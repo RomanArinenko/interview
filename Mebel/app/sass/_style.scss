@@ -1,0 +1,693 @@
+@import 'settings';
+
+
+// =======================================================================//
+// WR–
+// =======================================================================//
+
+.wr-header {background-color: #fff; padding: 30px 0;}
+.wr-services {padding: 60px 0 0 0; hr {border-color: #d9d9d9; margin: 0;}}
+
+.wr-advantages, 
+.wr-works, 
+.wr-prices, 
+.wr-distinction,
+.wr-task_inner, 
+.wr-task {padding: 60px 0;}
+
+
+.wr-advantages {}
+.wr-works {}
+
+.wr-prices {background: url("../img/bg_prices.jpg") center center no-repeat; background-size: cover;}
+.wr-distinction {background: url("../img/bg_dist.jpg") center center no-repeat; background-size: cover;}
+.wr-task_inner {background: url("../img/bg_task.jpg") 40% center no-repeat; background-size: cover; padding: 40px 0 80px 0; text-align: center;}
+
+.wr-prices,
+.wr-distinction {h3 {color: #fff !important;}}
+
+.wr-task {background: url("../img/bg_task.jpg") bottom center no-repeat; background-size: cover;}
+.wr-task_inner {background: url("../img/bg_task_in.jpg") bottom center no-repeat; background-size: cover;}
+.wr-gray {background-color: #444444; padding: 45px 0 0 0; @include respond-to(md) {padding: 30px 0 0 0;};
+}
+.ff-message {
+	color: #fff !important;
+	background: rgba(0,0,0,0.75) !important;
+	line-height: 12px !important;
+	z-index: 10000 !important;
+}
+
+// APP
+.app {
+	@include respond-to(sm) {min-width: 300px;}
+
+	// Preloader
+	.preloader {}
+
+
+	// HEADER
+	.header {
+
+		//Logo
+		.logo {
+			@include font-type($title-font, 22px, 26px, 0.8px, #191919);
+			display: block; max-width: 220px; padding-left: 78px;
+			@include respond-to(md) {margin: 0 auto;}
+			@include respond-to(sm) {margin: 0 auto; position: relative;}
+			
+
+			&:hover {text-decoration: none;}
+
+			i {position: absolute; top: -5px; left: 15px;
+				@include respond-to(md) {left: 80px;}
+				@include respond-to(sm) {left: 5px;}
+			}
+
+			span {
+				@include font-type($main-font, 11px, 14px, 0.5px, #6d6d6d); text-transform: uppercase;
+				display: block; margin-top: 5px;
+			}
+		}
+		
+		// Setting button
+		.header_order {position: relative; top: -2px;
+			@include respond-to(sm) {margin: 45px 0 30px 0;}
+			
+		}
+		
+		// Header block info
+		.header_info {
+			display: block; float: right; margin: 5px 0; padding-left: 45px;
+			position: relative;
+
+			&:active, 
+			&:hover, 
+			&:active, 
+			&:active:hover {
+				text-decoration: none;
+				em {text-decoration: underline;}
+			}
+
+			@include respond-to(md) {float: none; text-align: center; margin: 20px 0; padding: 0;}
+			@include respond-to(sm) {margin: 15px 0;}
+			
+
+			i {position: absolute; top: 0; left: 0;
+				@include respond-to(md) {position: relative;}
+			}
+
+			span {
+				@include font-type($title-font_regular, 16px, 26px, 0.8px, #6d6d6d);
+				strong {@include font-type($title-font, 22px, 26px, 0.8px, #191919);
+					@include respond-to(lg) {font-size: 20px;}
+				}
+			}
+
+			em {
+				@include font-type($main-font, 11px, 18px, 0.8px, #6d6d6d); text-transform: uppercase;
+				display: block;
+			}
+		}
+		
+		// Menu
+		.navbar-default {
+			text-align: center;
+			margin-bottom: 0;
+			background: transparent url("../img/slider_main.jpg") no-repeat center 0px; background-size: cover; border: 0;
+			@include border-radius(0);
+
+			.container{
+				@include respond-to(sm) {padding: 0;}
+			}
+			
+			.navbar-header {
+				@include respond-to(sm) {margin: 0; background: rgba(0,0,0,0.75);}
+				.navbar-toggle {background-color: #fff; padding: 10px;
+					&:before {
+						content: "menu";
+						text-transform: uppercase;
+						@include font-type($title-font, 20px, 20px, 0.8px, #fff);
+						position: absolute;
+						left: -64px;
+						top: 5px;
+					}
+				}
+				button {}
+			}
+
+			.navbar-collapse {
+				padding: 0;
+				border-top: 1px solid transparent;
+				
+				@include respond-to(sm) {margin: 0; border-top: 0;};
+				
+				h1 {
+					color: #fff; 
+					margin: 60px 0;
+					@include respond-to(sm) {margin: 0; padding: 30px 0;
+						font-size: 24px; line-height: 30px;
+						background: rgba(0,0,0,0.75);
+					}
+					
+					span {
+						font-size: 40px; 
+						display: block; margin-top: 5px;
+						@include respond-to(sm) { font-size: 20px; line-height: 30px;}
+					}
+				}
+
+				ul {
+					
+					&:before {
+						content: "";
+						display: block; width: 100%; height: 48px;
+						position: absolute; bottom: 0; left: 0;
+						background: rgba(0,0,0,0.75);
+					}
+					
+					li {
+						background: transparent;
+
+						a {
+							@include font-type($title-second-font, 14px, 18px, 0, #fff); text-transform: uppercase;
+							padding: 15px 36px;
+							border-right: 1px solid rgba(255,255,255,0.3);
+							@include respond-to(lg) {padding: 15px 22px;}
+							@include respond-to(md) {padding: 15px 11px; font-size: 13px;}
+
+							@include respond-to(sm) {border-right: none; background: rgba(0,0,0,0.75);}
+							
+
+							&:hover {
+								color: #e0e0e0;
+								background: rgba(0,0,0,0.75); border-right: 1px solid rgba(255,255,255,0.3);
+								@include respond-to(sm) {border-right: none; background: rgba(0,0,0,0.9);}
+							}
+						}
+
+						&:last-child{
+							a {border-right: none;}
+						}
+
+						&.active {
+							a {
+								color: #e0e0e0;
+								background: rgba(0,0,0,0.9); border-right: 1px solid rgba(255,255,255,0.3);
+								@include respond-to(sm) {border-right: none;}
+							}
+						}
+					}
+				}
+				.navbar-nav {
+					@include respond-to(sm) {margin: 0;}
+				}
+			}
+		}
+
+	} //HEADER
+
+	
+	// SECTION 
+	.section {
+		
+		.sidebar {
+			
+			// Services
+			.services_all {
+				margin-bottom: 60px;
+				border: 1px solid #e3e3e3;
+
+				h3 {
+					@include font-type($title-font, 20px, 50px, 0.8px, #fff);
+					height: 50px; padding: 0 0 0 20px;
+					background: #0093e3;
+				}
+
+				ul {
+					padding: 20px 0;
+
+					li {
+						margin: 0 15px;
+						a {
+							@include font-type($main-font, 15px, 18px, 0, #191919);
+							display: block; padding: 5px 0 5px 30px;
+							background: transparent url("../img/service_list.png") no-repeat scroll 0px 5px;
+						}
+						
+					}
+				}
+			}
+			
+			// Service buttons
+			.services_more {
+				margin-bottom: 60px;
+
+				ul {
+					li {
+						margin: 15px 0;
+
+						a {
+							@include font-type($title-font, 22px, 30px, 0.8px, #191919); text-transform: uppercase;
+							display: block; width: 100%; padding: 15px 0 5px 0;
+							border: 1px solid #e3e3e3; border-top: 5px solid #0093e3;
+
+							&:hover, 
+							&:active, 
+							&:focus, 
+							&:active:focus {
+								color: #fff; text-decoration: none;
+								background: #0093e3; border: 1px solid #0093e3; border-top: 5px solid #0093e3;
+								
+								.icons-service-clients {@extend .icons-service-clients:hover;}
+								.icons-service-articles {@extend .icons-service-articles:hover;}
+								.icons-service-otzyv {@extend .icons-service-otzyv:hover;}
+								.icons-service-warranty {@extend .icons-service-warranty:hover;}
+							}
+
+							i {top: -8px; margin: 0 15px;}
+						}
+					}
+				}
+			}
+		}
+
+		// Intro
+		.intro {
+			text-align: center;
+			margin-bottom: 45px;
+
+			h2 {@include font-type($title-font, 34px, 30px, 0.8px, #191919);}
+			span {
+				@include font-type($main-font, 26px, 30px, 0.8px, #191919); text-transform: uppercase;
+				display: block; margin: 15px 0 30px 0;
+			}
+			p {
+				@include font-type($main-font, 16px, 22px, 0.7px, #6d6d6d);
+				display: block; margin-bottom: 0;
+			}
+		}
+		
+		// Main form
+		.intro_form {
+			text-align: center;
+			margin-bottom: 60px; padding: 60px 30px;
+			background: url("../img/bg_form.jpg") center center no-repeat; background-size: cover;
+
+			h3 {
+				color: #fff;
+
+				&:after {margin: 15px auto 30px;}
+			}
+
+			form {.form-control {opacity: 0.8;}}
+		}
+
+		// Title
+		.title {
+			@include font-type($title-font, 26px, 30px, 0.4px, #191919); text-align: center;
+			
+			&:after {
+				content: "";
+				display: block;
+				width: 60px;
+				border-bottom: 1px solid #d9d9d9;
+				margin: 30px auto 45px auto;
+			}
+		}
+		
+		// Benefits
+		.advantages {
+			.prices_block {
+				@include respond-to (lg) {max-width: 420px; margin: 0 auto;}
+			}
+			ul {
+				text-align: center; 
+
+				li {
+					width: 220px; vertical-align: top; margin-bottom: 30px;
+					@include respond-to (lg) {width: 180px;}
+
+					i {margin-bottom: 15px;}
+					span {
+						@include font-type($main-font, 16px, 22px, 0, #6d6d6d);
+						display: block;
+						em {@include font-type($main-font, 16px, 22px, 0, #191919); font-weight: bold;}
+					}
+				}
+				.price-item {width: 200px;}
+			}
+		}
+		
+		
+		// Price
+		.pricelist {
+			margin-bottom: 45px; padding: 15px;
+			background: rgba(255,255,255,0.85);
+
+			.table-striped {
+				thead {
+					tr {
+						th {}
+					}
+				}
+				tbody {
+					tr:nth-of-type(2n+1) {
+						background: transparent;
+						td {}
+					}
+					tr:nth-of-type(2n) {
+						background: rgba(0,0,0,0.1);
+						td {}
+					}
+				}
+			}
+		}
+		
+		// Calculate on the price
+		.pricelist_order {
+			text-align: center;
+
+			.pricelist-popup {
+				margin: 0 20px 0 0;
+				@include respond-to (xs) {margin: 0;}
+			}
+			.btn {
+				margin: 0 0 0 20px;
+				@include respond-to (xs) {display: block; margin: 30px 0 0 0;}
+			}
+		}
+
+		// Carousel with services
+		.our_works {
+
+			ul {
+				width: 93%; margin: 0 auto;
+
+				li {
+					figure {
+						img {margin-bottom: 20px;}
+						figcaption {@include font-type($main-font, 16px, 18px, 0.8px, #6d6d6d); text-align: center;}
+					}
+				}
+
+				.owl-controls {
+					.owl-nav {
+
+						.owl-prev,
+						.owl-next {
+							display: inline-block; width: 14px; height: 44px;
+							position: absolute; top: 30%;
+						}
+
+						.owl-prev {
+							left: -25px;
+							background: url(../img/prev.png);
+						}
+
+						.owl-next {
+							right: -25px;
+							background: url(../img/next.png);
+						}
+					}
+				}
+			}
+		}
+		 
+		 // Difference
+		.dist {
+			text-align: center;
+			padding: 40px 55px;
+			background: rgba(255,255,255,0.2);
+			@include respond-to (sm) {margin-bottom: 30px;}
+			@include respond-to (xs) {padding: 30px 15px;}
+
+			span {
+				@include font-type($title-font, 42px, 42px, 0, #fff); text-align: center;
+				display: inline-block; width: 75px; height: 75px;
+			    margin: 0 0 20px 0; padding: 16px 28px;
+			    background: #0093e3;
+			    @include border-radius(46px);
+			}
+
+			h4 {
+				@include font-type($title-font, 18px, 18px, 0.8px, #fff);
+				margin: 0 0 15px 0;
+			}
+
+			p {@include font-type($main-font, 14px, 18px, 0.8px, #fff);}
+
+			a {@include font-type($main-font, 16px, 18px, 0.8px, #fff);}
+		}
+		
+		// Second call to action
+		.call_to_action {
+			text-align: center;
+
+			p {@include font-type($main-font, 14px, 18px, 0.8px, #6d6d6d);}
+
+			strong {
+				@include font-type($main-font, 16px, 18px, 0.8px, #191919);
+				display: block; margin-bottom: 30px;
+			}
+
+			a {margin: 15px 0;}
+		}
+
+		.prices_list {text-align: center;
+			h2 {@include font-type($title-font, 34px, 40px, 0.8px, #191919); margin-bottom: 30px;}
+			a {margin: 30px 0;}
+		}
+
+		.prices_info {
+			@include font-type($main-font, 14px, 18px, 0.8px, #737373);
+			text-align: center;
+			p {margin-bottom: 15px;
+				strong {color: #191919; font-weight: bold; display: block;}
+			}	
+		}
+
+		.need_margin {margin: 30px 0;}
+
+		.prices_montazh {
+			h2 {@include font-type($title-font, 26px, 38px, 0.8px, #191919);
+				text-align: center; padding: 45px 0;
+			}
+			table {border-bottom: 1px solid #e3e3e3;}
+		}
+		.prices_ustanovka_technika {
+			h2 {@include font-type($title-font, 26px, 38px, 0.8px, #191919);
+				text-align: center; padding: 45px 0;
+			}
+			table {border-bottom: 1px solid #e3e3e3;}
+		}
+		.prices_podkluchenie_technika {
+			h2 {@include font-type($title-font, 26px, 38px, 0.8px, #191919);
+				text-align: center; padding: 45px 0;
+			}
+			table {border-bottom: 1px solid #e3e3e3;}
+		}
+
+	} //SECTION
+	
+	
+	// FOOTER
+	.footer {
+		// Contacts, socials, menu
+		.footer_section {
+			padding: 0 0 45px 0;
+			@include respond-to(md){padding: 0 0 30px 0;}
+			h4 {
+				@include font-type($title-font, 20px, 30px, 0.8px, #fff);
+
+				&:after {
+					content: "";
+					display: block; width: 40px; margin: 15px 0;
+					border-bottom: 2px solid #fff;
+				}
+			}
+
+			ul {
+				li { 
+					padding: 10px 0;
+					@include respond-to(sm) {display: inline-block; margin-right: 20px;}
+					
+					a {
+						@include font-type($main-font, 14px, 22px, 0, #6d6d6d);
+						i {margin: 0 15px 0 0;}
+					}
+				}
+			}
+		}
+		// Adaptation for footer menu
+		.footer_menu {
+			ul {
+				li { 
+					@include respond-to(md) {display: inline-block; margin-right: 20px;}
+				}
+			}
+		}
+
+		// Copyright
+		.copyright {
+			text-align: center;
+			display: block; padding: 30px 0;
+			border-top: 1px solid #575757;
+		}
+		.button_up {
+			display: none;
+			position: fixed;
+		    bottom: 120px;
+		    right: 90px;
+		    padding: 12px 15px;
+		    i {top: 3px;}
+		}
+	}
+
+	
+	
+}
+
+// Popups
+	.pricelist_to_pop_up1  { 
+		display: none; width: 460px;
+ 		background: #fff;
+ 		padding: 0 0 50px 0;
+		@include respond-to(xs) {width:100%;};
+		
+ 		// Popup title
+ 		.pricelist-popup_header {
+ 			h3 {
+ 				@include font-type($title-font, 26px, 30px, 0.4px, #fff);
+				background: #0093e3; padding: 30px 60px 30px 30px;
+				position: relative;
+ 			}
+ 			span {
+ 				margin: 4px 16px 0 0; cursor: pointer;
+ 				i {position: absolute; right: 30px; top: 30px;}
+ 			}
+ 		}
+ 		
+		// Popup body
+ 		.pricelist-popup_body {
+ 			    padding: 10px 30px 0 30px;
+
+ 			@include respond-to(xs) { padding: 20px 25px 30px 25px;};
+ 			
+ 			
+ 			// Popup form
+			.form {
+				.form-group {
+					input {border: 1px solid #d9d9d9;}
+					label {}
+
+					textarea {border: 1px solid #d9d9d9;}
+					p {@include font-type($main-font, 14px, 21px, 0.4px, #969696); text-align: center;}
+				}
+				button {}
+			}
+		}
+	}
+
+
+
+// =======================================================================// 
+// ========================== ACCORDION ================================= //
+// =======================================================================//
+
+.panel-group{
+
+	.panel-default {
+		margin-bottom: 25px; 
+		border: 0;
+
+		.panel-heading {
+			padding: 0;
+			@include border-radius(5px);
+			
+			a {
+				@include font-type($title-second-font, 16px, 24px, 0px, #fff);
+			    display: inline-block; width: 100%; padding: 20px 90px 20px 30px;
+			    position: relative;
+			    background: #232c3b; 
+
+				&:focus, 
+				&:hover {text-decoration: none;}
+
+				span {
+					background: #fff; 
+					display: block; float: right; width: 26px; height: 26px; margin-top: -13px;
+					position: absolute; top: 50%; right: 30px;
+					@include border-radius(15px); 
+
+					&:after {
+						content: (""); 
+						display: block; width: 8px; margin: -1px 0 0 -4px;
+						position: absolute; top: 50%; left: 50%;
+						border-bottom: 2px solid #ff6c3a;
+					}
+				}
+			}
+			
+			.collapsed {
+				@include font-type($title-second-font, 16px, 24px, 0px, #232c3b); 
+				background: #f9f9f9; 
+
+				span {
+					background: #ff6c3a;
+					
+					&:after {
+						content: (""); 
+						display: block; width: 8px; margin: -1px 0 0 -4px;
+						border-bottom: 2px solid #fff;
+					}
+					&:before {
+						content: (""); 
+						display: block; height: 8px; margin: -1px 0 0 -4px;
+						position: absolute; top: 50%; left: 50%;
+						border-left: 2px solid #fff; 
+					}
+				}
+			}	
+		}
+
+		.panel-body {
+			padding:30px 60px 30px 30px;
+			background: #f9f9f9; border-top: 0px!important;
+			
+			p {margin-bottom: 0px;}
+		}
+	}
+}
+
+
+// =======================================================================// 
+// List and banner pagination                                             //        
+// =======================================================================// 
+
+.lists {
+	margin: 30px 0 0 0;
+	@include respond-to (sm) {margin: 20px 0; text-align: center;}
+
+	li {
+		margin-bottom: 21px;
+
+		@include respond-to (sm) {
+		display: inline;
+		margin-right: 15px;
+		}
+
+		@include respond-to (xs) {
+			display: block;
+		}
+
+		&:before {
+			content: "";
+			background-color: #ff6c3a;
+			width: 7px; height: 7px;
+			display: inline-block;
+			margin-right: 14px;
+			position: relative;
+			@include border-radius(4px);
+		}
+	}
+}

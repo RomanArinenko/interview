@@ -1,0 +1,1080 @@
+@import 'settings';
+
+    
+.app {
+
+
+// =======================================================================// 
+// ОБЩИЕ                                                                  //        
+// =======================================================================// 
+
+
+    // Статический баннер сверху страницы – TEMP
+    .inner_image {img {max-width:100%}}
+
+    // Системные свойства
+    .pr-60 {padding: 0 0 0 60px !important;}
+
+    // Обтекание
+    .float_left {padding: 5px 30px 0 0; float: left;}
+    .float_right {padding: 5px 0 0 30px; float: right;}
+
+
+// =======================================================================// 
+// МОДУЛИ                                                                 //        
+// =======================================================================// 
+
+
+    // Заголовок 1/2 BOOTSTRAP
+    .inner_title {
+        @include font-type($header-second_font, 28px, auto, 0.8px, #232323); text-transform: uppercase;
+        margin: 60px 0 30px 0;
+
+        @include respond-to(sm) {font-size: 24px; line-height: auto;}
+        
+        &:after {
+            content: "";
+            display: block; width: 50px; margin: 20px 0;
+            border-bottom: 3px solid #E99443;
+        }
+
+        &.text-center {&:after {margin: 20px auto;}}
+    }
+
+    // Пагинация для страницы новостей новостей BOOTSTRAP
+    // .news_inner_pagination {
+
+    //     ul {
+    //         display: block; margin:0; padding: 0;
+    //         border-top: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8;
+
+    //         li {
+    //             vertical-align: middle;
+
+    //             a {
+    //                 @include font-type($main-font, 11px, 2em, 0.8px, #165d6c); text-transform: uppercase;
+    //                 padding: 0 9px;
+    //                 @include border-radius(0); border: none;
+
+    //                 &:hover {}
+    //             }
+
+    //             &.disabled {a:hover {i {opacity: 0.6;}}}
+    //         }
+
+    //         li.previous {float: left; a { line-height: 2.5em; padding-left: 0; float: left; i {margin-right: 10px;} &:hover {background: none; i {background-position: 0 -729px;}}}}
+    //         li.next {float: right; a { line-height: 2.5em; padding-right: 0; float: right; i {margin-left: 10px;} &:hover {background: none; i {background-position: 0 -677px;}}}}
+    //     }
+         
+    //     ul.pagination {
+    
+    //         li {@extend .inline-block;}
+
+    //         li.active {
+
+    //             a {
+    //                 color: #fff; text-decoration: none;
+    //                 background:#165d6c;
+    //             }
+    //         }
+    //     }
+
+    //     // ul.pager {}
+    // } 
+
+    // Сайдбар
+    .sidebar {
+
+        h2 {
+            @include font-type($main-font, 18px, 24px, 0.8px, #111);
+            margin-bottom: 30px;
+            
+            &:after {
+                display: block; width: 40px; margin: 10px 0;
+                border-bottom: 2px solid #E99443;
+                content: "";
+            }
+        }
+
+        // Блок архив новостей BOOTSTRAP
+        .sidebar-nav {
+            @include respond-to(lg) {margin: 0 0px 75px 0;}
+            margin: 0 0px 75px 50px;
+            h2 {
+                margin-bottom: 24px;
+                padding: 5px 0 0 12px;
+                &:after {margin: 4px 0;}
+            }
+
+            ul.nav-pills {
+
+                li {
+                    display: block; float: none;
+                    border-bottom: 1px solid #f0f0f0;
+
+                    a {
+                        @include font-type($main-font, 14px, auto, 0.8px, #777777);
+                        display: block;
+                        padding: 12px 5px 10px 21px;
+                        background: transparent;
+                        @include border-radius(0);
+                         &:before {
+                            display: inline-block; width: 5px; height: 5px; margin-right: 5px;
+                            position: relative; top: -2px; left: -8px;
+                            background: #165d6c;
+                            content: "";
+                        }
+                        &:hover, &:active, &:focus, &:active:focus {text-decoration: none; color: #fff; background-color: #165d6c;
+                            &:before {
+                                background:#fff;
+                            }
+                        }
+
+
+                        span.badge {}
+                    }
+
+                    &.active {
+
+                        a {
+                            text-decoration: underline;
+
+                            span.badge {}
+                        }
+                    }
+                }
+            }
+        }
+
+        // Баннер
+        a.sidebar-banner {
+            @include respond-to(lg) {margin: 0 0px 75px 0;}
+            display: inline-block; margin: 0 0 75px 62px;
+            position: relative;
+
+            figure {img {max-width: 100%;}}
+            span {position: absolute; bottom: 22px; i {}}
+
+            &:hover span {
+                background: #fff; 
+                border: 2px solid #1b7f95;
+                color: #1b7f95;
+            }
+        }
+    } 
+        
+
+// =======================================================================// 
+// СТРАНИЦА О КОМПАНИИ                                                    //        
+// =======================================================================// 
+
+
+    // Заголовок О компании
+    .companny_intro {
+        margin: 0 0 75px 0;
+
+        @include respond-to(lg) {padding-right: 30px;}
+        @include respond-to(md) {padding-right: 0; margin: 0 0 50px 0;}
+
+        p {
+            @include font-type($main-font, 14px, 24px, 0.4px,#777777);
+        }
+    }
+    .companny_intro_pic {
+
+        img {
+            max-width: 100%; margin-right: 30px; float: right; padding-top: 5px;
+
+            @include respond-to(lg) {margin-right: 0;}
+            @include respond-to(md) {display: none;}
+
+        }
+    }
+    
+    // Члены команды
+    .company_member {
+        margin: 30px 0 75px 0;
+
+        @include respond-to(md) {margin: 15px 0 50px 0;}
+        
+        figure {text-align: center; img{max-width: 100%;}}
+        
+        hgroup {
+
+            h3 {
+                @include font-type($main-font, 18px, 20px, 0.4px, #252525); text-transform: uppercase; text-align: center;
+                margin: 30px 0px 15px 0px;
+            }
+
+            h4 {
+                @include font-type($main-font, 13px, 15px, 0.4px, #c6c6c6); text-align: center;
+                margin-bottom: 15px;
+            }
+        }
+
+        span {
+            text-align: center; @include font-type($main-font, 14px, auto, 0.4px,#767676);
+            display: block; margin-bottom: 3px;
+            
+            a {
+                color: #767676;
+            }
+        }
+    }
+
+    // Достижения
+    .bg-graph {
+        background: #165d6c url(../img/graph_up.png) center bottom no-repeat;
+        @include respond-to(sm) {display: none;}
+    }
+    .company_achievement {
+        margin: 90px -30px 180px -30px;
+        border-right: 1px solid #7ba1a9;
+
+        @include respond-to(lg) {margin: 90px 0 180px 0; }
+        @include respond-to(md) {border-right: none;}
+
+        &:last-child {border-right: none;}
+
+        p {
+            @include font-type($sidebar-font, 26px, auto, 1.2px, #fff); text-align: center;
+            padding-top: 6px;
+        }
+
+        strong {
+            @include font-type($sidebar-font, 15px, auto, 1.4px, #fff); text-align: center; text-transform: uppercase;
+            display: block; padding: 0 10px;
+
+            @include respond-to(md) {font-size: 12px; letter-spacing: 0.8px;}       
+        }
+
+    }
+
+    // Оборудование   
+    .company_equipment {
+        margin: 130px 0 90px 0;
+
+        @include respond-to(sm) {margin: 50px 0;}
+        
+        h2 {
+            @include font-type($header-second_font, 24px, 24px, 0.8px, #232323);
+            margin: 60px 0 30px 0;
+
+            @include respond-to(sm) {font-size: 22px; line-height: auto;}
+            @include respond-to(sm) {margin: 50px 0 30px 0;}
+        }
+
+        p {
+            @include font-type($main-font, 14px, auto, 0.8px, #777777);
+        }
+    }
+    .company_equipment_pic {
+        margin: 145px 0 75px 0;
+        padding-left: 40px;
+
+        @include respond-to(sm) {display: none;}
+
+        img {
+            max-width: 100%;
+        }
+    }
+    
+    // Результаты
+    .company_result {
+        margin: 130px 0px 100px 0;
+        padding-left: 45px;
+
+        @include respond-to(md) {margin: 50px 0px 75px 0;}
+        @include respond-to(sm) {padding-left: 0; margin: 50px 0;}
+        
+        h2 {
+            @include font-type($header-second_font, 24px, 24px, 0.8px, #232323);
+            margin-bottom: 30px;
+
+            @include respond-to(sm) {font-size: 22px; line-height: auto;}
+        }
+
+        p {
+            @include font-type($main-font, 14px, 24px, 0.8px, #777777);
+        }
+    }
+    .company_result_pic {
+        margin: 60px 0 30px 0;
+        padding-left: 20px;
+
+        @include respond-to(sm) {padding-left: 0; margin: 15px 0 30px 0;}
+        
+        figure {
+            img {max-width: 100%;}
+        }
+
+        ul {
+            padding-left: 24px; margin-bottom: 75px;
+            
+            li { 
+                @include font-type($main-font, 14px, auto, 0.8px, #232323); text-transform: uppercase;
+                @extend .inline-block; margin-right: 65px;
+                
+                span {
+                    @extend .inline-block; height: 13px; width: 13px; margin-right: 10px;
+                    background: #edaa69;
+                }
+                &:nth-child(2){
+                    span {background: #52be81;}
+                }
+                &:nth-child(3){
+                    span {background: #334b4b;}
+                }
+                &:last-child{
+                    margin-right: 0;
+                    span {background: #f9db86;}
+                }
+            }
+        }
+    }
+
+
+// =======================================================================// 
+// СТРАНИЦЫ НОВОСТИ + НОВОСТЬ ПОДРОБНО                                    //        
+// =======================================================================// 
+
+
+    // Превью новости
+    .news_item {
+        @include respond-to(lg) {height: 330px;}
+        @include respond-to(md) {height: 290px;}
+        @include respond-to(sm) {height: auto;}
+        position: relative;
+        margin-bottom: 46px; height: 292px;
+        background: url(../img/pattern.png); border-bottom: 3px solid #165d6c;
+        
+        figure {
+            margin-bottom: -20px;
+            img {max-width: 100%;}
+        }
+        
+        h2 {
+            @include font-type($header-second_font, 24px, 28px, 0.8px, #1a1a1a);
+            padding: 21px 28px 0 15px; margin-bottom: 8px;
+            margin-left: 3px;
+
+        }
+
+        span {
+            @include font-type($main-font, 12px, auto, 0.8px, #232323);
+            padding-left:15px;
+            i {
+                margin-right: 9px;
+                left: 2px;
+            }    
+        }
+        .news_date {
+            display: inline-block;
+            margin-top: 8px;
+            &:after {
+                content: "";
+                display: block; width: 50px; margin: 11px 0 0 2px;
+                border-bottom: 3px solid #d9d9d9;
+            }
+        }
+
+        p {
+            @include font-type($main-font, 13px, 25px, 0.6px, #777777);
+            padding: 11px 10px 0 18px; 
+        }
+
+        a {
+            position: absolute; bottom: 0px; right: 0px;
+            border-radius: 0px; padding: 3px 15px 3px 11px;
+            line-height: 18px; font-size: 12px;
+        }
+    }
+
+    // Подробная новость
+    .news_inner {
+
+        span.date {
+            @include font-type($header-first_font, 12px, auto, 1.2px, #9b9b9b);
+            display: block; margin-bottom: 10px;
+
+            i {top: -1px;}
+        }
+
+        p {@include font-type($main-font, 14px, 24px, 0.8px, #888888);}
+
+        figure {img {max-width: 100%;}}
+    }
+
+
+
+// =======================================================================// 
+// СТРАНИЦА ВАКАНСИИ                                                      //        
+// =======================================================================// 
+
+
+    .vacancy_header{
+        margin-bottom: 70px;
+    }
+    .vacancy_title {
+        padding: 25px 30px; margin-bottom: 45px;
+        position: relative;
+        background: #f3f7f8;
+        a{
+            text-decoration: none;
+            h3 {
+                @include font-type($sidebar-font, 24px, 36px, 0.8px, #165d6c);
+                padding-right: 90px;
+
+                @include respond-to(md) {@include font-type($sidebar-font, 18px, 24px, 0.6px, #165d6c);}               
+            }
+            i {
+                @include respond-to(sm) {right: 20px;}
+                position: absolute; right: 67px; top: 20px;
+                cursor: pointer;
+                transition: all 0.4s ease 0.4s;
+                transform: rotate(0deg);
+
+
+            }
+        }
+        .collapsed {
+            i{
+                transition: all 0.4s ease 0.4s;
+                transform: rotate(180deg);
+            }
+        }
+    }
+    
+    .vacancy_divider{
+        border-right: 1px dashed #c8cccd;
+    }
+
+    .vacancy_info{
+        padding: 30px; margin: -45px 0 45px 0;
+        background: #f3f7f8;
+        
+        h4 {
+            @include font-type($sidebar-font, 20px, 24px, 0.4px, #4a4a4a);
+            margin-bottom: 20px;
+
+            &:after {
+                display: block; margin: 15px 0; width: 115px;
+                border-bottom: 1px dashed #c8cccd;
+                content: '';
+            }
+        }
+        ul {
+            margin-bottom: 30px;
+            li {
+                @include font-type($main-font, 13px, 24px, 0.4px, #747474);
+                strong{
+                    color: #646464; font-weight: 600;
+                }
+                &:before {
+                    color: #646464;
+                    margin-right: 5px;
+                    content: "-";
+                }
+            }
+        }
+        h5 {
+            @include font-type($sidebar-font, 16px, 24px, 0.4px, #4a4a4a);
+            margin-bottom: 20px;
+
+            &:after {
+                display: block; margin: 15px 0; width: 115px;
+                border-bottom: 1px dashed #c8cccd;
+                content: '';
+            }
+        }
+        strong {
+            @include font-type($main-font, 13px, 24px, 0.2px, #646464); font-weight: 600;
+        }
+    }
+
+    .vacancy_action {
+        text-align: center;
+        margin: 45px 0;
+
+        h3 {
+            @include font-type($sidebar-font, 35px, 28px, 0.8px, #fff); text-align: center;
+            margin-bottom: 47px;
+        }
+        a {
+            text-transform: uppercase; @include font-type($main-font, 12px, auto, 0.8px, #fff);
+            padding: 8px 17px;
+            border: 2px solid #eaeff1;
+
+            &:hover, &:active, &:focus, &:active:focus{
+            color: #1b7f95;
+            border: 2px solid #1b7f95;
+            }
+        }
+        
+    }
+
+    .vacancy_conditon {
+        padding: 36px 30px;
+        background: #f4f8f9;
+        h3 {
+            @include font-type($sidebar-font, 24px, 24px, 0.8px, #165d6c);
+            margin-bottom: 32px;
+        }
+        ul {
+            li {
+                @include font-type($main-font, 13px, 24px, 0.2px, #646464);
+
+                &:before {
+                    color: #646464;
+                    margin-right: 5px;
+                    content: "-";
+                }
+            }
+        }
+    }
+
+
+// =======================================================================// 
+// СТРАНИЦА КОНТАКТЫ                                                      //        
+// =======================================================================// 
+
+
+    // Фон контактов
+    .bg-bordered {background: #f5f6f7; border-top:1px solid #ececec; border-bottom:1px solid #ececec; }
+
+
+    // Блоки контактной информации
+    .contact_info {
+        text-align: center;
+        height: 278px; margin: 0 -15px; padding-top: 58px;
+        border-left: 1px solid #ececec;
+
+        @include respond-to(sm) {
+            padding-top: 40px;
+            height: 220px;
+            border-left:none; border-bottom: 1px solid #ececec;
+        }
+        
+        i {margin-bottom: 20px;}
+
+        h2 {
+            @include font-type($header-second_font, 13px, 13px, 0.6px, #232323); text-transform: uppercase; text-align: center;
+            &:after {
+                display: block; width: 30px; margin: 7px auto 15px;
+                border-bottom: 2px solid #165d6c;
+                content: "";
+            }
+        }
+
+        span {
+            @include font-type($main-font, 14px, auto, 0.4px, #777777);
+            display: block; padding: 0 4px; margin-bottom: 4px;
+
+            @include respond-to(md) {@include font-type($main-font, 12px, auto, 0.4px, #777777);}
+        }
+
+        strong {
+            @include font-type($main-font, 14px, auto, 0.4px, #232323);
+            display: block; padding: 0 4px; margin-bottom: 4px;
+            
+            @include respond-to(md) {@include font-type($main-font, 12px, auto, 0.4px, #232323);}
+
+            a {letter-spacing: 1px; color:#777777;}
+        }
+
+        a.btn {
+            text-transform: uppercase; @include font-type($main-font, 12px, auto, 0.8px, #fff);
+            margin-top: 13px; padding: 5px 36px;
+            &:hover, &:active, &:focus, &:active:focus {
+                color:#1b7f95;
+            }
+        }
+        
+        &:hover {
+            background:#fff;
+        }
+    }
+
+    .contact_info-last {
+        @extend .contact_info;
+        border-right: 1px solid #ececec;
+
+        @include respond-to(sm) {
+            padding: 40px 0;
+            border:none;
+        }
+    }
+
+    .contact_title {
+        h2 {
+            @include font-type($header-second_font, 24px, 28px, 1.2px, #232323);
+            text-transform: none;
+            margin: 76px 0 20px 0;
+        }
+        h3 {
+            @include font-type($main-font, 16px, 16px, 0.8px, #5d5d5d); text-align:center;
+            margin-bottom: 50px;
+        }
+    }
+    
+    // Форма обратной связи в контактах
+    .contact_feedback {
+        margin-top: 20px;
+
+        button.btn-primary{
+            text-transform: uppercase;
+            padding: 11px 40px; margin-bottom: 53px;
+            border:2px solid #eaeff1;
+
+            @include border-radius(30px);
+            &:hover, &:active, &:focus, &:active:focus {
+                border:2px solid #1b7f95;
+            }
+        }
+
+        .form_right {
+            padding:0 75px 0 0;
+            @include respond-to(sm) {padding:0;}
+        }
+
+        .form_select {
+            padding:0 75px;
+            @include respond-to(sm) {padding:0;}
+        }
+        .form_left {
+            padding: 0 0 0 75px;
+            @include respond-to(sm) {padding:0;}
+        }
+
+    }
+
+
+// =======================================================================// 
+// СТРАНИЦА 404                                                           //        
+// =======================================================================// 
+
+
+    // картинка коровы
+    .no_found_intro_pic {
+        text-align: center;
+        margin: 88px 0;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    // Блок 404
+    .no_found_intro {
+        text-align: center;
+        margin-top: 150px;
+
+        @include respond-to(md) {margin-top: 130px;}
+        @include respond-to(xs) {margin-top: 75px;}
+        
+        h1 {
+            @include font-type($header-second_font, 220px, 200px, 0.8px, #232323);
+            margin-bottom: 20px;
+
+            @include respond-to(lg) {font-size: 180px; line-height: 180px;}
+            @include respond-to(md) {font-size: 160px; line-height: 160px;}
+        }
+
+        h2 {
+            @include font-type($header-second_font, 24px, 24px, 0.8px, #232323);
+            margin-bottom: 20px;
+
+            @include respond-to(lg) {font-size: 20px; line-height: 20px;}
+            @include respond-to(md) {font-size: 15px; line-height: 20px;}
+        }
+
+        p {
+            @include font-type($main-font, 14px, 20px, 0.8px, #777777); text-align: center;
+            @include respond-to(md) {font-size: 12px; line-height: 16px;}
+        }
+
+        a {
+            padding: 7px 24px;
+
+            @include respond-to(mobile) {width: 100%;}
+        }
+    }
+}
+// =======================================================================// 
+// СТРАНИЦА КАТАЛОГ                                                      //        
+// =======================================================================// 
+
+    .catalog_title {
+        @include font-type($header-second_font, 32px, 32px, 1px, #343436);
+        margin-top: 60px;
+        text-transform: uppercase;
+        &:after {
+            content: "";
+            display: block;
+            width: 50px;
+            border-bottom: 3px solid #E99443;
+            margin-top: 20px;
+            margin-bottom: 45px;
+        }
+    }
+    .catalog_menu {
+        ul {
+            li {
+
+                a {
+                    @include font-type($main-font, 14px, 14px, 0.8px, #232323);
+                    display: block;
+                    background-color: #f8f8f8;
+                    padding: 15px 0 15px 15px;
+                    &:hover, &:active, &:focus, &:active:focus {text-decoration: none; color: #FFF; background-color: #165d6c;}
+                    i {
+                        position: relative;
+                        top: -1px; left: -6px;
+                        color: #cecece;
+                        font-size: 16px;
+                    }
+                    
+                    
+                }
+            }
+        }
+    }
+    .catalog_item {
+        figure {
+            overflow: hidden;
+            position: relative;
+            margin-bottom: -6px;
+            img {
+                max-width: 100%;
+            }
+            figcapture {
+                text-transform: uppercase;
+                position: absolute;
+                display: none;
+                top: 43%;
+                left: 50%;
+                margin-bottom: 0;
+
+
+                .fastview {
+                    @include font-type($main-font, 11px, 20px, 0.8px, #fff);
+                    text-align: center;
+                    position: relative;
+                    right: 50%;
+                    background-color: #eca968;
+                    @include border-radius(5px);
+                    padding: 5px 7px;
+                }
+            }
+        }
+        a {
+            background-color: #FFF;
+            display: block;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            p {
+                @media screen and (max-width: 1199px) {font-size: 13px; padding-left: 15px;}
+                 @media screen and (max-width: 991px) {line-height: 24px;}
+                @media screen and (max-width: 510px) {line-height: 24px;}
+                @include font-type($sidebar-font, 14px, 48px, 1.2px, #3d4045);
+                border: 1px solid #e6e6e6;
+                margin-bottom: 0;
+                padding-left: 20px;
+
+            }
+            span {
+                @include font-type($main-font, 13px, 40px, 0.8px, #3d4045);
+                border-right: 1px solid #e6e6e6;
+                border-left: 1px solid #e6e6e6;
+                border-bottom: 1px solid #e6e6e6;
+                display: block;
+                text-align: right;
+                padding-right: 16px;
+                i {top: 10px;}
+            }
+        }
+        &:hover {
+            figure {
+                figcapture {
+                    display: block;
+                }
+            }
+            a {
+                background-color: #165d6c;
+                text-decoration: none;
+                
+                p {
+                    border-bottom: 1px solid #206372;
+                    color: #FFF;
+                }
+                span {color: #FFF;}
+            }
+        }
+    }
+
+    .news_inner_pagination {
+        margin: 30px 0 60px 0; height: 73px;
+        border-bottom: 1px solid #e8e8e8; border-top: 1px solid #e8e8e8;
+ 
+        ul {
+            text-align: center;
+            li {
+                display: inline-block; margin: 20px -2px;
+                border: 1px solid #f5f6f7;
+                &:hover {
+                    background-color: #ddd;
+                }
+                
+                a {
+                    @media screen and (max-width: 474px) {padding: 2px 8px;}
+                    @include font-type($main-font, 11px, 30px, 0.8px, #7b7b7b); text-transform: uppercase;
+                    text-decoration: none;
+                    padding: 2px 12px;
+                    
+                    i {
+                        top: -2px;
+                    }
+                }
+            }
+            .active{
+                background: #165d6c;
+                
+                a{
+                    color: #fff; text-decoration: none;
+                }
+            }
+            .first {
+                float: left;
+                border: none;
+                &:hover {background-color: #fff;}
+                
+                a {
+                    padding: 0;
+                    
+                    .news_prev {
+                        color: #7b7b7b;
+                        font-size: 20px;
+                        line-height: 20px;
+                        display: inline-block;
+                        margin-right: 10px;
+                        width: 24px;
+                        height: 24px;
+                        border: 1px solid #7b7b7b;
+                        @include border-radius(15px);
+                    }
+                    &:hover, &:active, &:focus, &:active:focus {
+                        color: #1f6372;
+                        text-decoration: none;
+                        .news_prev {
+                            color: #1f6372;
+                            border-color: #1f6372;
+                        }
+                    }
+                }
+
+            }
+            .last {
+                float: right;
+                border: none;
+                &:hover {background-color: #fff;}
+                a {
+                    padding: 0 0 0 4px;
+                    .news_next {
+                        color: #7b7b7b;
+                        font-size: 20px;
+                        line-height: 20px;
+                        display: inline-block;
+                        margin-left: 10px;
+                        width: 24px;
+                        height: 24px;
+                        border: 1px solid #7b7b7b;
+                        @include border-radius(15px);
+                    }
+                    &:hover, &:active, &:focus, &:active:focus {
+                        color: #1f6372;
+                        text-decoration: none;
+                        .news_next {
+                            color: #1f6372;
+                            border-color: #1f6372;
+                        }
+                    }
+                }
+            }
+        }
+    }
+// =======================================================================// 
+// СТРАНИЦА ПАРТНЕРАМ                                                      //        
+// =======================================================================// 
+    .wrapper {
+        
+        .inner_title {
+            @include font-type($header-second_font, 32px, 32px, 0.8px, #232323);
+            text-transform: uppercase;
+            &:after {
+                content: "";
+                display: block;
+                width: 50px;
+                border-bottom: 3px solid #E99443;
+                margin-top: 25px;
+                margin-bottom: 52px;
+            }
+        }
+        .partner_intro {
+            h2 {
+                @include font-type($sidebar-font, 24px, auto, 1.2px, #232323);
+                margin-bottom: 32px;
+            }
+            p {
+                @include font-type($main-font, 13px, 24px, 0, #888888);
+                margin-bottom: 42px;
+            }
+            ul {
+                li {
+                    @include font-type($main-font, 13px, 20px, 0, #888888);
+                    margin-bottom: 23px;
+                    i {
+                        margin-right: 25px;
+                        top: -3px;
+                    }
+                }
+            }
+        }
+        .partners_enter { 
+            @media screen and (max-width: 991px) {padding: 0 30px 52px 30px;}
+            @media screen and (max-width: 767px) {padding: 0 30px 10px 30px;}
+            padding: 0 100px 52px 100px;
+            background: #f7f8f9;
+            h2 {
+                @include font-type($sidebar-font, 24px, auto, 1px, #1b7f95);
+                margin-bottom: 34px;
+            }
+            form {
+                .form-group {
+                    label {
+                        @include font-type($main-font, 13px, 20px, 0.8px, #6a6868);
+                        margin-bottom: 9px;
+                    }
+                    input {
+                        display: block;
+                        width: 100%;
+                        margin-bottom: 23px;
+                        height: 44px;
+                        padding-left: 15px;
+                        font-size: 11px;
+                    }
+                }
+                a {
+                    @include font-type($main-font, 12px, 20px, 0, #646464);
+                    i {
+                        margin-right: 10px;
+                        top: 8px;
+                    }
+                }
+                .btn-primary {
+                    @include font-type($main-font, 12px, 20px, 0.8px, #3d4045);
+                    text-transform: uppercase;
+                    padding: 6px 46px;
+                    margin-top: 26px;
+                    display: block;
+                    color: #FFF;
+                    &:hover, &:active, &:focus, &:active:focus {color: #000;}
+                }
+            }
+        }
+    }
+    
+    .need_padding {
+        @media screen and (max-width: 767px) {margin-top: 20px; padding: 20px 0;}
+        margin-top: 72px; padding: 82px 0 74px 0;}
+    .wrapper {
+       
+        .partners_documents {
+            @media screen and (max-width: 767px) {margin-bottom: 30px;}
+            h2 {
+
+                @include font-type($sidebar-font, 24px, auto, 1.4px, #232323);
+                margin-bottom: 22px;
+            }
+            a {
+                @media screen and (max-width: 767px) {margin: 25px 0;}
+                @media screen and (max-width: 474px) {@include font-type($main-font, 10px, 54px, 0.4px, #165D6C); text-align: center;}
+                @include font-type($main-font, 14px, 54px, 0.8px, #3d4045);
+                text-transform: uppercase;
+                color: #165d6c;
+                display: block;
+                margin: 50px 0;
+
+                .icon {
+                    margin-right: 28px;
+                    @media screen and (max-width: 474px) {display:block; margin: 0 auto;}
+                }
+
+                .icons-partner-document {
+                    top: -3px;
+                }
+                .icons-partner-brandbook {
+                    top: -2px;
+                }
+                .icons-partners-deal {
+                    top: -1px;
+                }
+                .icons-partner-style {
+                    top: -3px;
+                }
+                .icons-partners-presentation {
+                    top: -2px;
+                }
+                .icons-parters-price {
+                    top: -1px;
+                }
+                &:hover {
+                    em {text-decoration: underline;}
+                }
+                em {
+                    display: inline-block;
+                    width: 60px;
+                    position: relative;
+                    top: 10px;
+                    line-height: 18px;
+                }
+            }
+        }
+        .partners_order {
+            @media screen and (max-width: 991px) {padding-left: 0;}
+            padding-left: 97px;
+            h2 {
+                @media screen and (max-width: 767px) {margin-bottom: 20px;}
+                @include font-type($sidebar-font, 24px, auto, 1.2px, #232323);
+                margin-bottom: 57px;
+            }
+            form {
+                .form-group {
+                    label {
+                        @include font-type($main-font, 13px, 20px, 0.8px, #565656);
+                        margin-bottom: 10px;
+                    }
+                    input {
+                        display: block;
+                        width: 100%;
+                        height: 34px;
+                        margin-bottom: 19px;
+                    }
+                    textarea {
+                        display: block;
+                        width: 100%;
+                        resize: none;
+                        height: 82px;
+                        margin-bottom: 39px;
+                    }
+                }
+                .btn-primary {
+                    @media screen and (max-width: 767px) {margin-bottom: 20px;}
+                    @include font-type($main-font, 12px, 20px, 0.8px, #3d4045);
+                    text-transform: uppercase;
+                    padding: 6px 32px;
+                    color: #FFF;
+                    &:hover, &:active, &:focus, &:active:focus {color: #000;}
+                }
+            }
+        }
+    }

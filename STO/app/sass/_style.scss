@@ -1,0 +1,699 @@
+@import 'settings';
+
+/* fonts */
+$primary-font: 'TTDrugsThin', sans-serif;
+$secondary-font: 'Open Sans', sans-serif;
+$secondary-font-condenced: 'Open Sans Condensed', sans-serif;
+
+/* colors */
+$primary-color: #ec3e01;
+$white-color: #ffffff;
+$gray-color: #000000;
+$gray-color: #000000;
+
+// APP
+
+  
+	// Прелодер
+	.preloader {}
+
+	// MODULES
+
+	// Navigation
+	// .list_navigation {padding-right: 15px;
+		// i {float: right;}
+	// }
+	
+
+	// HEADER
+	.header {
+		.bg-header_blue_dark {
+			
+			.navbar-default {
+				margin-bottom: 0;
+				background-color: transparent;
+				border: 0;
+				@include border-radius(0);
+				.navbar-header {
+					@include respond-to(md) {width: 100%;}
+					.navbar-brand {margin: 10px 0 0 0; padding: 0; width: 149px; height: 72px;
+						@include respond-to(md) {display: block; margin: 20px auto 10px; float: none;}
+						img {max-width: 100%;}
+					}
+					button { 
+						@include respond-to(sm) {margin: 30px 25px 0 0;}
+						@include respond-to(xs) {margin: 30px 10px 0 0;}
+					}
+				}
+				.navbar-collapse {
+					padding: 0;
+					@include respond-to(lg) {margin-left: -15px;}
+					@include respond-to(md) {margin: 0;}
+					@include respond-to(sm) {border: none; @include box-shadow(none);}
+					ul {
+						margin: 0 0 0 15px;
+						@include respond-to(lg) {margin: 0;}
+						.active {
+							a {
+								border-top: 4px solid #ff6b38; 
+								color: #ff6b38;
+								background-color: #293855;
+							}
+						}
+						li {background-color: transparent;
+							a {
+								@include font-type($main-font, 13px, 17px, 0, #fff);
+								text-transform: uppercase;
+								padding: 35px 20px 35px 19px;
+								border-top: 4px solid transparent;
+								@include respond-to(lg) {padding: 35px 9px 35px 9px;}
+								@include respond-to(md) {@include font-type($main-font, 11px, 15px, 0, #fff);
+									padding: 20px 8px;
+								}
+								&:hover {
+									border-top: 4px solid #ff6b38; 
+									color: #ff6b38;
+									background-color: #293855;
+								}
+								span {top: 6px;}
+
+							}
+							.dropdown-menu {
+								margin: 0; padding: 0;
+								width: 100%;
+								border: 2px solid #2a3b59;
+								@include box-shadow(none);
+								@include border-radius(0);
+								li {
+									border-bottom: 1px solid #ededed;
+									a {
+										padding: 18px 20px;
+										border: none; background: #fff;
+										text-transform: none; @include font-type($main-font, 14px, 16px, 0.4px, #5f636c);
+										&:hover {background:#f8f8f8;}
+									}
+								}
+							}
+						}
+						.open {
+							a {background-color: #293855; border-top: 4px solid #ff6b38;}
+						}
+					}
+				}
+			}
+
+		}//bg-blue_dark
+		.bg-header-blue_light {
+			.header_info {
+				position: relative;
+				@include respond-to (lg) {padding: 15px 0;}
+				@include respond-to (sm) { text-align: center;}
+				li { @include font-type($main-font, 13px, 17px, 0, #c3cdd3);
+					vertical-align: middle;
+					@include respond-to (xs) {
+						display: block; padding: 5px 0; text-align: center;
+					}
+					strong {
+						@include font-type($second-font, 16px, 24px, 0, #c3cdd3);
+						padding: 0;
+					}
+					i {top: 4px; left: 3px; margin-right: 7px;}
+					.icons-head-phone { margin: 10px 7px 0 0;
+						@include respond-to (xs) {display: none;}
+					}
+					.icons-head-adres {top: 0;}
+					a {
+						@include font-type($second-font, 13px, 17px, 0.4px, #c3cdd3);
+						padding: 15px 0; display: inline-block;
+						@include respond-to (xs) {
+							display: block; padding: 10px 0; width: 75%; margin: 0px auto;
+						}
+						&:hover {
+							text-decoration: none; color: #ff6c39;
+						}
+					}
+				}
+				.header_info-adres {
+					position: absolute; right: 60px;
+					@include respond-to (lg) {position: static;}
+					i { top: 14px;}
+
+				}
+
+			}
+			.back_call {
+				float: right; padding: 10px 0;
+				@include respond-to (lg) {padding: 30px 0 0 0;}
+				@include respond-to (sm) {float: none; padding: 0 0 15px 0; text-align: center;}
+				// @include respond-to (xs) { text-align: center; float: none;}
+				a {
+					padding: 9px 18px;
+				    @include border-radius(6px);
+				    font-size: 11px;
+				}
+			}
+		}//bg-blue_light
+	}//HEADER
+	
+		//  SLIDER REVOLUTION FULLSCREEN SASS 
+		.boxedcontainer {max-width: 1170px; margin: auto;
+			.slider_banner_content {padding: 55px 0 50px 0; margin-left: 70px;
+
+				img{width: 500px; height: auto;}
+
+				em { @include font-type($second-font, 20px, 24px, 0, #ff6c3a);
+					margin: 0 0 15px 0; display: block;
+					strong{@include font-type($second-font, 34px, 40px, 0.4px, #ff6c3a);}
+				}
+
+				h3 {@include font-type($title-font, 36px, 48px, 0.8px, #232c3b);}
+				
+				span {@include font-type($second-font, 14px, 16px, 0.4px, #232c3b);
+					i { top: -3px; margin: 0 5px 0 0; }
+				}
+				
+				a {padding: 12px 16px; color: #fff; @include border-radius(6px);}
+			}
+		}
+		.service {
+			
+			margin-bottom: 20px;
+			@include respond-to (lg) {margin-bottom: 100px;}
+			@include respond-to(md){text-align: center; margin-bottom: 100px;};	
+			@include respond-to(sm){text-align: center; margin-bottom: 100px;};
+			@include respond-to(xs){text-align: center; margin-bottom: 100px;};
+			@include respond-to (md) {text-align: center; margin-bottom: 46px;} 
+			h2 { 
+				margin: 0 0 26px 0;
+				@include respond-to (xs) {margin: 0 0 10px 0;}
+			}
+			p {@include font-type($main-font, 14px, 24px, 0px, #5f636b); margin-bottom: 33px;}
+			
+			.nav-tabs {
+				padding-left: 6px; border: none;
+				@include respond-to (lg) {padding: 0;}
+				@include respond-to (sm) {
+					
+				}
+				@include respond-to (xs) {text-align: center;}
+				
+				li {
+					padding: 0; display: inline-block; float: none;
+					@include respond-to (sm) {margin: 5px auto; display: block; width: 80%;}
+					
+					a {
+						&:hover, &:active, &:focus, &:active:focus {
+							color: #fff;
+							background-color: #ff6c3a;
+							
+						}
+						@include border-radius(0); padding: 13px 24px;
+						border: none; margin-right: 0;
+						@include respond-to (lg) {padding: 13px 18px;}
+						@include respond-to (md) {padding: 13px 24px;}
+					}
+				}
+				.active {
+					a {
+						&:active, &:focus, &:active:focus, &:hover {
+							color: #fff; border: none;
+							background-color: #ff6c3a;
+						}
+						color: #fff; background-color: #ff6c3a;
+
+						
+						@include box-shadow(none);
+					}
+				}
+			}
+		}
+
+		.work_with {background-color: #f9f9f9; padding: 17px 26px; margin: 17px 0 0 0;
+			@include respond-to(md){text-align: center;};	
+			@include respond-to(sm){text-align: center;};
+			@include respond-to(xs){text-align: center;};
+			
+			h3 {
+				margin-bottom: 27px;
+				@include respond-to (xs) {margin-bottom: 15px;}
+			}
+			ul {display: inline-block; width: 200px;
+				@include respond-to (lg) {padding-left: 0;}
+
+				li {display: inline-block; padding: 7px 0px; text-align: left;
+					span {display: inline-block; width: 140px;}
+					@include font-type($main-font, 13px, 13px, 0, #5f636b);
+					i {top: -5px; margin-right: 14px;}
+				}
+			}
+		}
+		
+		
+		.bg-price {
+			padding: 69px 0 40px 0;
+			@include respond-to(sm){padding: 69px 0 10px 0;};
+			
+			.price-item {
+				text-align: center;
+				padding: 0 0 30px 0; margin: 0 0 50px 0;
+				border: 1px solid #f5f5f5;
+				i {top: -40px; position: absolute; left: 50%; margin-left: -44px;}
+				div {
+					background-color: #2a3b59;
+					padding-top: 60px;
+					height: 189px;
+					display: block;
+					vertical-align: middle;
+					@include respond-to (sm) {display: block; padding: 60px 0 30px 0; height: auto;}
+					h3 {
+						@include font-type($title-font, 22px, 28px, 0, #fff);
+						text-align: center;
+						text-transform: uppercase;
+						@include respond-to (md) {font-size: 18px;}
+					}
+					h4 {
+						@include font-type($title-font, 22px, 28px, 0.8px, #fff);
+						text-align: center; padding: 0 20px;
+						text-transform: uppercase;
+						&:after {
+							content: "";
+							display: block;
+							width: 42px;
+							border-bottom: 3px solid #3c5177;
+							margin: 10px auto;
+						}
+						@include respond-to (md) {font-size: 18px;}
+					}
+				}
+				
+				ul {background-color: #faf9f9; margin-bottom: 30px;
+					.dark_li {background-color: #f0f0f0;}
+					li {
+						@include font-type($main-font, 14px, 17px, 0.3px, #5f636b);
+						text-align: left;
+						padding: 14px 0 14px 24px;
+						em {
+							display: inline-block; width: 234px;
+							@include respond-to (md) {width: 210px;}
+							@include respond-to (sm) {width: 234px;}
+						}
+						span {@include font-type($title_bold-font, 18px, 27px, 0.8px, #ff6c3a); margin-right: 6px;}
+						@include respond-to (lg) {text-align: center;}
+						@include respond-to (md) {padding: 14px 0;}
+					}
+				}
+				a {padding: 10px 16px; @include border-radius(6px);}
+			}
+		}//bg-price
+		.bg-full_info {
+			.content_info {
+				span {
+					@include font-type($title-font, 18px, 27px, 1px, #fff);
+					display: block; margin-top: 33px;
+				}
+				em {
+					@include font-type($main-font, 12px, 18px, 1px, #a0a7b3);
+					display: block; margin: 4px 0 37px 0;
+					@include respond-to (lg) {margin: 4px 0 0 0;}
+				}
+			}
+			.documentation {
+				padding: 35px 0 0 60px;
+				@include respond-to (lg) {padding: 0 0 0 60px;}
+				@include respond-to (md) {padding: 0 0 0 30px;}
+				@include respond-to (sm) {
+					padding: 0;
+					text-align: center;
+				    display: block;
+				    width: 440px;
+				    margin: 0 auto;
+				}
+				@include respond-to (xs) {width: 200px;}
+				
+				.first {
+					margin-right: 38px; padding: 13px 19px;
+					@include respond-to (lg) {margin: 15px 0;}
+				}
+				a {
+					padding: 13px 30px; @include border-radius(6px);
+					@include respond-to (lg) {margin-bottom: 15px;}
+					@include respond-to (sm) {margin: 15px 0 15px 15px;}
+					@include respond-to (xs) {margin: 0 0 15px 0;}
+				}
+			}
+		}//bg-full_info
+		.bg-benefit {
+			padding: 71px 0 29px 0;
+			position: relative;
+			text-align: center;
+			 @include respond-to (sm) {padding: 30px 0;}
+			.icons-delimiter {
+				position: absolute; bottom: 68px; left: 49.2%;
+				@include respond-to (lg) {bottom: 70px;}
+				@include respond-to (md) {bottom: 48px;}
+				@include respond-to (sm) {display: none;}
+			}
+			h2 {
+				text-align: center;
+				margin-bottom: 16px;
+				@include respond-to (sm) {font-size: 36px; line-height: 40px;}
+				@include respond-to (xs) {font-size: 24px; line-height: 36px;}
+			}
+ 
+			span {
+				@include font-type($main-font, 14px, 21px, 0.2px, #5f636b);
+				text-align: center;
+			    display: block;
+			    width: 50%;
+			    margin: 0 auto 88px auto;
+			    @include respond-to (md) {width: 80%;}
+			    @include respond-to (sm) {width: 100%; margin: 0 auto 40px auto;}
+			}
+			.benefit-item-left {
+				position: relative;
+				text-align: right;
+    			padding: 0 80px 4px 20px;
+    			margin: 0 80px 71px 0;
+    			background: #f9f9f9;
+    			@include box-shadow(1px 1px 1px #ebebeb);
+    			@include respond-to(lg){padding: 0 80px 4px 0;};
+    			@include respond-to (md) {margin: 0 80px 30px 0; background: none; @include box-shadow(none);}
+    			@include respond-to (sm) {
+    				text-align: left; padding: 0 0 4px 70px;
+    				margin: 0 0 30px 30px; background: #f9f9f9; @include box-shadow(1px 1px 1px #ebebeb);
+    			}
+    			@include respond-to (xs) {background: none; @include box-shadow(none);}
+
+				figure {
+					img {
+						position: absolute; right: -62px; width: 130px;
+						@include respond-to (sm) {left: -30px; width: 80px; top: 0px;}
+					}
+				} 
+				h3 {
+					@include font-type($second-font, 18px, 27px, 0.8px, #232c3b);
+					text-transform: none; padding-top: 20px;
+					margin-bottom: 16px;
+					@include respond-to (md) {padding-top: 0;}
+					@include respond-to (sm) {margin: 8px 0;}
+				}
+				p {
+					@include font-type($main-font, 13px, 21px, 0, #5f636b);
+					@include respond-to(lg){margin: 0;}
+					
+				}
+			}
+			.benefit-item {
+				position: relative;
+				text-align: left;
+    			padding: 0 20px 4px 80px;
+    			margin: 0 0 71px 80px;
+    			background: #f9f9f9;
+    			@include box-shadow(1px 1px 1px #ebebeb);
+    			@include respond-to(lg){padding: 0 0 4px 80px;};
+    			@include respond-to (md) {background: none; @include box-shadow(none);margin: 0 0 30px 80px; }
+    			@include respond-to (sm) {padding: 0 0 4px 70px; margin: 0 0 30px 30px; background: #f9f9f9;}
+    			@include respond-to (xs) {background: none;}
+
+
+				figure {
+					img {
+						position: absolute; left: -62px; width: 130px;
+						@include respond-to (sm) {width: 80px; top: 0px; left: -30px;}
+					}
+				}
+				h3 {
+					@include font-type($second-font, 18px, 27px, 0.8px, #232c3b);
+					text-transform: none; padding-top: 20px;
+					margin-bottom: 16px;
+					@include respond-to (md) {padding-top: 0;}
+					@include respond-to (sm) {margin: 8px 0;}
+				}
+				p {
+					@include font-type($main-font, 13px, 21px, 0, #5f636b);
+					@include respond-to(lg){margin: 0;}
+				}
+				
+			}
+		}
+	
+	.footer {
+		.bg-blue_light {
+			padding-top: 46px;
+			.footer-menu {
+				padding-bottom: 24px;
+				h3 {@include font-type($title-font, 24px, 32px, 0.8px, #fff);
+					margin-bottom: 30px;}
+				ul {
+					li {
+						margin-bottom: 3px; width: 91%;
+						border-bottom: 1px solid #1e2a44;
+						&:last-child{
+							border-bottom: none;
+						}
+						
+						@include respond-to (sm) {border-bottom: none; float: left; margin: 0 0 15px 0; width: auto;}
+						a {
+							@include font-type($main-font, 12px, 18px, 0, #a1b1bc); text-transform: uppercase; text-decoration: none;
+							padding: 5px 10px 13px 10px; display: block;
+							@include respond-to (sm) {padding: 0 0 0 25px;}
+							&:before {
+								display: inline-block;
+								content: "";
+								width: 5px;
+								border-bottom: 5px solid #f15323;
+								position: relative; top: -3px; left: -10px;
+							}
+
+							&:hover, &:focus, &:active { 
+								color:#f15323;		
+								&:before { border-bottom: 5px solid #ffffff;}
+							}	
+						}
+					}
+					.active {
+						a {
+							color: #f15323;
+							&:before { border-bottom: 5px solid #fff;}
+						}
+					}
+				}
+			}
+			.footer_contact {
+				h3 {@include font-type($title-font, 24px, 32px, 0.8px, #fff);
+					margin-bottom: 36px;
+				}
+				p {@include font-type($main-font, 12px, 18px, 0.8px, #aab9c3);
+					margin-bottom: 26px;
+				}
+				em {
+					@include font-type($main-font, 14px, 21px, 0, #f15323);
+					display: block; margin-bottom: 15px;
+					i { margin-right: 15px; top: 3px;}
+				}
+				span {
+					display: block; margin-bottom: 13px;
+					i {  margin-right: 15px; top: 3px;}
+					a {@include font-type($main-font, 14px, 21px, 0, #f15323);}
+				}
+				strong {@include font-type($main-font, 14px, 21px, 0, #f15323);
+					display: block;  margin-bottom: 27px;
+					i {  margin-right: 15px; top: 6px;}
+				}
+			}
+			.map {}
+		}//bg-blue_light
+		.bg-blue_dark {
+			padding: 23px 0 13px;
+			@include respond-to (xs) {text-align: center;}
+			span {@include font-type($main-font, 12px, 18px, 0, #a1b1bc);
+				@include respond-to (sm) { display:block;}
+				em {@include font-type($main-font, 12px, 18px, 0, #a1b1bc);
+					padding: 0 10px; margin: 0 5px; border-left: 1px solid #a1b1bc; border-right: 1px solid #a1b1bc;
+				}
+			}
+			
+			
+			a { float: right; margin-left: 10px;
+				@include respond-to (xs) {float: none; margin: 15px 10px; display: inline-block;}
+				i {}
+			}
+			
+		}//bg-blue_dark
+	}
+
+	//Animation banner
+	.section {
+		.slider_imaging {
+			padding: 30px 0;
+			@include respond-to (md) {display:none; padding: 0;}
+			img {
+				opacity: 0;
+				@include keyframes (scale) {
+					0% {
+						// @include transform(skewX(30deg));
+						@include transform(skewX(15deg) translateX(-350px));
+						@include opacity(0);
+					}
+					100% {
+						@include transform(none);
+						@include opacity(1);
+					}
+				}
+				@include animation(scale cubic-bezier(0.645, 0.045, 0.355, 1) 2.0s 0.1s forwards);
+			}
+		}
+		.slider_banner_content {
+			padding: 55px 0 50px 0; margin-left: 70px;
+			@include respond-to (lg) {margin: 0;}
+			@include respond-to (md) {padding: 50px 0 50px 0; text-align: center;}
+			span { @include font-type($second-font, 20px, 24px, 0, #ff6c3a);
+				margin: 0 0 15px 0; display: block; opacity: 0;
+				
+				@include keyframes (span_text) {
+					0% {
+						@include transform(translateY(-100px));
+						@include opacity(0);
+					}
+					100% {
+						@include transform(none);
+						@include opacity(1);
+					}
+				}
+				@include animation(span_text  ease-out 0.5s 3.4s forwards);
+
+				strong{@include font-type($second-font, 34px, 40px, 0.4px, #ff6c3a);}
+			}
+			h3 {@include font-type($title-font, 40px, 48px, 0.8px, #232c3b); opacity: 0;
+				@include respond-to (xs) {@include font-type($title-font, 24px, 32px, 00px, #232c3b);}
+				@include keyframes (zagalovok) {
+					0% {
+						@include transform(translateX(100px));
+						@include opacity(0);
+					}
+					100% {
+						@include transform(none);
+						@include opacity(1);
+					}
+				}
+				@include animation(zagalovok  ease-out 1s 0.8s forwards);
+			}
+			ul {
+				padding: 15px 0;
+				
+				.first-li, .second-li, .third-li, .forth-li { @include font-type($second-font, 14px, 16px, 0.4px, #232c3b);
+					margin: 0 0 10px 0; opacity :0;
+					@include respond-to(xs) {@include font-type($second-font, 12px, 15px, 0.4px, #232c3b);}
+
+					@include keyframes (elem_li) {
+						0% {
+							@include transform(translateX(80px));
+							@include opacity(0.1);
+						}
+						100% {
+							@include transform(none);
+							@include opacity(1);
+						}
+					}
+				}
+				.first-li {@include animation(elem_li 1s 1.6s forwards cubic-bezier(0.68, -0.55, 0.265, 1.55) normal);}
+				.second-li {@include animation(elem_li 1s 1.8s forwards cubic-bezier(0.68, -0.55, 0.265, 1.55) normal);}
+				.third-li {@include animation(elem_li 1s 2.0s forwards cubic-bezier(0.68, -0.55, 0.265, 1.55) normal);}
+				.forth-li {@include animation(elem_li 1s 2.2s forwards cubic-bezier(0.68, -0.55, 0.265, 1.55) normal);}
+				li{
+					i { top: -3px; margin: 0 5px 0 0; opacity:0; 
+						@include keyframes (elem_i) {
+							0% {
+								@include transform(rotate(-30deg) scale(2));
+								@include opacity(0.1);
+							}
+							100% {
+								@include transform(none);
+								@include opacity(1);
+							}
+						}
+						@include animation(elem_i 0.8s 2.6s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86) normal);
+					}
+				}
+			}
+			a {padding: 12px 16px; @include border-radius(6px); opacity: 0;
+				@include keyframes (link) {
+					0% {
+						@include transform(translateY(40px));
+						@include opacity(0);
+					}
+					100% {
+						@include transform(none);
+						@include opacity(1);
+					}
+				}
+				@include animation(link 0.5s 3.4s forwards ease-out normal);
+			}
+		}
+	}
+
+	// Popups
+	.message_to_pop_up, .help_to_pop_up  { display:none; width: 460px;
+ 		
+ 		background: #fff;
+		@include border-radius(6px);
+ 		.message-popup_header, .help-popup_header{
+ 			span {float: right; margin: 4px 16px 0 0; cursor: pointer;}
+ 		}
+ 		.message-popup_body, .help-popup_body{
+ 			padding: 20px 65px 50px 65px;
+ 			h2 {@include font-type($title-font, 24px, 30px, 0.4px, #232c3b);text-align: center;
+				margin: 0 0 20px 0;
+ 			}
+ 			p {@include font-type($main-font, 14px, 21px, 0.4px, #232c3b); text-align: center;}
+ 			
+			.form {
+				.form-group {
+					input {@include font-type($main-font, 13px, 25px, 0.8px, #d7d7d7); 
+						height: 40px; margin: 0 0 20px 0;
+						@include border-radius(6px);
+					}
+					label {margin: 0 0 10px 5px;}
+
+					textarea {resize: none; height: 150px; margin: 0 5px; font-size: 13px;
+						@include border-radius(2px);
+		 			}
+				}
+			}
+			button {
+				width: 100%; padding: 10px 0; margin: 10px 0;
+				@include border-radius(6px);
+			}
+			a {  padding: 10px 0; margin: 10px 30px; display: block;
+				@include border-radius(6px);
+			}
+		}
+	}
+	.help_to_pop_up {
+		width: 520px;
+	}
+.button_up {}
+.popup {}
+
+
+
+body {
+
+  // // Для телефонов (вертикальных)
+  // @include respond-to(mobile) { background: red; };
+  
+  // // Для телефонов (больших?? черная дыра.)
+  // @include respond-to(handhelds) { background: black; };
+  
+  // // Для телефонов(горизонтальных)
+  // @include respond-to(wide-handhelds) { background: blue; };
+  
+  // // Для планшетов (вертикальных)
+  // @include respond-to(tablets) { background: green; };
+  
+  // // Для планшетов (горизонтальных)
+  // @include respond-to(wide-tablets) { background: orange; };
+  
+  // // Для больших мониторов
+  // @include respond-to(tv) {background: none;};
+}

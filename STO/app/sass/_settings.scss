@@ -1,0 +1,801 @@
+
+		  		
+
+// =======================================================================// 
+// Подключаем компасс с базовыми настройками                              //        
+// =======================================================================// 
+
+@import "compass";
+@import "compass/reset";
+
+$experimental-support-for-mozilla: true;
+$experimental-support-for-webkit: true;
+$support-for-original-webkit-gradients: true;
+$experimental-support-for-opera: true;
+$experimental-support-for-microsoft: true;
+$experimental-support-for-khtml: true;
+$experimental-support-for-svg: true;
+
+
+
+// =======================================================================// 
+// Подключаем все шрифты, которые используем на проекте                   //        
+// =======================================================================// 
+
+/* Импортируем гугл-шрифты */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,cyrillic);
+
+
+
+/* Импортируем локальные шрифты */
+@mixin font-face($font-family, $file-path) {
+  
+	// Мы используем http://everythingfonts.com/font-face конвертер
+  	@font-face {
+		font-family: $font-family;
+		src: url('../fonts/' + $file-path + '/' + $file-path + '.eot');
+		src: url('../fonts/' + $file-path + '/' + $file-path + '.eot') format('embedded-opentype'),
+			 url('../fonts/' + $file-path + '/' + $file-path + '.woff2') format('woff2'),
+			 url('../fonts/' + $file-path + '/' + $file-path + '.woff') format('woff'),
+			 url('../fonts/' + $file-path + '/' + $file-path + '.ttf') format('truetype'),
+			 url('../fonts/' + $file-path + '/' + $file-path + '.svg#TTDrugsThin') format('svg');      
+		   
+		font-weight: normal;
+		font-style: normal;
+	}
+  
+	// Chrome для Windows фикс: http://www.adtrak.co.uk/blog/font-face-chrome-rendering/
+	@media screen and (-webkit-min-device-pixel-ratio: 0) {
+		@font-face {
+			font-family: $font-family;
+			src: url('../fonts/' + $file-path + '/' + $file-path + '.svg##{$font-family}') format('svg');
+		}
+	}
+}
+
+// Мы используем http://everythingfonts.com/font-face конвертер
+// Подключаем локальный шрифты из Миксина
+@include font-face (OpenSans, 'OpenSans');
+@include font-face (OpenSans-Semibold, 'OpenSans-Semibold');
+@include font-face (opensans-light, 'opensans-light');
+@include font-face (opensans-extrabold, 'opensans-extrabold');
+@include font-face (Micra-Normal, 'Micra-Normal');
+@include font-face (Micra-Bold, 'Micra-Bold');
+
+/* Определяем шрифты */
+$main-font: 'OpenSans', sans-serif;
+$second-font: 'OpenSans-Semibold', sans-serif;
+$extrabold-font: 'opensans-extrabold', sans-serif;
+$light-font: 'opensans-light', sans-serif;
+$title-font: 'Micra-Normal', sans-serif;
+$title_bold-font: 'Micra-Bold', sans-serif;
+
+/* Шрифтовый Миксин */
+@mixin font-type($font-family, $font-size, $line-height, $letter-spacing, $color) {
+	font-family: $font-family;
+	font-size: $font-size;
+	line-height: $line-height;
+	letter-spacing: $letter-spacing;
+	color: $color;
+}
+
+
+
+// =======================================================================// 
+// Настраиваем все иконки на проекте используя спрайты                    //        
+// =======================================================================// 
+
+/* Включаем спрайты */
+$mysprite-layout:smart;
+@import "icons/*.png";
+@include all-icons-sprites;
+
+/* Подключаем Иконки */
+
+$icons: ('delimiter','facebook','footer-phone','gear',
+	'head-adres','head-arrow','head-clock','head-phone','footer-letter',
+	'tick','vk','list-check', 'contact-velcom', 'contact-mts', 'contact-phone',
+	'service-kuzov', 'service-diagnostic', 'service-kpp', 'service-electro', 
+	'service-zamena', 'service-remont','service-toplivo','service-hod', 
+	'service-dvigatel', 'service-oborudovanie', 'service-uchod', 'service-uslugi',
+	'service-winter', 'service-summer', 'service-tire-new', 'service-tire-old',
+	'service-auto-masla', 'service-trans-masla', 'service-antifriz',
+	'service-maslo', 'service-zhidkost', 'service-gruz-masla', 'service-akpp-masla',
+	'service-tormoz-zhidkost', 'search', 'adv-prev', 'adv-next', 'next', 'download');
+
+@each $icons in $icons {
+	.icons-#{$icons} {
+		display: inline-block;
+		position: relative;
+		width: icons-sprite-width(#{$icons});
+		height: icons-sprite-height(#{$icons});
+		
+		vertical-align: top;
+		display: -moz-inline-stack;
+		zoom: 1;
+        *display: inline;
+	}
+}
+
+// =======================================================================// 
+//                                  Адаптация                             //        
+// =======================================================================// 
+@mixin respond-to($media) {
+  @if $media == mobile {
+    @media only screen and (max-width: 320px) { @content; }
+  }
+  @else if $media == xs {
+    @media only screen and (max-width: 481px) { @content; }
+  }
+  @else if $media == sm {
+    @media only screen and (max-width: 767px) { @content; }
+  }
+  @else if $media == md {
+   @media only screen and(max-width: 991px) { @content; }
+  }
+  @else if $media == lg {
+   @media only screen and (max-width: 1199px) { @content; }
+  }
+  @else if $media == desktop {
+    @media only screen and (max-width: 1300px) { @content; }
+  }
+}
+
+// =======================================================================// 
+// Общесистемные классы и настройка вертикального ритма                   //        
+// =======================================================================// 
+
+html {
+	/* height hack */
+	min-height:100%; 
+	height:auto !important; 
+	height:100%;
+}
+
+body {
+	/* height hack */
+	min-height:100%; 
+	height:auto !important; 
+	height:100%;
+	
+	/* устанавливаем оптимальный вертикальный ритм */
+	@include font-type($main-font, 14px, 20px, 0px, #111111);
+	@include font-type($second-font, 14px, 20px, 0px, #111111);
+
+	/* сглаживание шрифтов в вебките */
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
+button, select {-webkit-appearance: none;}
+
+
+/* Общие стили для картинок */
+img {width: 100%; height: auto;}
+
+/* Стили картинок
+----------------
+.img-responsive -
+.img-rounded -
+.img-circle -
+.img-thumbnail -
+*/
+
+
+/* Дополнительные системные классы */
+.np {padding: 0;} /* no padding */
+.np-l {padding-left:0;} /* no padding left */
+.np-r {padding-right:0;} /* no padding right */
+.dp {padding:0 30px;} /* double padding */
+.nm {margin:0;} /* no margin */
+.nm-b {margin-bottom:0;} /* no margin bottom */
+
+/* Очищение обтекания */
+.clear {clear: both;} 
+
+/* Кроссбраузерный inline-block */
+.inline-block {
+	display:-moz-inline-stack; /*Firefox 2*/
+	display:inline-block; /*Хорошие браузеры*/
+	_overflow:hidden; /*IE6, IE7*/
+	*zoom:1; /*включаем hasLayout для IE6, IE7*/
+	*display:inline; /*при hasLayout true display:inline в IE6, IE7 ведёт себя как display:inline-block*/
+}
+
+/* Общий сброс базовых настроек */
+.navbar-default .navbar-toggle {border:none;}
+
+/* Сообщение об устаревшем броузере */
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+
+  
+
+// =======================================================================//
+// Бэкграунды
+// =======================================================================//
+	.bg-header_blue_dark {background-color: #1d2b43;}
+	.bg-header-blue_light {background-color: #2a3b59;}
+	.bg-full_info {background: url("../img/shina-patern.png");}
+	.bg-blue_light {background-color: #162035;}
+	.bg-blue_dark {background-color: #0b172a;}
+	.bg-gray_light {background-color: #f5f5f5;}
+
+// =======================================================================// 
+// КНОПКИ                                                                 //        
+// =======================================================================// 
+
+.btn {	
+	padding: 0;
+	text-decoration:none;
+	text-transform: uppercase;
+	border: 0;
+	@include border-radius(0);
+	  
+
+	&:hover, 
+	&:active, 
+	&:focus, 
+	&:active:focus {
+		text-decoration: none;
+		outline: none;
+	}
+
+	&:active {
+		@include box-shadow(inset 0px 3px 5px rgba(0, 0, 0, 0.125));
+	}
+		
+}
+
+
+.btn-link {
+	@include font-type($main-font, 14px, 34px, 0px, #dc6945); font-weight: bold;
+	text-transform: none;
+	text-decoration: underline;
+
+	&:hover, 
+	&:active, 
+	&:focus, 
+	&:active:focus {
+		text-decoration: none;
+		color: #f15323;
+		@include box-shadow(none);
+	}  
+}
+
+
+.btn-primary {
+	@include font-type($second-font, 12px, auto, 0, #fff);
+	@include box-shadow(1px 1px 2px #e2e2e2);
+	text-align: center;
+	background: #ff6c3a url("../img/pixel.png") repeat-x left bottom;
+	color: #fff;
+	border: 1px solid #ff6c3a;
+	text-transform: uppercase;
+	display: inline-block;
+
+	&:hover {
+		background: #ee4f19 url("../img/pixel.png") repeat-x left bottom;
+		color: #fff;
+		border: 1px solid #ca3a08;
+	}
+	&:active, 
+	&:focus, 
+	&:active:focus {
+		background: #ee4f19 url("../img/pixel.png") repeat-x left bottom;
+		color: #fff;
+		border: 1px solid #ca3a08;
+		@include box-shadow(none);
+	}
+}
+.btn-shadow {
+	@include box-shadow(none);
+}
+.btn-next {
+	@include font-type($second-font, 16px, 24px, 0px, #fff);
+	background-color: #2a3b59; padding: 12px 25px 13px 25px; margin: 0 -1px; text-align: center; text-transform: none;
+
+	@include respond-to(lg){padding: 12px 8px 13px 8px;};
+	@include respond-to(md){padding: 12px 19px 13px 19px;};
+	
+	&:hover, 
+	&:active, 
+	&:focus, 
+	&:active:focus {text-decoration: none; color: #fff; background-color: #ff6c3a;}
+	
+}
+.btn-next.active{
+	 background-color: #ff6c3a;
+	 @include box-shadow(none);
+}
+
+// =======================================================================// 
+// ===========================ACCARDION================================== //
+// =======================================================================//
+.panel-group{
+
+	.panel-default {border: 0; margin-bottom: 25px;
+
+		.panel-heading { @include border-radius(5px); padding: 0;
+			
+			a {@include font-type($second-font, 16px, 24px, 0px, #fff); position: relative;
+				
+			   display: inline-block; padding: 20px 90px 20px 30px; width: 100%; background: #232c3b; 
+
+				&:focus, &:hover {text-decoration: none;}
+
+				span {background: #fff; display: block; width: 26px; height: 26px; @include border-radius(15px); float: right; position: absolute; top: 50%; right: 30px; margin-top: -13px; 
+
+					&:after {content: (""); display: block; border-bottom: 2px solid #ff6c3a; width: 8px; position: absolute; left: 50%; top: 50%; margin-top: -1px; margin-left: -4px;};
+					
+				}
+			}
+			
+			.collapsed {@include font-type($second-font, 16px, 24px, 0px, #232c3b); background: #f9f9f9; 
+
+				span {background: #ff6c3a;
+					
+					&:after {content: (""); display: block; border-bottom: 2px solid #fff; width: 8px; position: absolute; left: 50%; top: 50%; margin-top: -1px; margin-left: -4px;};
+					&:before {content: (""); display: block; border-left: 2px solid #fff; height: 8px; position: absolute; left: 50%; top: 50%; margin-top: -4px; margin-left: -1px; };
+				}
+			}	
+		}
+		.panel-body {background: #f9f9f9; border-top: 0px!important; padding:30px 60px 30px 30px; 
+			
+			p {margin-bottom: 0px;}
+		}
+	}
+}
+
+
+
+// =======================================================================// 
+// Настройка Типографики                                                  //        
+// =======================================================================// 
+
+/* В дополнение от Bootstrap, <p> (параграфы) получают нижний отступ в половину калькулируемой высоты строки (изначально 10px) */
+p {@include font-type($main-font, 13px, 20px, 0.8px, #000);
+	margin-bottom: 20px; /* для правильного вертикального ритма */
+	  
+	
+}
+	/* <p> в виде заголовка */
+	.lead {@include font-type($light-font, 18px, 28px, 0px, #6a7483); max-width: 400px; display: inline-block;
+		@include respond-to(sm) {
+			@include font-type($light-font, 14px, 22px, 0px, #6a7483);
+		}
+	}
+
+  
+
+/* Стили для параграфов
+----------------
+<p> с измененным цвета шрифта
+.text-muted {}
+.text-primary {}
+.text-success {}
+.text-info {}
+.text-warning {}
+.text-danger {}
+
+<p> с фоновым цветом в режиме BLOCK
+.bg-primary {}
+.bg-success {}
+.bg-info {}
+.bg-warning {}
+.bg-danger {}
+
+Используйте системные классы для выравнивания текста в параграфах
+.text-left {}
+.text-center {}
+.text-right {}
+.text-justify {}
+*/
+
+
+small, .small {}
+strong, .strong {}
+em, .em {}	
+
+
+a {
+	&:hover, &:focus, &:active, &:active:focus {outline: none;}
+	text-decoration: none;
+	
+	&:hover {}
+	&:active {}
+	
+   @include transition(0.2s, ease-out); 
+
+}
+
+
+h1, .h1, 
+h2, .h2, 
+h3, .h3, 
+h4, .h4,
+h5, .h5,
+h6, .h6 {text-transform: uppercase;}
+
+h1, .h1 {@include font-type($title-font, 40px, 60px, 0, #232c3b);
+	@include respond-to(xs){@include font-type($title-font, 20px, 24px, 0, #232c3b);};
+}
+
+h2, .h2 {@include font-type($title-font, 40px, 60px, 0, #232c3b);
+			@include respond-to (xs){
+				@include font-type($title-font, 20px, 24px, 0, #232c3b);
+			}
+		}	
+
+h3, .h3 {@include font-type($title-font, 24px, 34px, 0px, #232c3b);
+			@include respond-to(xs){
+				@include font-type($title-font, 20px, 24px, 0px, #232c3b);
+			}
+		}
+h4, .h4 {text-transform: none;}
+h5, .h5 {}
+h6, .h6 {}
+
+
+/* address */
+address, .address {
+
+	strong {}
+	a {}
+}
+
+/* Для расширения текста при длительном наведении на аббревиатуру, включите атрибут title="" внутри <abbr>.
+   Добавьте .initialism к аббревиатуре для легкого уменьшения размера шрифта. */
+abbr, .abbr {
+	
+}
+
+/* Добавьте .blockquote-reverse для выравнивания цитаты справа. */
+blockquote {
+
+	/* Всегда вставляйте в цитату <p> */
+	p {}
+
+	footer {}
+	
+	/* <cite title="Source Title">Source Title</cite> */
+	cite {}
+}
+
+
+/* Для удаления отступов из списка используем .list-unstyled
+   Для выравнивания в строчку используем .list-inline */
+
+// =======================================================================// 
+// Список и банерная пагинация                                            //        
+// =======================================================================// 
+.lists {
+	margin: 30px 0 0 0;
+	@include respond-to (sm) {margin: 20px 0; text-align: center;}
+	li {
+		margin-bottom: 21px;
+		@include respond-to (sm) {
+		display: inline;
+		margin-right: 15px;
+		}
+		@include respond-to (xs) {
+			display: block;
+		}
+		&:before {
+			content: "";
+			background-color: #ff6c3a;
+			width: 7px; height: 7px;
+			display: inline-block;
+			margin-right: 14px;
+			position: relative;
+			@include border-radius(4px);
+		}
+	}
+}
+.main_pagination {
+	padding: 0 0 31px 0;
+    ul {
+    	margin: 20px 0; padding: 15px 0;
+
+        li { @extend .inline-block;
+        	vertical-align: middle;
+
+            a {
+                @include font-type($main-font, 12px, 24px, 0, #2f3f5c);
+                padding: 2px 10px; margin: 0 -3px;
+                @include border-radius(0); border: 1px solid #ddd;
+
+                &:hover, &:focus {
+					color: #2f3f5c;
+					background: #f0f0f0;
+	            }
+            }
+
+
+            &.disabled {a:hover {i {opacity: 0.6;}}}
+        }
+        li.previous {
+	        a { 
+	            line-height: 24px; 
+	            padding: 2px 5px 2px 0; margin: 0 1px 0 0;
+	            border: none;
+	            
+	            i {margin-right: 10px; top: 3px;
+	            }
+	            &:hover, &:focus {
+              		background: none;
+              		.icons-adv-prev {@extend .icons-adv-prev:hover;}
+              	}
+	        }
+        } 
+        li.next {
+	        a { 
+	            line-height: 24px; 
+	            padding: 2px 0 2px 5px; margin: 0 0 0 1px;
+	            border: none;
+	            i {margin-left: 10px; top:3px;
+	            }
+	            &:hover, &:focus {
+              		background: none;
+              		.icons-adv-next {@extend .icons-adv-next:hover;}
+              	}
+	        }
+        } 
+    }
+
+	ul.pagination{
+		li.active {
+	        a {
+	            color: #fff; text-decoration: none;
+	            background:#1d2b43; border: 1px solid #1d2b43;
+	        }
+	    }
+	}
+}
+
+.banner_pagination {
+	ul {
+		margin-bottom: 70px;
+		text-align: center;
+		li {
+			a {
+				display: inline-block;
+				margin: 0 4px;
+				padding: 0;
+				width: 12px; height: 12px;
+				background-color: #fff;
+				border: 2px solid #d8d8d8;
+				@include border-radius(6px);
+				&:hover, &:active, &:focus, &:active:focus {
+					border: 2px solid #ff6c3a;
+				}
+			}
+			
+			&:before {display: none;}
+		}
+	}
+}
+
+ol {
+	li {}
+}
+
+
+/* Расположение терминов и их описаний бок о бок в линию при помощи .dl-horizontal (для прайсов и тех-характеристик) */
+dl {
+	dt {}
+	dd {}
+}
+
+/* Оформление кода и маркировок */
+pre {}
+code {}
+kbd {}
+mark {}
+
+
+
+// =======================================================================// 
+// ТАБЛИЦЫ                                                                //        
+// =======================================================================// 
+
+/* Враппер для адаптивных таблиц */
+.table-responsive {
+	border: none;
+	.table {
+		@include box-shadow(none);
+		tbody {
+			th { border-top: none;}
+			td { border-top: none;}
+		}
+	}
+}
+
+/* Стили таблиц
+----------------
+.active - Применяет цвет при наведении на конкретную строку или ячейку
+ классы можно использовать в любой части таблицы
+.success - зеленый
+.warning - желтый
+.danger - красный
+.info - синий
+*/
+
+.table {
+	@include box-shadow(1px 0px 3px #d1d1d1);
+	thead {
+		tr {
+			th {}
+		}
+	}
+	tbody {
+		tr {
+			th { border-top: none;}
+			td {border-top: 1px solid #f3f3f3;}
+		}
+	}
+}
+
+.table-striped {
+	tbody {
+		tr:nth-of-type(2n+1) {
+			background: #fdfdfd;
+		}
+		tr:nth-of-type(2n) {
+			background: #f0f0f0;
+		}
+	} 
+}
+
+/* Дополнительные классы для таблиц
+----------------
+.table-striped - с черезполосицей
+.table-bordered - с бордерами
+.table-hover - с эффектом наведения на сточку
+.table-condensed - сжатая
+*/
+
+
+
+// =======================================================================// 
+// ФОРМЫ                                                                  //        
+// =======================================================================// 
+
+/*  Лэйбы (классы для .form-group)
+----------------
+.has-success 
+.has-warning
+.has-error
+.has-feedback - если у нас иконка 
+*/
+	
+	label {}
+
+/* 
+Добавьте .form-inline для выравнивания по левому краю и встроенному блоку управления для компактной планировки.
+Используя Bootstrap предопределенные классы разметки для выравнивания лейблов и груп контролов форм 
+в горизонтальном макете добавляя .form-horizontal в форму (.form-group превращается в .row).
+В <label> и <imput> добавляем классы для сетки .col-sm-№
+
+Наиболее распространенные формы управления, текстовые поля ввода включают поддержку для всех типов 
+HTML5 : text, text, datetime, datetime-local, date, month, time, week, number, email, url, search, tel, и color.
+
+Для select используется .form-control Используйте опцию по умолчанию, или добавьте multiple, чтобы показать несколько вариантов сразу.
+*/
+
+.form {
+	/* отступы между каждым сгруппированным блоком  */
+	.form-group {
+
+		.control-label {
+			
+		}
+
+		.input_wrapper {
+			
+			select {}
+		}
+
+		.input-group-addon {}
+
+		/* The general style input, textarea, select */
+		label {@include font-type($second-font, 14px, 22px, 0.8px, #232c3b);}
+		.form-control {
+				// border: 1px solid #d4d4d4;
+				border: 1px solid #fff;
+				@include box-shadow(1px 0.5px 2px #ececec);
+				transition: none;
+			/* хак против зума на мобильных */
+			font-size: 16px;
+
+			&:focus, 
+			&:active:focus {
+				// border: 1px solid #ececec;
+				border: 1px solid #f4f4f4;
+				@include box-shadow(1px 0.5px 2px #f4f4f4);
+			}
+		}
+
+		/* Style for checkboxes*/
+		.checkbox {
+			/* Используйте .checkbox-inline класса набором флажков или радиоприемников для управления отображениями на той же линии. */
+			label {
+				input {
+
+				}
+			}
+		}
+		/* Стиль для радиобуттонов */
+		.radio {
+			/* Используйте .radio-inline класса набором флажков или радиоприемников для управления отображениями на той же линии. */
+			label {
+				input {
+					
+				}
+			}
+		}
+		/* Когда вам необходимо разместить текст рядом с формой этикетки в пределах горизонтальной формы, используйте .form-control-static класс на <p>. */
+		.form-control-static {
+
+		}
+		/* Подпись к input, textarea, selec */
+		.help-block {
+
+		}
+	}
+
+	.has-success {
+		.control-label {}
+		.form-control {}
+	}
+	.has-warning {
+		.control-label {}
+		.form-control {}
+	}
+	.has-error {
+		.control-label {}
+		.form-control {}
+	}
+	
+	.has-feedback {
+		.glyphicon {
+		
+		}
+	}
+}
+
+
+
+
+
+
+// =======================================================================// 
+// МИКСИНЫ                                                                //        
+// =======================================================================// 
+
+
+
+// @mixin respond-to($media) {
+//   @if $media == mobile {
+//     @media only screen and (max-width: 320px) { @content; }
+//   }
+//   @else if $media == handhelds {
+//     @media only screen and (min-width: 321px) and (max-width: 479px) { @content; }
+//   }
+//   @else if $media == wide-handhelds {
+//     @media only screen and (min-width: 480px) and (max-width: 767px) { @content; }
+//   }
+//   @else if $media == tablets {
+//     @media only screen and (min-width: 768px) and (max-width: 959px) { @content; }
+//   }
+//   @else if $media == wide-tablets {
+//     @media only screen and (min-width: 960px) and (max-width: 1199px) { @content; }
+//   }
+//   @else if $media == tv {
+//     @media only screen and (min-width: 1200px) { @content; }
+//   }
+// }

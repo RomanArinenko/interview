@@ -1,0 +1,86 @@
+<div class="boxedcontainer">
+								<div class="tp-banner-container">
+									<div class="tp-banner">
+										<ul>
+											<!-- SLIDE -->
+											<li data-transition="slideleft"  data-slotamount="7" data-masterspeed="0">
+												<!-- MAIN IMAGE -->
+												  
+												<!-- LAYERS -->
+												<!-- LAYER NR. 1 -->
+												<div class="slider_banner_content">
+												<div class="tp-caption skewfromleftshort fadeout"
+													data-x="20"
+													data-y="30"
+													data-speed="500"
+													data-start="000"
+													data-easing="easeOutQuint">
+													
+													<img src="img/shina.png">
+													
+												</div>
+												<div class="tp-caption sft fadeout"
+													data-x="550"
+													data-y="50"
+													data-speed="1000"
+													data-start="1800"
+													data-easing="Power4.easeOut">
+													<em>Скидка <strong>20%</strong> за комплект</em>
+												</div>
+
+												<div class="tp-caption lfr fadeout"
+													data-x="550"
+													data-y="100"
+													data-speed="800"
+													data-start="000"
+													data-easing="Power4.easeOut">
+													<h3>шины Falken Ziex</h3>
+												</div>
+												<div class="tp-caption sfr fadeout"
+													data-x="570"
+													data-y="170"
+													data-speed="1000"
+													data-start="600"
+													data-easing="easeInOutBack">
+													<span><i class="icons-list-check"></i>Unlimited Disk Space, Bandwidth & Email Addresses</span>
+												</div>
+												<div class="tp-caption sfr fadeout"
+													data-x="570"
+													data-y="195"
+													data-speed="1000"
+													data-start="800"
+													data-easing="easeInOutBack">
+													<span><i class="icons-list-check"></i>Quisque nisi purus sollicitudin</sapn>
+												</div>
+												<div class="tp-caption sfr fadeout"
+													data-x="570"
+													data-y="220"
+													data-speed="1000"
+													data-start="1000"
+													data-easing="easeInOutBack">
+													<span><i class="icons-list-check"></i>Etiam eget viverra justo tristique felis velit, vitae efficitur ligula congue</span>
+												</div>
+												<div class="tp-caption sfr fadeout"
+													data-x="570"
+													data-y="245"
+													data-speed="1000"
+													data-start="1200"
+													data-easing="easeInOutBack">
+													<span><i class="icons-list-check"></i>Suspendisse commodo vel metus</span>
+												</div>
+												<div class="tp-caption lfb fadeout"
+													data-x="550"
+													data-y="300"
+													data-speed="1000"
+													data-start="1800"
+													data-easing="Power4.easeOut">
+													<a class="btn btn-primary" href="#">Узнать больше</a>
+												</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						
+					</div>

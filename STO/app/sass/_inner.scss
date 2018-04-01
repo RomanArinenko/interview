@@ -1,0 +1,499 @@
+// FAQ PAGE SCSS
+.app {
+
+	.faq-header {text-align: center; padding: 70px 0 25px;
+         
+	}
+
+	.faq-body {padding-bottom: 70px;
+
+	}
+	.panel-group {
+		.panel-default {
+			.panel-body {
+				p { font-size: 14px; line-height: 24px; color: #6a7483;}
+			}
+		}
+	}
+}
+
+
+// Contacts page
+	.bg-contacts{
+	 	padding: 54px 0 0 0; text-align: center;
+	 	h1 {margin: 0 0 12px 0;}
+	 	p {margin: 0 auto 57px; max-width: 550px;}
+	 }
+	
+ 	.contact_form {
+		padding: 29px 54px 38px 54px;
+ 		background: #f7f7f7;
+ 		@include box-shadow(1px 0px 1px #f2f2f2);
+ 		margin: 0 0 65px 0; 
+ 		@include respond-to (xs) { padding: 25px 20px; margin: 0 0 30px 0;}
+ 		@include border-radius(3px);
+ 		h3 { margin: 0 0 28px; 
+			@include respond-to (xs) {text-align: center;}
+ 		}
+ 		.form {
+ 			.form-group {
+ 				label{ @include font-type($main-font, 12px, 24px, 0px, #6a7483);
+ 					margin: 0 0 10px 5px;
+ 				}
+	 			input { height: 42px; margin: 0 5px; @include border-radius(2px); font-size: 13px;}
+	 			textarea {resize: none; height: 103px; margin: 0 5px; font-size: 13px;
+					@include border-radius(2px);
+	 			}
+ 			}
+ 		}
+ 		button { padding: 10px 30px; margin: 18px 0 0 5px;
+			@include border-radius(6px);
+			@include box-shadow(1px 1px 2px #cccccc);
+ 		}
+ 	}
+ 	.contact_info {
+ 		padding: 29px 54px 38px 54px;
+ 		@include respond-to (xs) { padding: 25px 20px;}
+ 		h3 { margin: 0 0 17px 0;
+			@include respond-to (xs) {text-align: center;}
+ 		}
+ 		ul { padding: 20px 0 47px 0;
+ 			li {@include font-type($main-font, 16px, 18px, 0px, #6a7483); margin: 0 0 13px 0;
+ 				i {margin: 0 15px 0 0; top: -2px;}
+ 			}
+ 		}
+ 		span {@include font-type($main-font, 14px, 24px, 0.4px, #6a7483); 
+ 			display: block; margin: 0 0 10px 0;
+ 		}
+ 	}
+ 	.contact_map {
+ 		figure  {
+ 			@include respond-to(xs){display: none;};
+ 			
+ 			img {max-width: 100%; margin: 0 0 -5px 0;}
+ 		}
+ 	}
+
+
+	 // Ppage Our services and page Tires & eth
+	.bg-services {
+		padding: 54px 0 75px 0; text-align: center;
+		@include respond-to (sm) {padding: 30px 0 50px 0;}
+		h1 { margin: 0 0 9px 0;}
+		p {margin: 0 auto 20px; max-width: 710px;
+		}
+		.services_links {
+			text-align: center; padding: 25px 0 25px 0;
+			a { padding: 12px 28px; margin: 0 5px 0 30px;
+				@include border-radius(6px);
+				@include respond-to(sm) {margin: 10px 15px;}
+				@include respond-to(xs) { display: block; margin: 20px; padding: 10px 20px;}
+			}
+		}
+
+		.services_list {
+			padding: 48px 0 28px 0;
+			border-bottom: 1px dashed #d4d8de;
+			@include respond-to (sm) {padding: 40px 0 20px 0;}
+			@include respond-to(xs) { padding: 30px 0 10px 0;}
+			h2 {@include font-type($title-font, 30px, 30px, 0px, #1d2b43); text-align: center;
+				margin: 0 0 35px 0;
+				@include respond-to(xs) {@include font-type($title-font, 20px, 24px, 0px, #1d2b43);}
+			}
+			.table-striped {
+				th {
+					height: 82px;
+					padding: 23px 5px 5px 5px;
+					@include respond-to(md) {padding: 8px 0 5px 0;}
+					h3{ 
+						@extend .inline-block;
+						@include font-type($extrabold-font, 24px, 40px, 0px, #1d2b43); text-transform: none;
+						@include respond-to(md) {font-size: 14px;}
+					}
+					i { margin: 0 12px 0 20px;
+						@include respond-to(md) {margin: 0 8px 0 10px;}
+					}
+				}
+				td {
+					@include font-type($main-font, 14px, 18px, 0px, #1d2b43);
+				 	padding: 10px 8px 10px 8px;
+				 	@include respond-to(xs) {
+						font-size: 13px; padding: 10px 5px 10px 5px;
+				 	}
+				 	span {@include font-type($extrabold-font, 18px, 18px, 0px, #ff6c3a);
+						@include respond-to(xs) { font-size: 16px;}
+				 	}
+				 	em {color:#7f8795;}
+				}
+				td:last-child {
+					padding: 10px 25px 10px 8px; width: 100px; text-align: right;
+					@include respond-to(xs) { padding: 10px 8px 10px 8px; width: 80px;}
+				}
+				td:nth-child(1) {
+					background: transparent url("../img/table-marker.png") no-repeat 31px 16px;
+					padding: 10px 5px 10px 60px;
+					text-align: left;
+					@include respond-to(xs) {
+						background: transparent url("../img/table-marker.png") no-repeat 11px 16px;
+						padding: 10px 5px 10px 30px;
+					}
+				}
+				
+				.services_category {
+					@include font-type($main-font, 18px, 24px, 0px, #1d2b43); font-weight: 700;
+					height: 54px; padding: 10px 5px !important;
+					background: none !important;
+					@include respond-to(md) {@include font-type($main-font, 14px, 24px, 0px, #1d2b43);}
+					i {margin: 0 12px 0 20px;
+						@include respond-to(md) {margin: 0 8px 0 10px;}
+					}
+				}
+			}
+		}
+		.services_list.last{
+			border-bottom: none;
+		}
+
+		.services_eth {
+			padding: 63px 0 34px 0;
+			@include respond-to (sm) {padding: 40px 0 20px 0;}
+		}
+		
+		.services_raschodniki{
+				border-bottom: 1px dashed #d4d8de; padding: 0 0 38px 0; text-align: center;
+		}
+		.services_ts {
+			padding: 50px 0;
+			h2 { @include font-type($title-font, 24px, 34px, 0px, #162035); text-align: center; margin: 0 0 20px 0;
+				@include respond-to(xs) {@include font-type($title-font, 20px, 34px, 0px, #162035);}
+			}
+			p { @include font-type($second-font, 14px, 24px, 0px, #424d60); width: 50%; text-align: center;
+					@include respond-to(sm) {width: 100%;
+					@include font-type($second-font, 13px, 18px, 0px, #424d60);
+				}
+			}
+		}
+		.table-responsive {
+			.table {
+				tbody {
+					td,th { @include font-type($second-font, 14px, 20px, 0px, #424d60);
+						padding: 0px 5px 5px 5px;
+						@include respond-to(md){padding: 5px 7px;};
+						@include respond-to(xs){ font-size: 12px;};
+					}
+				}
+			}
+		}
+		figure { margin: 0 20px 0 0;
+			@include respond-to(md){margin: 0;}
+			img {max-width: 100%;}
+		}
+		.services_tire {
+			text-align: center;
+			padding: 32px 0 30px 0;
+			@include respond-to(md){padding: 10px 0;};
+			
+			a {padding: 15px 29px; @include border-radius(6px);}
+		}
+	}
+
+	// Company page
+	.bg-company{
+		padding: 48px 0 86px 0;
+		@include respond-to(md) {padding: 40px 0 50px 0;}
+		h1 {text-align:center; margin: 0 0 56px 0;
+			@include respond-to(md) {margin: 0 0 40px 0;}
+			@include respond-to(xs) {margin: 0 0 20px 0;}
+		}
+	}
+	.company_info {
+		p {@include font-type($main-font, 14px, 24px, 0px, #6a7483);
+			margin: -8px 0 20px 0;
+			@include respond-to(sm) {@include font-type($main-font, 13px, 18px, 0px, #6a7483);}
+			strong { font-weight: 700;}
+		}
+		h2 {@include font-type($title-font, 24px, 24px, 0px, #232c3b);
+			margin: 53px 0 40px 0;
+			@include respond-to(md) {margin: 33px 0 30px 0;}
+		}
+		ul {
+			margin: 0 0 14px 0;
+			li {
+				padding: 5px 0 5px 40px;
+				background: transparent url("../img/tick-small.png") no-repeat 0px 5px;
+				@include respond-to(sm) {padding: 5px 0 5px 30px;}
+				span {@include font-type($main-font, 14px, 24px, 0px, #6a7483);
+					@include respond-to(sm) {@include font-type($main-font, 13px, 18px, 0px, #6a7483);}
+				}
+			}
+		}
+		.company_links {
+			a { padding: 14px 18px; margin: 31px 15px 0px 0; @include border-radius(6px);
+				@include respond-to(sm) {margin: 31px 15px 30px 0;}
+				@include respond-to(xs) {display: block; margin: 25px 30px; }
+			}
+		}
+		a { padding: 13px 21px; margin: 0 15px 0 2px; @include border-radius(6px);
+			@include respond-to(md) {margin: 0 15px 20px 2px;}
+			@include respond-to(xs) {display: block; margin: 25px 30px;}
+		}
+		h3 {margin: 0 0 28px 0;
+		}
+	}
+	.company_image {
+		img { max-width: 100%;}
+	}
+	.company_image1 {
+		display: inline-block;
+		margin: 0 -5px 0 0;
+		width: 50%;
+		img { max-width: 100%;}
+		.company_image-second {padding-right: 3px;}
+		.company_image-second1 {padding-left: 3px;}
+	}
+	
+	.bg-gray_light {
+		padding: 62px 0 50px 0;
+		@include respond-to(md) {padding: 60px 0 30px 0;}
+		@include respond-to(sm) {padding: 40px 0 30px 0;}
+	}
+
+// Advices of spec page
+.advice_header {
+	text-align: center; padding: 50px 0 34px 0;
+}
+.advice_topic {
+	padding: 22px 40px 22px 22px; margin: 20px 0;
+	border: 1px solid #1d2b43;
+	h3 {
+		&:after {content:""; 
+		display: block; width: 60px; margin: 14px 0 15px 0;
+		border-bottom: 1px solid #d8d5d5;}
+	}
+	p { @include font-type($main-font, 14px, 24px, 0px, #6a7483);
+		@include respond-to(xs){@include font-type($main-font, 13px, 21px, 0px, #6a7483);
+		  };
+	}
+	a { @include font-type($main-font, 12px, 24px, 0px, #1d2b43); text-transform: uppercase; text-decoration:none;
+		float: right; padding: 5px 17px 6px 21px;
+		position: relative; left: 41px; bottom: 14px;
+		border: 1px solid #1d2b43;
+	  
+		i { top: 6px; margin: 0 0 0 8px;}
+		&:hover { color: #ff6c3a;
+			transition: none;
+			.icons-next {@extend .icons-next:hover;}
+		}
+	}
+}
+
+
+
+// 404 Page
+.bg-no_found_page {
+	background: #fff url("../img/background-404page.png") no-repeat 75% 50%;
+	padding: 174px 0 52px 0;
+	@include respond-to(xs){padding: 70px 0 40px 0;
+		background-size: 70%;
+	}
+	
+	.no_found_title {
+		text-align: center;
+		h1{@include font-type($title-font, 100px, 34px, 0px, #2a3b59);
+			margin: 0 0 73px 0;
+			@include respond-to(xs){@include font-type($title-font, 48px, 34px, 0px, #2a3b59);
+			margin: 0 0 40px 0;
+			}
+		}
+		h2 { 
+			margin: 0 0 35px 0;}
+		p {margin: 0 auto 20px; max-width: 600px;}
+	}
+	.no_found_form {
+		padding: 110px 0 0 0;
+		@include respond-to(xs){padding: 60px 0 0 0; text-align: center;};
+		
+		span { @include font-type($main-font, 14px, 34px, 0px, #a3a9b4);
+		}
+		.btn-link { 
+			margin: 0 0 0 20px;
+			@include respond-to(xs){display:block; margin: 0;};
+			
+		}
+		form {
+			padding: 25px 0 5px 0;
+			margin: 0 20px;
+			@include respond-to(xs){margin: 0;}
+			
+			.form-group {
+				.form-control{
+					@include font-type($main-font, 14px, 30px, 0px, #c6cad2);
+					height: 51px;
+					background: #232c3b; border: none;
+					@include border-radius(10px);
+					&:focus, 
+					&:active:focus {
+						@include font-type($main-font, 14px, 30px, 0px, #c6cad2);
+						border: none;
+					}
+				}
+				i {float: right; right: 20px; bottom: 33px;}
+			}
+		}
+	}
+}
+
+
+// page Advice
+ 	.wr-advice {
+ 		padding-top: 50px;
+ 		h2 {
+ 			@include font-type($title-font, 40px, 60px, 0px, #232c3b);
+ 			text-align: center;
+ 			margin-bottom: 55px;
+ 			@include respond-to (xs) {font-size: 36px;}
+ 		}
+ 		.main_img {
+ 			float: left;
+ 			margin-right: 32px;
+ 			margin-bottom: 23px;
+ 			@include respond-to (sm) {margin-right: 0;}
+ 			img {
+ 				max-width: 750px;
+ 				@include respond-to (lg) {max-width: 575px;}
+ 				@include respond-to (md) {max-width: 430px;}
+ 			}
+ 			@include respond-to (sm) {
+ 				float: none;
+ 				img {max-width: 100%;}
+ 			}
+ 		}
+ 		.second_img {
+ 			float: right;
+ 			margin-left: 30px;
+ 			margin-bottom: 28px;
+ 			background-color: #f7f7f7;
+			text-align: center;
+		    height: 350px;
+		    width: 360px;
+		    padding-top: 48px;
+ 			img {width: auto;}
+ 			@include respond-to (lg) {
+ 				height: 305px;
+ 				padding-top: 30px;
+ 			}
+ 			@include respond-to (md) {
+ 				width: 270px;
+ 				height: 260px;
+ 				img {width: 200px;}
+ 			}
+ 			@include respond-to (sm) {
+ 				width: 220px;
+    			height: 216px;
+    			img {width: 160px;}
+ 			}
+ 			@include respond-to (xs) {
+ 				float: none;
+ 				width: auto;
+ 				height: auto;
+ 				margin-left: 0;
+ 				padding: 15px;
+ 				img {width: 260px;}
+ 			}
+ 		}
+ 		figure {
+ 			img {}
+ 		}
+ 		h3 {
+ 			@include font-type($second-font, 18px, 14px, 0px, #232c3b);
+ 			text-transform: none;
+ 			margin-bottom: 25px;
+ 			@include respond-to (sm) {line-height: 20px;}
+ 		}
+ 		p {
+ 			color: #6a7483; line-height: 23px; font-size: 14px;
+ 			margin-bottom: 12px;
+ 			a {@include font-type($extrabold-font, 14px, 20px, 0px, #1d2b43);}
+ 		}
+ 		.first_engine {
+ 			figure {
+ 				background-color: #f7f7f7;
+ 				text-align: center;
+			    height: 350px;
+			    padding-top: 44px;
+			    margin-bottom: 33px;
+ 				img {width: auto;}
+ 				@include respond-to (md) {
+ 					height: 262px;
+ 					padding-top: 20px;
+ 					img {width: 190px;}
+ 				}
+ 			}
+ 			h3 {}
+ 			p {}
+ 		}
+ 		.second_engine {
+ 			figure {
+ 				background-color: #f7f7f7;
+ 				text-align: center;
+			    height: 350px;
+			    padding-top: 44px;
+			    margin-bottom: 33px;
+ 				img {width: auto;}
+ 				@include respond-to (md) {
+ 					height: 262px;
+ 					padding-top: 20px;
+ 					img {width: 190px;}
+ 				}
+ 			}
+ 			h3 {}
+ 			p {}
+ 		}
+ 		.third_engine {
+ 			figure {
+ 				background-color: #f7f7f7;
+ 				text-align: center;
+			    height: 350px;
+			    padding-top: 44px;
+			    margin-bottom: 33px;
+ 				img {width: auto;}
+ 				@include respond-to (md) {
+ 					height: 262px;
+ 					padding-top: 20px;
+ 					img {width: 190px;}
+ 				}
+ 			}
+ 			h3 {}
+ 			p {}
+ 		}
+ 		.oil_engine {
+ 			margin: 65px 0 30px 0;
+ 			padding-left: 30px;
+ 			border-left: 5px solid #ff6c3a;
+ 			h3 {@include font-type($second-font, 18px, 18px, 0px, #232c3b); margin-bottom: 12px;}
+ 			p {@include font-type($main-font, 14px, 25px, 0px, #6a7483); max-width: 1000px;}
+ 		}
+ 		
+ 		table {
+ 			margin-top: 20px;
+ 			margin-bottom: 70px;
+ 			tr {
+ 				th {
+ 					background-color: #232c3b;
+ 					color: #e9eef5;
+ 					padding: 19px 0px 19px 70px;
+ 					@include respond-to (sm) {padding: 19px 0px 19px 15px;}
+ 				}
+ 				td {
+ 					background-color: #faf9f9;
+ 					color: #232c3b;
+ 					padding: 11px 0px 11px 70px;
+ 					@include respond-to (sm) {padding: 19px 0px 19px 15px;}
+ 				}
+ 				&:nth-child(odd) {
+ 					td {background-color: #f0f0f0;}
+ 				}
+ 			}
+ 		}
+ 	}
+
