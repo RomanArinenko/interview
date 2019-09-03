@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 515 219" style="enable-background:new 0 0 515 219;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:none;stroke:#487FEA;stroke-width:0.5;stroke-miterlimit:10;}
+	.st2{fill:url(#SVGID_1_);}
+	.st3{font-family:'TitilliumWeb-Regular';}
+	.st4{font-size:18px;}
+	.st5{font-family:'GoogleSans-Medium';}
+	.st6{font-size:35px;}
+	.st7{fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#FFFFFF;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+	.st8{opacity:0.93;fill:#FFFFFF;}
+	.st9{font-size:11px;}
+</style>
+<g>
+	<g>
+		
+			<image style="overflow:visible;opacity:0.3;" width="542" height="215" xlink:href="CC7B9091.png"  transform="matrix(1 0 0 1 -14 53)">
+		</image>
+		<g>
+			<path class="st0" d="M466.7,217.5H47.3c-15.4,0-27.8-12.5-27.8-27.8V97.7c0-15.4,12.5-27.8,27.8-27.8h419.4
+				c15.4,0,27.8,12.5,27.8,27.8v91.9C494.5,205,482,217.5,466.7,217.5z"/>
+			<path class="st1" d="M466.7,217.5H47.3c-15.4,0-27.8-12.5-27.8-27.8V97.7c0-15.4,12.5-27.8,27.8-27.8h419.4
+				c15.4,0,27.8,12.5,27.8,27.8v91.9C494.5,205,482,217.5,466.7,217.5z"/>
+		</g>
+	</g>
+	<g>
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-0.5" y1="109.5192" x2="515.4661" y2="109.5192">
+			<stop  offset="0" style="stop-color:#86D657"/>
+			<stop  offset="1" style="stop-color:#7DC4A6"/>
+		</linearGradient>
+		<path class="st2" d="M504.6,219H10.4c-6,0-10.9-4.9-10.9-10.9V10.9C-0.5,4.9,4.4,0,10.4,0h494.2c6,0,10.9,4.9,10.9,10.9v197.2
+			C515.5,214.1,510.6,219,504.6,219z"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 36.3662 48.8257)" class="st0 st3 st4">Total attendees</text>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 36.3662 90.8257)" class="st0 st5 st6">12,350</text>
+	</g>
+	<g>
+		<path class="st7" d="M418.3,85.4v-6.7c0-6,4.9-10.8,10.8-10.8h13.4c6,0,10.8,4.9,10.8,10.8v6.7"/>
+		<circle class="st7" cx="435.8" cy="51.8" r="8.8"/>
+		<path class="st7" d="M460.1,67.9c6,0,10.8,4.9,10.8,10.8v6.7"/>
+		<path class="st7" d="M453.4,60.5c4.8,0,8.8-3.9,8.8-8.8s-3.9-8.8-8.8-8.8"/>
+	</g>
+	<text transform="matrix(1 0 0 1 21.5781 208.9248)" class="st8 st3 st9">11:00</text>
+	<text transform="matrix(1 0 0 1 118.5781 208.9248)" class="st8 st3 st9">13:00</text>
+	<text transform="matrix(1 0 0 1 234.5781 208.9248)" class="st8 st3 st9">15:00</text>
+	<text transform="matrix(1 0 0 1 346.5781 208.9248)" class="st8 st3 st9">17:00</text>
+	<text transform="matrix(1 0 0 1 451.5781 208.9248)" class="st8 st3 st9">19:00</text>
+</g>
+</svg>

@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KIOSK</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/css/index.css">
+    <link rel="stylesheet" href="css/rlink.css">
+    <link rel="stylesheet" href="css/screen.css">
+
+    
+
+
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/rlink.js" type="text/javascript"></script>
+    
+    <script src="js/jquery.nicescroll.min.js" type="text/javascript"></script>
+    <script src="js/sweetalert.min.js" type="text/javascript"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/index.min.js"></script>
+
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div class="hided_element_for_uploading_images"></div>
+
+    <div class="main_login_pop">
+        <div class="main_login_pop_closer">
+            <svg version="1.1" xml:space="preserve">
+                <g class="line1" id="Layer_1-2" data-name="Layer 1">
+                    <g>
+                        <line x1="9.72" y1="1" x2="75.17" y2="1" style="fill:none;stroke:#fcfcfc;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+                        <line x1="49.46" y1="15.94" x2="91.64" y2="15.94" style="fill:none;stroke:#fcfcfc;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+                    </g>
+                    <g>
+                        <line x1="1" y1="6.75" x2="66.45" y2="6.75" style="fill:none;stroke:#ededed;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+                        <line x1="40.74" y1="21.69" x2="82.92" y2="21.69" style="fill:none;stroke:#ededed;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+                    </g>
+                </g>
+                <g class="line2" id="Layer_1-2" data-name="Layer 1">
+                    <g>
+                        <line x1="9.72" y1="1" x2="75.17" y2="1" style="fill:none;stroke:#fcfcfc;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+                        <line x1="49.46" y1="15.94" x2="91.64" y2="15.94" style="fill:none;stroke:#fcfcfc;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+                    </g>
+                    <g>
+                        <line x1="1" y1="6.75" x2="66.45" y2="6.75" style="fill:none;stroke:#ededed;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+                        <line x1="40.74" y1="21.69" x2="82.92" y2="21.69" style="fill:none;stroke:#ededed;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+                    </g>
+                </g>
+                <g class="line3" id="Layer_1-2" data-name="Layer 1">
+                    <g>
+                        <line x1="9.72" y1="1" x2="75.17" y2="1" style="fill:none;stroke:#fcfcfc;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+                        <line x1="49.46" y1="15.94" x2="91.64" y2="15.94" style="fill:none;stroke:#fcfcfc;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+                    </g>
+                    <g>
+                        <line x1="1" y1="6.75" x2="66.45" y2="6.75" style="fill:none;stroke:#ededed;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+                        <line x1="40.74" y1="21.69" x2="82.92" y2="21.69" style="fill:none;stroke:#ededed;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+                    </g>
+                </g>
+                <g class="line4" id="Layer_1-2" data-name="Layer 1">
+                    <g>
+                        <line x1="9.72" y1="1" x2="75.17" y2="1" style="fill:none;stroke:#fcfcfc;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+                        <line x1="49.46" y1="15.94" x2="91.64" y2="15.94" style="fill:none;stroke:#fcfcfc;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+                    </g>
+                    <g>
+                        <line x1="1" y1="6.75" x2="66.45" y2="6.75" style="fill:none;stroke:#ededed;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+                        <line x1="40.74" y1="21.69" x2="82.92" y2="21.69" style="fill:none;stroke:#ededed;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+                    </g>
+                </g>
+                <g class="square1">
+                    <line style="fill:none;stroke:#fcfcfc;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="3.3" y1="11" x2="22.8" y2="11"/>
+                    <line style="fill:none;stroke:#fcfcfc;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="13.1" y1="1.2" x2="13.1" y2="20.7"/>
+                </g>
+                <line class="line5" style="fill:none;stroke:#fcfcfc;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="14.7" y1="29" x2="82.1" y2="29"/>
+                <line class="line6" style="fill:none;stroke:#fcfcfc;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="14.1" y1="16" x2="81.5" y2="16"/>
+                <g class="square2">
+                    <line style="fill:none;stroke:#fcfcfc;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="14.6" y1="16.3" x2="37" y2="16.3"/>
+                    <line style="fill:none;stroke:#fcfcfc;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="25.8" y1="5.1" x2="25.8" y2="27.5"/>
+                </g>
+                <line class="line7" style="fill:none;stroke:#fcfcfc;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="-6.8" y1="19.8" x2="65.1" y2="19.8"/>
+                <polyline class="line8" style="fill:none;stroke:#fcfcfc;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="82.2,25.9 71,18 59.8,25.9 48.6,18 37.3,25.9 26.1,18 14.9,25.9 "/>
+                <polyline class="line9" style="fill:none;stroke:#fcfcfc;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="74.6,24.6 60.7,14.8 46.9,24.6 33,14.8 19.1,24.6 5.2,14.8 -8.7,24.6 "/>
+                <polyline class="line10" style="fill:none;stroke:#fcfcfc;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="84.4,34.7 70.5,24.9 56.7,34.7 42.8,24.9 28.9,34.7 15,24.9 1.1,34.7 "/>
+                <polyline class="line11" style="fill:none;stroke:#fcfcfc;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="98.9,23.1 85,13.4 71.1,23.1 57.3,13.4 43.4,23.1 29.5,13.4 15.6,23.1 "/>
+                <polyline class="line12" style="fill:none;stroke:#fcfcfc;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="80,18.4 68,10 56,18.4 44,10 32.1,18.4 20.1,10 8.1,18.4 "/>
+                <polyline class="line13" style="fill:none;stroke:#fcfcfc;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="79.6,13 68.4,5 57.1,13 45.9,5 34.7,13 23.4,5 12.2,13 "/>
+                <g class="line14">
+                    <line style="fill:none;stroke:#fcfcfc;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="1.7" y1="22.9" x2="66.2" y2="22.9"/>
+                    <line style="fill:none;stroke:#fcfcfc;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="3.9" y1="22.7" x2="45.4" y2="22.7"/>
+                </g>
+                <g class="square3">
+                    <line style="fill:none;stroke:#fcfcfc;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="13.8" y1="15.6" x2="32" y2="15.6"/>
+                    <line style="fill:none;stroke:#fcfcfc;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="22.9" y1="6.4" x2="22.9" y2="24.7"/>
+                </g>
+                <g class="line15">
+                    <line style="fill:none;stroke:#fcfcfc;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="-1.4" y1="7.1" x2="64" y2="7.1"/>
+                    <line style="fill:none;stroke:#fcfcfc;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="38.3" y1="22.1" x2="80.5" y2="22.1"/>
+                </g>
+                <g class="square4">
+                    <line style="fill:none;stroke:#fcfcfc;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="9.6" y1="16.8" x2="29.1" y2="16.8"/>
+                    <line style="fill:none;stroke:#fcfcfc;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="19.3" y1="7.1" x2="19.3" y2="26.6"/>
+                </g>
+                <g class="line16">
+                    <line style="fill:none;stroke:#fcfcfc;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="25.5" y1="22.8" x2="79.2" y2="22.8"/>
+                </g>
+                <line class="line17" style="fill:none;stroke:#ededed;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="-1.7" y1="16.5" x2="67.2" y2="16.5"/>
+                <line class="line18" style="fill:none;stroke:#ededed;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="7.1" y1="14" x2="58.5" y2="14"/>
+                <line class="line19" style="fill:none;stroke:#ededed;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="-5" y1="15.2" x2="46.4" y2="15.2"/>
+                <g class="square5">
+                    <line style="fill:none;stroke:#ededed;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="0.1" y1="10" x2="19.7" y2="10"/>
+                    <line style="fill:none;stroke:#ededed;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="9.9" y1="0.2" x2="9.9" y2="19.8"/>
+                </g>
+                <line class="line20" style="fill:none;stroke:#ededed;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="9.1" y1="36.6" x2="76.5" y2="36.6"/>
+                <line class="line21" style="fill:none;stroke:#ededed;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="11.5" y1="26.7" x2="78.9" y2="26.7"/>
+                <g class="square6">
+                    <line style="fill:none;stroke:#ededed;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="4.1" y1="23.2" x2="26.5" y2="23.2"/>
+                    <line style="fill:none;stroke:#ededed;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="15.3" y1="12" x2="15.3" y2="34.4"/>
+                </g>
+                <line class="line22" style="fill:none;stroke:#ededed;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="-1" y1="23.8" x2="70.9" y2="23.8"/>
+
+                <g class="line23" id="Layer_1-2" data-name="Layer 1">
+                    <polyline points="76.98 8.92 65.75 1 54.52 8.92 43.29 1 32.06 8.92 20.83 1 9.59 8.92" style="fill:none;stroke:#fcfcfc;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"/>
+                    <polyline points="68.39 14.59 57.16 6.67 45.93 14.59 34.7 6.67 23.47 14.59 12.23 6.67 1 14.59" style="fill:none;stroke:#ededed;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"/>
+                </g>
+                <g class="line24" id="Layer_1-2" data-name="Layer 1">
+                    <polyline points="76.98 8.92 65.75 1 54.52 8.92 43.29 1 32.06 8.92 20.83 1 9.59 8.92" style="fill:none;stroke:#fcfcfc;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"/>
+                    <polyline points="68.39 14.59 57.16 6.67 45.93 14.59 34.7 6.67 23.47 14.59 12.23 6.67 1 14.59" style="fill:none;stroke:#ededed;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"/>
+                </g>
+                <g class="line25" id="Layer_1-2" data-name="Layer 1">
+                    <polyline points="76.98 8.92 65.75 1 54.52 8.92 43.29 1 32.06 8.92 20.83 1 9.59 8.92" style="fill:none;stroke:#fcfcfc;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"/>
+                    <polyline points="68.39 14.59 57.16 6.67 45.93 14.59 34.7 6.67 23.47 14.59 12.23 6.67 1 14.59" style="fill:none;stroke:#ededed;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"/>
+                </g>
+                <g class="line26" id="Layer_1-2" data-name="Layer 1">
+                    <polyline points="76.98 8.92 65.75 1 54.52 8.92 43.29 1 32.06 8.92 20.83 1 9.59 8.92" style="fill:none;stroke:#fcfcfc;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"/>
+                    <polyline points="68.39 14.59 57.16 6.67 45.93 14.59 34.7 6.67 23.47 14.59 12.23 6.67 1 14.59" style="fill:none;stroke:#ededed;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"/>
+                </g>
+                <g class="line27" id="Layer_1-2" data-name="Layer 1">
+                    <polyline points="76.98 8.92 65.75 1 54.52 8.92 43.29 1 32.06 8.92 20.83 1 9.59 8.92" style="fill:none;stroke:#fcfcfc;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"/>
+                    <polyline points="68.39 14.59 57.16 6.67 45.93 14.59 34.7 6.67 23.47 14.59 12.23 6.67 1 14.59" style="fill:none;stroke:#ededed;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"/>
+                </g>
+                <line class="line28" style="fill:none;stroke:#ededed;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="13" y1="18" x2="31.3" y2="18"/>
+                <g class="line29">
+                    <line style="fill:none;stroke:#ededed;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="-4.9" y1="24.6" x2="59.6" y2="24.6"/>
+                    <line style="fill:none;stroke:#ededed;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="15.3" y1="30.3" x2="56.8" y2="30.3"/>
+                </g>
+                <g class="square7">
+                    <line style="fill:none;stroke:#ededed;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="5.2" y1="21.3" x2="23.5" y2="21.3"/>
+                    <line style="fill:none;stroke:#ededed;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="14.3" y1="12.1" x2="14.3" y2="30.4"/>
+                </g>
+                <line class="line30" style="fill:none;stroke:#ededed;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="7.8" y1="16.4" x2="61.5" y2="16.4"/>
+                <g class="line31">
+                    <line style="fill:none;stroke:#ededed;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="-0.1" y1="4.9" x2="65.3" y2="4.9"/>
+                    <line style="fill:none;stroke:#ededed;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="39.6" y1="19.8" x2="81.8" y2="19.8"/>
+                </g>
+                <g class="square8">
+                    <line style="fill:none;stroke:#ededed;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="0.4" y1="22.9" x2="19.9" y2="22.9"/>
+                    <line style="fill:none;stroke:#ededed;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="10.1" y1="13.1" x2="10.1" y2="32.6"/>
+                </g>
+                <g class="line32">
+                    <line style="fill:none;stroke:#ededed;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="14.9" y1="29.8" x2="68.6" y2="29.8"/>
+                </g>
+                <g class="trngl1" id="Layer_1-2" data-name="Layer 1">
+                    <polygon points="10.4 0 21.9 23.74 36.71 1.91 10.4 0" style="fill:#f8f8f8;"/>
+                    <polygon points="1 4.74 12.5 28.48 27.31 6.65 1 4.74" style="fill:none;stroke:#ededed;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"/>
+                </g>
+                <g class="trngl2" id="Layer_1-2" data-name="Layer 1">
+                    <polygon points="10.4 0 21.9 23.74 36.71 1.91 10.4 0" style="fill:#f8f8f8;"/>
+                    <polygon points="1 4.74 12.5 28.48 27.31 6.65 1 4.74" style="fill:none;stroke:#ededed;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"/>
+                </g>
+                <g class="trngl3" id="Layer_1-2" data-name="Layer 1">
+                    <polygon points="10.4 0 21.9 23.74 36.71 1.91 10.4 0" style="fill:#f8f8f8;"/>
+                    <polygon points="1 4.74 12.5 28.48 27.31 6.65 1 4.74" style="fill:none;stroke:#ededed;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"/>
+                </g>
+                <g class="trngl4" id="Layer_1-2" data-name="Layer 1">
+                    <polygon points="10.4 0 21.9 23.74 36.71 1.91 10.4 0" style="fill:#f8f8f8;"/>
+                    <polygon points="1 4.74 12.5 28.48 27.31 6.65 1 4.74" style="fill:none;stroke:#ededed;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"/>
+                </g>
+                <g class="trngl5" id="Layer_1-2" data-name="Layer 1">
+                    <polygon points="10.4 0 21.9 23.74 36.71 1.91 10.4 0" style="fill:#f8f8f8;"/>
+                    <polygon points="1 4.74 12.5 28.48 27.31 6.65 1 4.74" style="fill:none;stroke:#ededed;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"/>
+                </g>
+                <polygon class="trngl6" style="fill:#f8f8f8;" points="6.8,2.3 18.2,25.7 32.8,4.2 "/>
+                <polygon class="trngl7" style="fill:#f8f8f8;" points="9.2,5.5 21.3,30.4 36.9,7.5 "/>
+                <polygon class="trngl8" style="fill:none;stroke:#ededed;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="6.4,27.8 30,38.7 27.7,12.8 "/>
+                <polygon class="trngl9" style="fill:none;stroke:#ededed;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="4.4,7.4 16.5,32.4 32.1,9.4 "/>
+                <polygon class="trngl10" style="fill:none;stroke:#ededed;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="0,3.3 11.5,27 26.3,5.2 "/>
+                <polygon class="trngl11" style="fill:none;stroke:#ededed;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="-8.5,13.1 5.4,41.7 23.3,15.4 "/>
+                <polygon class="trngl12" style="fill:none;stroke:#ededed;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="9.6,17 20.9,40.4 35.5,18.9 "/>
+                <polygon class="trngl13" style="fill:none;stroke:#ededed;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="-0.7,7.5 11.4,32.4 27,9.5 "/>
+                <g class="ellipse1"><g id="Layer_1-2" data-name="Layer 1"><circle cx="22" cy="12.98" r="12.98" transform="translate(-2.73 19.36) rotate(-45)" style="fill:#f8f8f8;"/><circle cx="13.98" cy="19.79" r="12.98" transform="translate(-8.51 28.81) rotate(-76.62)" style="fill:none;stroke:#ededed;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"/></g></g>
+                <g class="ellipse2"><g id="Layer_1-2" data-name="Layer 1"><circle cx="22" cy="12.98" r="12.98" transform="translate(-2.73 19.36) rotate(-45)" style="fill:#f8f8f8;"/><circle cx="13.98" cy="19.79" r="12.98" transform="translate(-8.51 28.81) rotate(-76.62)" style="fill:none;stroke:#ededed;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"/></g></g>
+                <g class="ellipse3"><g id="Layer_1-2" data-name="Layer 1"><circle cx="22" cy="12.98" r="12.98" transform="translate(-2.73 19.36) rotate(-45)" style="fill:#f8f8f8;"/><circle cx="13.98" cy="19.79" r="12.98" transform="translate(-8.51 28.81) rotate(-76.62)" style="fill:none;stroke:#ededed;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"/></g></g>
+                <g class="ellipse4"><g id="Layer_1-2" data-name="Layer 1"><circle cx="22" cy="12.98" r="12.98" transform="translate(-2.73 19.36) rotate(-45)" style="fill:#f8f8f8;"/><circle cx="13.98" cy="19.79" r="12.98" transform="translate(-8.51 28.81) rotate(-76.62)" style="fill:none;stroke:#ededed;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"/></g></g>
+                <g class="ellipse5"><g id="Layer_1-2" data-name="Layer 1"><circle cx="22" cy="12.98" r="12.98" transform="translate(-2.73 19.36) rotate(-45)" style="fill:#f8f8f8;"/><circle cx="13.98" cy="19.79" r="12.98" transform="translate(-8.51 28.81) rotate(-76.62)" style="fill:none;stroke:#ededed;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"/></g></g>
+                <g class="ellipse6"><g id="Layer_1-2" data-name="Layer 1"><circle cx="22" cy="12.98" r="12.98" transform="translate(-2.73 19.36) rotate(-45)" style="fill:#f8f8f8;"/><circle cx="13.98" cy="19.79" r="12.98" transform="translate(-8.51 28.81) rotate(-76.62)" style="fill:none;stroke:#ededed;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"/></g></g>
+            </svg>
+        </div>
+        <div class="main_login_pop_inner">
+            <h4>Sign in</h4>
+            <h3>Zara winter collection 2019</h3>
+            <form action="">
+                <input type="text" placeholder="Username or Email">
+                <input type="password" placeholder="Password">
+                <input type="checkbox" id="remember_me">
+                <label for="remember_me">Remember me</label>
+                <button type="submit">Sign in</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="first_screen" style="background-image: url(img/kiosk_default_first_screen_bg.svg);">
+        <figure class="logo">
+            <img src="img/kiosk_logo.svg" alt="">
+        </figure>
+        <h2>
+            <strong>XTAG</strong>
+            <span>Technologies & Solutions</span>
+        </h2>
+        <a class="go" href="#"><em>Check In</em> <i></i> <span></span></a>
+    </div>
+
+    <div class="congr_popup">
+        <div class="congr_popup_inner">
+            <h3>Congratulations!</h3>
+            <p>You were successfuly chacked in</p>
+            <img src="img/kiosk_congr_i.svg" alt="">
+        </div>
+    </div>
+
+    <div class="error_popup">
+        <div class="error_popup_inner">
+            <h3>Error!</h3>
+            <p>We didn’t found you in our system</p>
+            <img src="img/kiosk_error.svg" alt="">
+        </div>
+    </div>
+
+    <div class="check_out_popup">
+        <div class="check_out_popup_inner">
+            <h3>Check Out!</h3>
+            <p>Would you like to check out?</p>
+            <a href="#" class="checkOut_btn">Check Out</a>
+            <a href="#" class="checkOut_cancel_btn">Cancel</a>
+        </div>
+    </div>
+
+    <div class="camera_scar_qr">
+        <em class="back" onclick="">Back</em>
+        <h4>Scan QR</h4>
+        <figure class="active_logo">
+            <img src="img/kiosk_logo.svg" alt="">
+            <figcaption>
+                <strong>XTAG</strong>
+                <span>Technologies &amp; Solutions</span>
+            </figcaption>
+        </figure>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 425.55 410.37">
+            <title>Camera scanning</title>
+            <g id="Layer_2" data-name="Layer 2">
+            <g id="Layer_1-2" data-name="Layer 1">
+                <circle cx="211.75" cy="205.87" r="204.5" style="fill:#e4e4e4"/>
+            <path d="M372.24,382.27a1.71,1.71,0,0,1-1.66,2.12H294.87c-13.58,0-24.59-9.88-24.59-22.07h0c0-12.19,11-22.07,24.59-22.07H362Z" style="fill:#487fea"/>
+            <polygon points="149.62 157.67 131.91 157.67 98.46 78.76 116.48 78.76 149.62 157.67" style="fill:#487fea"/>
+            <path d="M319.69,80.28a14.33,14.33,0,1,1-19.31-6.14A14.34,14.34,0,0,1,319.69,80.28Z" style="fill:#487fea"/>
+            <polyline points="315.99 342.37 361.98 342.37 321.69 170.15 242.29 170.15 315.99 342.37" style="fill:#487fea"/>
+            <path d="M222.78,168.91l.16.38,6.28,15.25,6.41,15.55a15,15,0,0,1-27.76,11.43l-17.54-42.61Z" style="fill:#487fea"/>
+            <path d="M378.75,109.67a59.62,59.62,0,0,1-17.12,42C351.06,162.39,344.45,168,328.31,168H175.56l-14.69-36H313c16.14,0,27.75-6.63,38.33-17.38s14.36-24.32,14.36-40.72c0-1.43,0-1.84-.14-3.24C375.13,81.24,378.75,94.13,378.75,109.67Z" style="fill:#65a7dd"/>
+            <path d="M380.86,17.89H357a3,3,0,1,1,0-6h23.84a3,3,0,0,1,0,6" style="fill:#2e353a"/>
+            <path d="M368.94,29.79a3,3,0,0,1-3-3V3a3,3,0,1,1,6,0V26.82a3,3,0,0,1-3,3" style="fill:#2e353a"/>
+            <path d="M422.57,56.61H398.74a3,3,0,1,1,0-6h23.83a3,3,0,1,1,0,6" style="fill:#2e353a"/>
+            <path d="M410.65,68.52a3,3,0,0,1-3-3V41.72a3,3,0,1,1,6,0V65.55a3,3,0,0,1-3,3" style="fill:#2e353a"/>
+            <path d="M297,387.42c-15.19,0-27.55-11.23-27.55-25s12.36-25,27.55-25H360.7L321.6,170.23H229.45l63.12,147.25-5.28,2.26L240.76,211.17l-3.13,4a17.89,17.89,0,0,1-7.24,5.5,17.66,17.66,0,0,1-6.8,1.35A17.93,17.93,0,0,1,207,210.91l-16.87-41H152.47l-4.21-10.15h-30.5L74.41,55.17h30.5L100.7,45H319.3A62.44,62.44,0,0,1,330.42,168.9l-3.11.56,39.77,170,10.32,42.26a4.6,4.6,0,0,1-4.46,5.68Zm0-44.31c-12,0-21.81,8.65-21.81,19.28s9.78,19.29,21.81,19.29h74.53l-9.42-38.57ZM212.28,208.72a12.19,12.19,0,1,0,22.55-9.29l-12.16-29.52H196.3Zm-56-44.55h163a56.71,56.71,0,0,0,53.22-76.3l-3.23-8.74-2.48,9A62.78,62.78,0,0,1,306.19,134H143.77ZM121.59,154h24.29l-38.6-93.12H83Zm20.52-25.81H306.19a56.91,56.91,0,0,0,40.35-16.6A56.29,56.29,0,0,0,363.22,72.8l0-1.14-.74-.87a56.62,56.62,0,0,0-43.2-20H109.8Z" style="fill:#2e353a"/>
+            <path class="wave1" d="M75,122.75,62.74,93.93A3.41,3.41,0,1,1,69,91.25l12.3,28.82A3.41,3.41,0,1,1,75,122.75" style="fill:#2e353a"/>
+            <path class="wave2" d="M61.86,153.38,31.51,82.26a3.41,3.41,0,1,1,6.28-2.68L68.14,150.7a3.41,3.41,0,1,1-6.28,2.68" style="fill:#2e353a"/>
+            <path class="wave3" d="M48.68,184,.28,70.59a3.41,3.41,0,1,1,6.28-2.68L55,181.32A3.41,3.41,0,1,1,48.68,184" style="fill:#2e353a"/>
+        </g>
+        </g>
+        </svg>
+        <p>Scan the QR code from your<br>electronic or printed ticket</p>
+    </div>
+
+    <div class="scan_qr_pop active">
+        <h4>Scan QR</h4>
+        <img src="img/kiosk_phone_qr.jpg" alt="">
+        <div class="scan_window">
+            <span>Aim the camera to the QR</span>
+        </div>
+        <em class="back" onclick="">Back</em>
+    </div>
+
+
+    <div class="register_gform_wrapper">
+        <div class="reg_header">
+            <em class="back" onclick="">Back</em>
+            <h4>Registration</h4>
+            <div class="band_pop_ui_block">
+                <span class="regstr active">Registration</span>
+                <span class="photo">Photo</span>
+                <span class="band">Band</span>
+                <span class="signature">Signature</span>
+            </div>
+
+            <figure class="active_logo">
+                <img src="img/kiosk_logo.svg" alt="">
+                <figcaption>
+                    <strong>XTAG</strong>
+                    <span>Technologies &amp; Solutions</span>
+                </figcaption>
+            </figure>
+        </div>
+                
+                <div class="gf_browser_chrome gform_wrapper" id="gform_wrapper_1">
+                    <form method="post" action="">
+                <div class="gform_body">
+                    <ul class="gform_fields top_label form_sublabel_below description_below">
+                        <li class="gfield col-lg-4 col-sm-6 col-xs-12 gfield_contains_required">
+                            <div class="">
+                                <input name="first_name" type="text" class="large" placeholder="" id="first_name" autocomplete="off">
+                                <label class="gfield_label" for="first_name">
+                                <span class="gfield_required"></span>First name</label>
+                            </div>
+                        </li>
+                        <li class="gfield col-lg-4 col-sm-6 col-xs-12 gfield_contains_required">
+                            <div class="">
+                                <input name="second_name" type="text"  class="large" placeholder="" id="second_name" autocomplete="off">
+                                <label class="gfield_label" for="second_name"><span class="gfield_required"></span>Second name</label>
+                            </div>
+                        </li>
+                        <li class="gfield col-lg-4 col-sm-6 col-xs-12 gfield_contains_required">
+                            <div class="">
+                                <input name="email" type="text"  class="large" placeholder="" id="email" autocomplete="off">
+                                <label class="gfield_label" for="email">Email</label>
+                            </div>
+                        </li>
+                        <li class="gfield col-lg-4 col-sm-6 col-xs-12 gfield_contains_required">
+                            <div class="">
+                                <input name="area" type="text" class="large" placeholder="" id="area" autocomplete="off">
+                                <label class="gfield_label" for="area"><span class="gfield_required"></span>Area</label>
+                            </div>
+                        </li>
+                        <li class="gfield col-lg-4 col-sm-6 col-xs-12">
+                            <label class="gfield_label" for="input_1_8">Choose city</label>
+                            <div class="ginput_container ginput_container_select">
+                                <select class="medium gfield_select" tabindex="4">
+                                    <option value="Choose 1">Choose 1</option>
+                                    <option value="Choose 2">Choose 2</option>
+                                    <option value="Choose 3">Choose 3</option>
+                                    <option value="Choose 4">Choose 4</option>
+                                    <option value="Choose 5">Choose 5</option>
+                                    <option value="Choose 6">Choose 6</option>
+                                    <option value="Choose 7">Choose 7</option>
+                                    <option value="Choose 8">Choose 8</option>
+                                    <option value="Choose 9">Choose 9</option>
+                                    <option value="Choose 10">Choose 10</option>
+                                    <option value="Choose 11">Choose 11</option>
+                                    <option value="Choose 12">Choose 12</option>
+                                    <option value="Choose 13">Choose 13</option>
+                                    <option value="Choose 14">Choose 14</option>
+                                    <option value="Choose 15">Choose 15</option>
+                                </select>
+                            </div>
+                        </li>
+                        <li class="gfield col-lg-4 col-sm-6 col-xs-12">
+                            <div class="">
+                                <input name="phone" type="text" class="large" placeholder="" id="phone" autocomplete="off">
+                                <label class="gfield_label" for="phone">Phone number</label>
+                            </div>
+                        </li>
+                        
+                        <li class="gfield col-lg-6 col-md-12 col-xs-12">
+                            <label class="gfield_label">Checkboxes</label>
+                            <div class="ginput_container ginput_container_checkbox">
+                                <ul class="gfield_checkbox">
+                                    <li class="col-lg-4">
+                                        <input type="checkbox" id="choice_1_9_1">
+                                        <label for="choice_1_9_1" id="label_1_9_1">First Choice</label>
+                                    </li>
+                                    <li class="col-lg-4">
+                                        <input type="checkbox" id="choice_1_9_2" >
+                                        <label for="choice_1_9_2" id="label_1_9_2">Second Choice</label>
+                                    </li>
+                                    <li class="col-lg-4">
+                                        <input type="checkbox" id="choice_1_9_3" >
+                                        <label for="choice_1_9_3" id="label_1_9_3">Third Choice</label>
+                                    </li>
+
+
+                                    <li class="col-lg-4">
+                                        <input type="checkbox" id="choice_1_9_4">
+                                        <label for="choice_1_9_4" id="label_1_9_1">First Choice</label>
+                                    </li>
+                                    <li class="col-lg-4">
+                                        <input type="checkbox" id="choice_1_9_5" >
+                                        <label for="choice_1_9_5" id="label_1_9_2">Second Choice Second Choice</label>
+                                    </li>
+                                    <li class="col-lg-4">
+                                        <input type="checkbox" id="choice_1_9_6" >
+                                        <label for="choice_1_9_6" id="label_1_9_3">Third Choice Choice</label>
+                                    </li>
+
+
+                                    <li class="col-lg-4">
+                                        <input type="checkbox" id="choice_1_9_7">
+                                        <label for="choice_1_9_7" id="label_1_9_1">First Choice First</label>
+                                    </li>
+                                    <li class="col-lg-4">
+                                        <input type="checkbox" id="choice_1_9_8" >
+                                        <label for="choice_1_9_8" id="label_1_9_2">Second Choice</label>
+                                    </li>
+                                    <li class="col-lg-4">
+                                        <input type="checkbox" id="choice_1_9_9" >
+                                        <label for="choice_1_9_9" id="label_1_9_3">Third Choice Third Choice</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="gfield col-lg-6 col-md-12 col-xs-12">
+                            <label class="gfield_label">Radiobuttons</label>
+                            <div class="ginput_container ginput_container_radio">
+                                <ul class="gfield_radio">
+                                    <li class="gchoice_1_10_0 col-lg-4">
+                                        <input name="input_10" type="radio" id="choice_1_10_0">
+                                        <label for="choice_1_10_0" id="label_1_10_0">First Choice</label>
+                                    </li>
+                                    <li class="gchoice_1_10_1 col-lg-4">
+                                        <input name="input_10" type="radio" id="choice_1_10_1">
+                                        <label for="choice_1_10_1" id="label_1_10_1">Second Choice</label>
+                                    </li>
+                                    <li class="gchoice_1_10_2 col-lg-4">
+                                        <input name="input_10" type="radio" id="choice_1_10_2">
+                                        <label for="choice_1_10_2" id="label_1_10_2">Third Choice</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="gfield col-lg-4 col-sm-6 col-xs-12">
+                            <label class="gfield_label" for="input_1_8">Choose some</label>
+                            <div class="ginput_container ginput_container_select">
+                                <select class="medium gfield_select" tabindex="4">
+                                    <option value="some 1">some 1</option>
+                                    <option value="some 2">some 2</option>
+                                    <option value="some 3">some 3</option>
+                                    <option value="some 4">some 4</option>
+                                    <option value="some 5">some 5</option>
+                                    <option value="some 6">some 6</option>
+                                    <option value="some 7">some 7</option>
+                                    <option value="some 8">some 8</option>
+                                    <option value="some 9">some 9</option>
+                                    <option value="some 10">some 10</option>
+                                    <option value="some 11">some 11</option>
+                                    <option value="some 12">some 12</option>
+                                    <option value="some 13">some 13</option>
+                                    <option value="some 14">some 14</option>
+                                    <option value="some 15">some 15</option>
+                                </select>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="gform_footer clear top_label">
+                    <button type='submit' value='Save & Check in' class='send_to_server go'>Save & Check in</button>
+                    <button type='button' value='Cancel' class='clear_form'>Cancel</button>
+                    <button type='submit' value='Check out' class='check_out_btn'>Check out</button>
+                </div>
+            </form>
+
+        </div>
+        <script type="text/javascript">
+            if(typeof gf_global == 'undefined') var gf_global = {"gf_currency_config":{"name":"U.S. Dollar","symbol_left":"$","symbol_right":"","symbol_padding":"","thousand_separator":",","decimal_separator":".","decimals":2},"base_url":"https:\/\/roman2.xtag-event.com\/dev1\/wp-content\/plugins\/gravityforms","number_formats":[],"spinnerUrl":"https:\/\/roman2.xtag-event.com\/dev1\/wp-content\/plugins\/gravityforms\/images\/spinner.gif"};jQuery(document).bind('gform_post_render', function(event, formId, currentPage){if(formId == 1) {} } );jQuery(document).bind('gform_post_conditional_logic', function(event, formId, fields, isInit){} );</script><script type="text/javascript"> jQuery(document).ready(function(){jQuery(document).trigger('gform_post_render', [1, 1]) } );
+        </script>
+    </div>
+
+    <div class="enter_code_inner">
+        <div class="enter_code_header">
+            <em class="back" onclick="">Back</em>
+            <figure class="active_logo">
+                <img src="img/kiosk_logo.svg" alt="">
+                <figcaption>
+                    <strong>XTAG</strong>
+                    <span>Technologies & Solutions</span>
+                </figcaption>
+            </figure>
+            
+        </div>
+        
+        <form action="">
+            <h4><i></i>Enter code</h4>
+            <input type="text" placeholder="Your code here...">
+            <button class="go" type="submit">Check In</button>
+        </form>
+    </div>
+
+    <div class="settings_wr">
+        <div class="settings">
+            <div class="setting_menu">
+                <span class="burger_sett"></span>
+                <h6>
+                    <i></i>
+                    <span>Google</span>
+                    <em>Kiosk settings</em>
+                </h6>
+                <div>
+                    <ul>
+                        <li class="active"><a href="#" data-tab="1">General information</a></li>
+                        <li><a href="#" data-tab="2">Badges & Printers</a></li>
+                        <li><a href="#" data-tab="3">Selfie camera</a></li>
+                        <li><a href="#" data-tab="4">QR scanner</a></li>
+                        <li><a href="#" data-tab="5">Backup</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="setting_info">
+                <div class="general_info active" data-tab_item="1">
+                    <h6 class="clear"><a class="exit" href="#"></a> <a class="full_size_setting" href="#"></a><span>General information</span></h6>
+                    <ul>
+                        <li class="user_info clear">
+                            <i>
+                                <img src="img/kiosk_user_i.svg" alt="">
+                            </i>
+                            <span>developer</span>
+                            <a href="#">Log out</a>
+                        </li>
+                        <li class="disabled">
+                            <a href="#">Auto check-in </a><span>Disabled</span>
+                        </li>
+                        <li class="enabled">
+                            <a href="#">Printing </a><span>Enabled</span>
+                        </li>
+                        <li class="disabled">
+                            <a href="#">Unique check-in </a><span>Disabled</span>
+                        </li>
+                        <li class="server_status enabled full_sized_li">
+                            <span>Online</span>
+                            <p>Remote server status</p>
+                            <p class="last_cync">Last Sync time:  <span>17:24</span>    <em>01 Nov 2018</em></p>
+                        </li>
+                        <li class="disabled full_sized_li local_server">
+                            <div>
+                                <a href="#">Local server status </a><span>Disconnected</span>
+                            </div>
+                            <div>
+                                <form action="#">
+                                    <input type="text" placeholder="Local server IP">
+                                    <button type="submit">Connect</button>
+                                </form>
+                                <span href="#">Scan server</span>
+                            </div>
+                            
+                        </li>
+                    </ul>
+                </div>
+        
+                <div class="badges_printers" data-tab_item="2">
+                    <h6 class="clear"><a class="exit" href="#"></a> <a class="full_size_setting" href="#"></a><span>Badges</span></h6>
+                    <ul>
+                        <li>
+                            <div class="number"><span>1</span></div>
+                            <div class="badge_name"><p>Google badge</p></div>
+                            <div class="printer_info">
+                                <span>Printer</span>
+                                <em>Printer 3</em>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="number"><span>2</span></div>
+                            <div class="badge_name"><p>Waze badge</p></div>
+                            <div class="printer_info">
+                                <span>Printer</span>
+                                <em>Printer 3</em>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="number"><span>3</span></div>
+                            <div class="badge_name"><p>ASUS badge</p></div>
+                            <div class="printer_info">
+                                <span>Printer</span>
+                                <em>Printer 3</em>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="choose_printer">
+                        <span>Choose printer</span>
+                        <div>
+                            <ul>
+                                <li>Printer 1</li>
+                                <li>Printer 2</li>
+                                <li class="active">Printer 3</li>
+                                <li>Printer 4</li>
+                                <li>Printer 5</li>
+                                <li>Printer 6</li>
+                                <li>Printer 7</li>
+                                <li>Printer 8</li>
+                                <li>Printer 9</li>
+                                <li>Printer 10</li>
+                                <li>Printer 11</li>
+                                <li>Printer 12</li>
+                                <li>Printer 13</li>
+                                <li>Printer 14</li>
+                                <li>Printer 15</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="selfie_camera" data-tab_item="3">
+                    <h6 class="clear"><a class="exit" href="#"></a> <a class="full_size_setting" href="#"></a><span>Selfie camera</span></h6>
+                    <div class="list_of_cameras_wr">
+                        <div class="name_of_camera">
+                            <span>Selfie camera</span>
+                        </div>
+                        <div class="list_of_cameras">
+                            <p>Choose camera</p>
+                            <span>Front Apple camera X228cJ - HD</span>
+                        </div>
+                    </div>
+                    <div class="try_camera">
+                        <div class="camera_image">
+                            <figure>
+                                <img src="img/kiosk_try_camera_bg.svg" alt="">
+                                <div class="video_from_camera"><div></div></div>
+                            </figure>
+                            
+                        </div>
+                        <div class="list_cam_options">
+                            <ul>
+                                <li class="hor"><a class="hor" href="#"><img src="img/kiosk_hor.svg" alt=""></a><span>Vertical</span></li>
+                                <li class="ver"><a class="ver" href="#"><img src="img/kiosk_ver.svg" alt=""></a><span>Horizontal</span></li>
+                                <li class="rr"><a class="rr" href="#"><img src="img/kiosk_rr.svg" alt=""></a><span>Rotate right</span></li>
+                                <li class="rl"><a class="rl" href="#"><img src="img/kiosk_rl.svg" alt=""></a><span>Rotate left</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="choose_camera">
+                        <span>Choose camera</span>
+                        <div>
+                            <ul>
+                                <li>Front Apple camera X228cJ - HD</li>
+                                <li>Back Apple camera 32LS - 720p</li>
+                                <li class="active">Front Apple camera X228cJ - HD</li>
+                                <li>Front Apple camera X228cJ - HD</li>
+                                <li>Back Apple camera 32LS - 720p</li>
+                                <li>Front Apple camera X228cJ - HD</li>
+                                <li>Front Apple camera X228cJ - HD</li>
+                                <li>Back Apple camera 32LS - 720p</li>
+                                <li>Front Apple camera X228cJ - HD</li>
+                                <li>Front Apple camera X228cJ - HD</li>
+                                <li>Back Apple camera 32LS - 720p</li>
+                                <li>Front Apple camera X228cJ - HD</li>
+                                <li>Front Apple camera X228cJ - HD</li>
+                                <li>Back Apple camera 32LS - 720p</li>
+                                <li>Front Apple camera X228cJ - HD</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="qr_scanner" data-tab_item="4">
+                    <h6 class="clear"><a class="exit" href="#"></a> <a class="full_size_setting" href="#"></a><span>QR scanner</span></h6>
+
+                    <div class="list_of_cameras_wr">
+                        <div class="name_of_camera">
+                            <span>QR scanner</span>
+                        </div>
+                        <div class="list_of_cameras">
+                            <p>Choose camera / external scanner</p>
+                            <span>USB scanner 7SIXZ278</span>
+                        </div>
+                    </div>
+
+                    <div class="choose_camera">
+                        <span>Choose camera</span>
+                        <div>
+                            <ul>
+                                <li>Front Apple camera X228cJ - HD</li>
+                                <li>Back Apple camera 32LS - 720p</li>
+                                <li class="active">Front Apple camera X228cJ - HD</li>
+                                <li>Front Apple camera X228cJ - HD</li>
+                                <li>Back Apple camera 32LS - 720p</li>
+                                <li>Front Apple camera X228cJ - HD</li>
+                                <li>Front Apple camera X228cJ - HD</li>
+                                <li>Back Apple camera 32LS - 720p</li>
+                                <li>Front Apple camera X228cJ - HD</li>
+                                <li>Front Apple camera X228cJ - HD</li>
+                                <li>Back Apple camera 32LS - 720p</li>
+                                <li>Front Apple camera X228cJ - HD</li>
+                                <li>Front Apple camera X228cJ - HD</li>
+                                <li>Back Apple camera 32LS - 720p</li>
+                                <li>Front Apple camera X228cJ - HD</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="lets_scan">
+                        <i class="great"></i>
+                        <!-- <i class="timer"></i> -->
+                        <!-- <span class="time_up">10s</span> -->
+                        <h6>Great!</h6>
+                        <p>We successfuly recognize<br>scanning from external device</p>
+                        <!-- <p>Please scan some<br>barcode / QR code now...</p> -->
+                        <!-- <p>Let’s test the scanner...</p> -->
+                        <!-- <p>We dident recognize any scanning</p> -->
+                        <a href="#"><span>Test now</span></a>
+                        <!-- <a href="#"><span>Try again</span></a> -->
+                    </div>
+                </div>
+                <div class="backup" data-tab_item="5">
+                    <h6 class="clear"><a class="exit" href="#"></a> <a class="full_size_setting" href="#"></a><span>Backup</span></h6>
+                    <div class="backup_download_buttons">
+                        <div>
+                            <a href="#"><span>Download full DB</span></a>
+                            <a href="#"><span>Download unsynced changes</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="search_popuper">
+        <div class="search_flex_container">
+            <div class="search_inner spaceForResults">
+                <div class="search_header">
+                    <em class="back" onclick="">Back</em>
+                    <figure class="active_logo">
+                        <img src="img/kiosk_logo.svg" alt="">
+                        <figcaption>
+                            <strong>XTAG</strong>
+                            <span>Technologies & Solutions</span>
+                        </figcaption>
+                    </figure>
+                </div>
+                <form action="" class="spaceForKeyboard">
+                    <h4><i></i>Search</h4>
+                    <input type="text" placeholder="Write here your name...">
+                </form>
+            </div>
+            <div class="search_results active">
+                <div>
+                    <ul>
+                        <li class="checkedin">
+                            <div class="clear">
+                                <i>
+                                    <img src="img/kiosk_user_i.svg" alt="">
+                                </i>
+                                <span>Osher Cohen</span>
+                                <em>Owner</em>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="clear">
+                                <i></i>
+                                <span>Eran Eluz</span>
+                                <em>CTO Xtag</em>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="clear">
+                                <i></i>
+                                <span>Roman Roman</span>
+                                <em>Developer Xtag</em>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="clear">
+                                <i>
+                                    <img src="img/kiosk_user_i.svg" alt="">
+                                </i>
+                                <span>Osher Cohen</span>
+                                <em>Owner</em>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="clear">
+                                <i></i>
+                                <span>Eran Eluz</span>
+                                <em>CTO Xtag</em>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="clear">
+                                <i></i>
+                                <span>Roman Roman</span>
+                                <em>Developer Xtag</em>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="clear">
+                                <i>
+                                    <img src="img/kiosk_user_i.svg" alt="">
+                                </i>
+                                <span>Osher Cohen</span>
+                                <em>Owner</em>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="clear">
+                                <i></i>
+                                <span>Eran Eluz</span>
+                                <em>CTO Xtag</em>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="clear">
+                                <i></i>
+                                <span>Roman Roman</span>
+                                <em>Developer Xtag</em>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="clear">
+                                <i>
+                                    <img src="img/kiosk_user_i.svg" alt="">
+                                </i>
+                                <span>Osher Cohen</span>
+                                <em>Owner</em>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="clear">
+                                <i></i>
+                                <span>Eran Eluz</span>
+                                <em>CTO Xtag</em>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="clear">
+                                <i></i>
+                                <span>Roman Roman</span>
+                                <em>Developer Xtag</em>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="clear">
+                                <i>
+                                    <img src="img/kiosk_user_i.svg" alt="">
+                                </i>
+                                <span>Osher Cohen</span>
+                                <em>Owner</em>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="clear">
+                                <i></i>
+                                <span>Eran Eluz</span>
+                                <em>CTO Xtag</em>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="clear">
+                                <i></i>
+                                <span>Roman Roman</span>
+                                <em>Developer Xtag</em>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="main">
+        <div class="logo_block" style="background-image: url(img/kiosk_logo_block_bg.svg);">
+            <figure>
+                <img src="img/kiosk_logo.svg" alt="">
+                <figcaption>
+                    <strong>XTAG</strong>
+                    <span>Technologies & Solutions</span>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="content_wr">
+            <div class="content_inner">
+                <div class="scan_qr notActive main_screen_item">
+                   
+                    <div class="first_info">
+                        <i></i>
+                        <h4>Scan QR</h4>
+                        <p>Scan the QR code from your<br>electronic or printed ticket</p>
+                        <a class="go" href="#">Go</a>
+                    </div>
+
+                    
+
+                </div>
+                <div class="right_col_wr">
+                    <div class="enter_code notActive main_screen_item">
+                        <div class="first_info">
+                            <i></i>
+                            <h4>Enter code</h4>
+                            <p>Manualy enter a code you<br>got by email, sms etc...</p>
+                            <a class="go" href="#">Go</a>
+                        </div>
+                    </div>
+                    <div class="searching_main_block notActive main_screen_item">
+                        <div class="first_info">
+                            <i></i>
+                            <h4>Search</h4>
+                            <p>Search your self by personal information</p>
+                            <a class="go" href="#">Go</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="register notActive main_screen_item">               
+                <div class="first_info">
+                    <span>If you haven’t register yet now its the time!</span>
+                    <a href="#" class="go_register">Register Now</a>
+                </div>              
+            </div>
+        </div>
+    </div>
+    <div class="simple_keyboard_wr">
+        <div class="simple-keyboard"></div>
+    </div>
+
+    <div class="client_info popup">
+        <span class="client_info_back"></span>
+        <figure class="active_logo">
+            <img src="img/kiosk_logo.svg" alt="">
+            <figcaption>
+                <strong>XTAG</strong>
+                <span>Technologies &amp; Solutions</span>
+            </figcaption>
+        </figure>
+        <div class="signature_overlay popup">
+            <div class="signature"></div>
+            <div class="btn_block">
+                <a href="#" class="clear">Clear</a>
+                <a href="#" class="accept">Accept</a>
+            </div>
+        </div>
+        <div class="band_link_overlay">
+            <div>
+                <span>Put the band on the reader to scan</span>
+                <img class="grid" src="img/kiosk_grid.svg" alt="">
+                <img class="grid_animation_logo" src="img/kiosk_grid_animation_logo.svg" alt="">
+                <svg class="grid_btn_to_action" viewBox="0 0 43 66">
+                    <g id="Layer_2" data-name="Layer 2">
+                        <g id="Layer_1-2" data-name="Layer 1">
+                            <rect width="43" height="66" rx="21.5" ry="21.5" style="fill:#b3b3b3; opacity:0.48"/>
+                            <path d="M14.75,40.72l6.6,6.07a.59.59,0,0,0,.8,0l6.6-6.07" class="call_to_bounce" style="fill:none;stroke:#333;stroke-linecap:round; stroke-miterlimit:10; stroke-width:2px;"/>
+                            <path d="M14.75,31.1l6.6,6.07a.59.59,0,0,0,.8,0l6.6-6.07" class="call_to_bounce" style="fill:none;stroke:#333;stroke-linecap:round; stroke-miterlimit:10; stroke-width:2px;"/>
+                        </g>
+                    </g>
+                </svg>
+                <a href="#">Skip</a>
+            </div>
+        </div>
+        <div class="selfie_preview">
+            <span class="camera_aval_info">Camera ON</span>
+            <img src="img/kiosk_unknown_pop4.jpg" alt="">
+            <div class="btn_block">
+                <a href="#" class="retake">Retake</a>
+                <a href="#" class="accept">Accept</a>
+            </div>
+        </div>
+        <span class="camera_aval_info">Camera ON</span>
+        <div class="get_selfie">
+            <span class="timer">3</span>
+            <span class="camera_aval_info">Camera ON</span>
+            <img src="img/kiosk_unknown_pop4.jpg" alt="">
+            <a href="#">
+                <img src="img/kiosk_round_button.svg" alt="">
+            </a>
+        </div>
+        <span class="camera_aval_info">Camera ON</span>
+        <div class="band_pop_ui_block">
+            <span class="regstr active">Registration</span>
+            <span class="photo active">Photo</span>
+            <span class="band active">Band</span>
+            <span class="signature active">Signature</span>
+        </div>
+    </div>
+    
+</body>
+</html>

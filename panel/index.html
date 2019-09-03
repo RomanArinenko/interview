@@ -1,0 +1,1681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" vi>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+	<title>Panel Scroll</title>
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/owl.theme.default.css">
+    <link rel="stylesheet" href="css/circle.css">
+    <link rel="stylesheet" href="css/spectrum.css">
+	<link rel="stylesheet" href="css/screen.css">
+    <link rel="stylesheet" href="css/croppie.css">
+    <link rel="stylesheet" href="css/datepicker.css">
+    <link rel="stylesheet" href="css/skin.min.css">
+
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="js/jQuery-ui-Rotatable.js" type="text/javascript"></script>
+    <script src="js/jquery.mobile-events.min.js" type="text/javascript"></script>
+    <script src="js/jquery_ui_touch_punch.js" type="text/javascript"></script>
+    <script src="js/jquery.mousewheel.min.js" type="text/javascript"></script>
+    <script src="js/rangeslider.js" type="text/javascript"></script>
+    <script src="js/spectrum.js" type="text/javascript"></script>
+    <script src="js/owl.carousel.js" type="text/javascript"></script>
+    <script src="js/chart.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="loader" onclick="$('.loader').remove();">
+        <div class="l_main">
+            <div class="l_square"><span></span><span></span><span></span></div>
+            <div class="l_square"><span></span><span></span><span></span></div>
+            <div class="l_square"><span></span><span></span><span></span></div>
+            <div class="l_square"><span></span><span></span><span></span></div>
+        </div>
+    </div>
+    <div class="badge_editor_pop">
+        <div class="badge_editor_header">
+            <span class="close_badge_editor"></span>
+            <em>Badge editor</em>
+            <a href="#">Save changes</a>
+        </div>
+        <div class="badge_editor">
+            <div class="badge_view">
+                <div class="badge_view_inner">
+                    <div class="height">
+                        <span>180</span>
+                        <em>mm</em>
+                    </div>
+                    <div class="width">
+                        <span>160</span>
+                        <em>mm</em>
+                    </div>
+                    <img src="img/empty_badge.png" alt="">
+
+                    <div class="qr_block">
+                        <span class="options_indicator" onclick="$('.options_indicator').toggleClass('active');"></span>
+                        <ul>
+                            <li class="bring_forward">Bring Forward</li>
+                            <li class="bring_to_front">Bring to Front</li>
+                            <li class="send_backward">Send Backward</li>
+                            <li class="send_to_back">Send to Back</li>
+                            <li class="delete">Delete</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar_tools active">
+                <span class="show_hide_sidebar_tools" onclick="$('.sidebar_tools').toggleClass('active');"></span>
+
+                <div class="sidebar_tools_inner">
+
+                    <div class="badge_name_tool">
+                        <div class="tool_header">
+                            <h4>Badge name</h4>
+                            <i class="closer_click_start"></i>
+                            <div class="tool_description closer_click_elem">
+                                <span class="show_more">Show more</span>
+                                <span class="show_less">Show less</span>
+                                <div>
+                                    <strong>Badge name</strong>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus illo consectetur aut, asperiores repellendus unde, atque! Blanditiis est modi, alias voluptates veniam sit iste maxime possimus beatae aut recusandae dignissimos praesentium neque inventore, impedit delectus pariatur sint deleniti qui! Earum laudantium similique explicabo incidunt asperiores architecto quasi placeat sint reiciendis repudiandae perferendis, repellendus iste, corporis ullam quo adipisci officiis cum officia unde. Iste alias delectus reiciendis neque mollitia iure, commodi ratione sapiente velit atque cupiditate eius hic suscipit. Consequuntur quod natus consequatur tempore magni tempora quasi quas ullam doloribus saepe neque aspernatur nemo assumenda repudiandae, nobis qui cumque. Nostrum quam deserunt nulla harum, pariatur, dicta assumenda ab labore facere id, modi ipsum doloremque voluptatum optio, non laboriosam fugiat quas facilis repudiandae iste corrupti animi sed. Veritatis vero tempora aut officiis, facere delectus voluptatum consectetur vel suscipit alias, eos perferendis, dolore optio. Dolorum minus ducimus, libero illum similique adipisci animi nemo autem, provident, hic quae neque commodi incidunt maxime tenetur quisquam corporis mollitia omnis. Necessitatibus animi odit molestias alias id, minus ipsum aperiam facilis eaque repellendus sit quod, vero libero voluptates aspernatur eligendi sequi dolorum at molestiae possimus. Vero voluptatem quia harum repellendus optio eum dolore consequuntur voluptatum, nemo, excepturi aliquam!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="text" placeholder="New badge 1">
+                    </div>
+
+                    <div class="mirror_printing_tool">
+                        <div class="tool_header">
+                            <h4>Mirror printing</h4>
+                            <i class="closer_click_start"></i>
+                            <div class="tool_description closer_click_elem">
+                                <span class="show_more">Show more</span>
+                                <span class="show_less">Show less</span>
+                                <div>
+                                    <strong>Mirror printing</strong>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus illo consectetur aut, asperiores repellendus unde, atque! Blanditiis est modi, alias voluptates veniam sit iste maxime possimus beatae aut recusandae dignissimos praesentium neque inventore, impedit delectus pariatur sint deleniti qui! Earum laudantium similique explicabo incidunt minus ducimus, libero illum similique adipisci animi nemo autem, provident, hic quae neque commodi incidunt maxime tenetur quisquam corporis mollitia omnis. Necessitatibus animi odit molestias alias id, minus ipsum aperiam facilis eaque repellendus sit quod, vero libero voluptates aspernatur eligendi sequi dolorum at molestiae possimus. Vero voluptatem quia harum repellendus optio eum dolore consequuntur voluptatum, nemo, excepturi aliquam!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <select name="mirror_print">
+                            <option value="1" selected="selected">No</option>
+                            <option value="2">Flip first part</option>
+                            <option value="3">Flip second part</option>
+                        </select>
+                    </div>
+
+                    <div class="copies_tool">
+                        <div class="tool_header">
+                            <h4>Copies</h4>
+                           <i class="closer_click_start"></i>
+                           <div class="tool_description closer_click_elem">
+                               <span class="show_more">Show more</span>
+                               <span class="show_less">Show less</span>
+                               <div>
+                                   <strong>Copies</strong>
+                                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus illo consectetur aut, asperiores repellendus unde, atque! Blanditiis est modi, alias voluptates veniam sit iste maxime possimus beatae aut recusandae dignissimos praesentium neque inventore, impedit delectus pariatur sint deleniti qui! Earum laudantium similique explicabo incidunt asperiores architecto quasi placeat sint reiciendis repudiandae perferendis, repellendus iste, corporis ullam quo adipisci officiis cum officia unde. Iste alias delectus reiciendis neque mollitia iure, commodi ratione sapiente velit atque cupiditate eius hic suscipit. Consequuntur quod natus consequatur tempore magni tempora quasi quas ullam doloribus saepe neque aspernatur nemo assumenda repudiandae, nobis qui cumque. Nostrum quam deserunt nulla harum, pariatur, dicta assumenda ab labore facere id, modi ipsum doloremque voluptatum optio, non laboriosam fugiat quas facilis repudiandae iste corrupti animi sed. Veritatis vero tempora aut officiis, facere delectus voluptatum consectetur vel suscipit alias, eos perferendis, dolore optio. Dolorum minus ducimus, libero illum similique adipisci animi nemo autem, provident, hic quae neque commodi incidunt maxime tenetur quisquam corporis mollitia omnis. Necessitatibus animi odit molestias alias id, minus ipsum aperiam facilis eaque repellendus sit quod, vero libero voluptates aspernatur eligendi sequi dolorum at molestiae possimus. Vero voluptatem quia harum repellendus optio eum dolore consequuntur voluptatum, nemo, excepturi aliquam!</p>
+                               </div>
+                           </div>
+                        </div>
+                        <div class="copies_tool_inner">
+                            <span class="less"></span>
+                            <span class="more"></span>
+                            <input type="text" value="1">
+                        </div>
+                    </div>
+
+                    <div class="units_tool">
+                        <div class="tool_header">
+                            <h4>Units</h4>
+                           <i class="closer_click_start"></i>
+                           <div class="tool_description closer_click_elem">
+                               <span class="show_more">Show more</span>
+                               <span class="show_less">Show less</span>
+                               <div>
+                                   <strong>Units</strong>
+                                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus illo consectetur aut, asperiores repellendus unde, atque! Blanditiis est modi, alias voluptates veniam sit iste maxime possimus beatae aut recusandae dignissimos praesentium neque inventore, impedit delectus pariatur sint deleniti qui! Earum laudantium similique explicabo incidunt asperiores architecto quasi placeat sint reiciendis repudiandae perferendis, repellendus iste, corporis ullam quo adipisci officiis cum officia unde. Iste alias delectus reiciendis neque mollitia iure, commodi ratione sapiente velit atque cupiditate eius hic suscipit. Consequuntur quod natus consequatur tempore magni tempora quasi quas ullam doloribus saepe neque aspernatur nemo assumenda repudiandae, nobis qui cumque. Nostrum quam deserunt nulla harum, pariatur, dicta assumenda ab labore facere id, modi ipsum doloremque voluptatum optio, non laboriosam fugiat quas facilis repudiandae iste corrupti animi sed. Veritatis vero tempora aut officiis, facere delectus voluptatum consectetur vel suscipit alias, eos perferendis, dolore optio. Dolorum minus ducimus, libero illum similique adipisci animi nemo autem, provident, hic quae neque commodi incidunt maxime tenetur quisquam corporis mollitia omnis. Necessitatibus animi odit molestias alias id, minus ipsum aperiam facilis eaque repellendus sit quod, vero libero voluptates aspernatur eligendi sequi dolorum at molestiae possimus. Vero voluptatem quia harum repellendus optio eum dolore consequuntur voluptatum, nemo, excepturi aliquam!</p>
+                               </div>
+                           </div>
+                        </div>
+                        <div class="units_tool_inner">
+                            <input type="radio" name="units" value="1" checked id="unit_mm">
+                            <label for="unit_mm">Millimeters (mm)</label>
+                            <input type="radio" name="units" value="2" id="unit_in">
+                            <label for="unit_in">Inches (in)</label>
+                        </div>
+                    </div>
+
+                    <div class="printing_tool">
+                        <div class="tool_header">
+                            <h4>Printing</h4>
+                            <i class="closer_click_start"></i>
+                            <div class="tool_description closer_click_elem">
+                                <span class="show_more">Show more</span>
+                                <span class="show_less">Show less</span>
+                                <div>
+                                   <strong>Printing</strong>
+                                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus illo consectetur aut, asperiores repellendus unde, atque! Blanditiis est modi, alias voluptates veniam sit iste maxime possimus beatae aut recusandae dignissimos praesentium neque inventore, impedit delectus pariatur sint deleniti qui! Earum laudantium similique explicabo incidunt asperiores architecto quasi placeat sint reiciendis repudiandae perferendis, repellendus iste, corporis ullam quo adipisci officiis cum officia unde. Iste alias delectus reiciendis neque mollitia iure, commodi ratione sapiente velit atque cupiditate eius hic suscipit. Consequuntur quod natus consequatur tempore magni tempora quasi quas ullam doloribus saepe neque aspernatur nemo assumenda repudiandae, nobis qui cumque. Nostrum quam deserunt nulla harum, pariatur, dicta assumenda ab labore facere id, modi ipsum doloremque voluptatum optio, non laboriosam fugiat quas facilis repudiandae iste corrupti animi sed. Veritatis vero tempora aut officiis, facere delectus voluptatum consectetur vel suscipit alias, eos perferendis, dolore optio. Dolorum minus ducimus, libero illum similique adipisci animi nemo autem, provident, hic quae neque commodi incidunt maxime tenetur quisquam corporis mollitia omnis. Necessitatibus animi odit molestias alias id, minus ipsum aperiam facilis eaque repellendus sit quod, vero libero voluptates aspernatur eligendi sequi dolorum at molestiae possimus. Vero voluptatem quia harum repellendus optio eum dolore consequuntur voluptatum, nemo, excepturi aliquam!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <select name="printing" id="">
+                            <option value="1">Sticker only</option>
+                            <option value="2">Full badge</option>
+                        </select>
+                    </div>
+
+                    <div class="sticker_size_tool">
+                        <div class="tool_header">
+                            <h4>Sticker size</h4>
+                            <i class="closer_click_start"></i>
+                            <div class="tool_description closer_click_elem">
+                                <span class="show_more">Show more</span>
+                                <span class="show_less">Show less</span>
+                                <div>
+                                    <strong>Sticker size</strong>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus illo consectetur aut, asperiores repellendus unde, atque! Blanditiis est modi, alias voluptates veniam sit iste maxime possimus beatae aut recusandae dignissimos praesentium neque inventore, impedit delectus pariatur sint deleniti qui! Earum laudantium similique explicabo incidunt asperiores architecto quasi placeat sint reiciendis repudiandae perferendis, repellendus iste, corporis ullam quo adipisci officiis cum officia unde. Iste alias delectus reiciendis neque mollitia iure, commodi ratione sapiente velit atque cupiditate eius hic suscipit. Consequuntur quod natus consequatur tempore magni tempora quasi quas ullam doloribus saepe neque aspernatur nemo assumenda repudiandae, nobis qui cumque. Nostrum quam deserunt nulla harum, pariatur, dicta assumenda ab labore facere id, modi ipsum doloremque voluptatum optio, non laboriosam fugiat quas facilis repudiandae iste corrupti animi sed. Veritatis vero tempora aut officiis, facere delectus voluptatum consectetur vel suscipit alias, eos perferendis, dolore optio. Dolorum minus ducimus, libero illum similique adipisci animi nemo autem, provident, hic quae neque commodi incidunt maxime tenetur quisquam corporis mollitia omnis. Necessitatibus animi odit molestias alias id, minus ipsum aperiam facilis eaque repellendus sit quod, vero libero voluptates aspernatur eligendi sequi dolorum at molestiae possimus. Vero voluptatem quia harum repellendus optio eum dolore consequuntur voluptatum, nemo, excepturi aliquam!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sticker_size_tool_inner">
+                            <div class="horizontal">
+                                <input type="text" value="160mm">
+                            </div>
+                            <div class="vertical">
+                                <input type="text" value="180mm">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="attendeeID_tool">
+                        <div class="tool_header">
+                            <h4>Attendee ID for example</h4>
+                            <i class="closer_click_start"></i>
+                            <div class="tool_description closer_click_elem">
+                                <span class="show_more">Show more</span>
+                                <span class="show_less">Show less</span>
+                                <div>
+                                    <strong>Attendee ID for example</strong>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus illo consectetur aut, asperiores repellendus unde, atque! Blanditiis est modi, alias voluptates veniam sit iste maxime possimus beatae aut recusandae dignissimos praesentium neque inventore, impedit delectus pariatur sint deleniti qui! Earum laudantium similique explicabo incidunt asperiores architecto quasi placeat sint reiciendis repudiandae perferendis, repellendus iste, corporis ullam quo adipisci officiis cum officia unde. Iste alias delectus reiciendis neque mollitia iure, commodi ratione sapiente velit atque cupiditate eius hic suscipit. Consequuntur quod natus consequatur tempore magni tempora quasi quas ullam doloribus saepe neque aspernatur nemo assumenda repudiandae, nobis qui cumque. Nostrum quam deserunt nulla harum, pariatur, dicta assumenda ab labore facere id, modi ipsum doloremque voluptatum optio, non laboriosam fugiat quas facilis repudiandae iste corrupti animi sed. Veritatis vero tempora aut officiis, facere delectus voluptatum consectetur vel suscipit alias, eos perferendis, dolore optio. Dolorum minus ducimus, libero illum similique adipisci animi nemo autem, provident, hic quae neque commodi incidunt maxime tenetur quisquam corporis mollitia omnis. Necessitatibus animi odit molestias alias id, minus ipsum aperiam facilis eaque repellendus sit quod, vero libero voluptates aspernatur eligendi sequi dolorum at molestiae possimus. Vero voluptatem quia harum repellendus optio eum dolore consequuntur voluptatum, nemo, excepturi aliquam!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="attendeeID_tool_inner">
+                            <span class="less"></span>
+                            <span class="more"></span>
+                            <input type="text" value="2626">
+                        </div>
+                    </div>
+
+                    <div class="target_audience_tool">
+                        <div class="tool_header">
+                            <h4>Target audience</h4>
+                            <i class="closer_click_start"></i>
+                            <div class="tool_description closer_click_elem">
+                               <span class="show_more">Show more</span>
+                               <span class="show_less">Show less</span>
+                               <div>
+                                   <strong>Target audience</strong>
+                                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus illo consectetur aut, asperiores repellendus unde, atque! Blanditiis est modi, alias voluptates veniam sit iste maxime possimus beatae aut recusandae dignissimos praesentium neque inventore, impedit delectus pariatur sint deleniti qui! Earum laudantium similique explicabo incidunt asperiores architecto quasi placeat sint reiciendis repudiandae perferendis, repellendus iste, corporis ullam quo adipisci officiis cum officia unde. Iste alias delectus reiciendis neque mollitia iure, commodi ratione sapiente velit atque cupiditate eius hic suscipit. Consequuntur quod natus consequatur tempore magni tempora quasi quas ullam doloribus saepe neque aspernatur nemo assumenda repudiandae, nobis qui cumque. Nostrum quam deserunt nulla harum, pariatur, dicta assumenda ab labore facere id, modi ipsum doloremque voluptatum optio, non laboriosam fugiat quas facilis repudiandae iste corrupti animi sed. Veritatis vero tempora aut officiis, facere delectus voluptatum consectetur vel suscipit alias, eos perferendis, dolore optio. Dolorum minus ducimus, libero illum similique adipisci animi nemo autem, provident, hic quae neque commodi incidunt maxime tenetur quisquam corporis mollitia omnis. Necessitatibus animi odit molestias alias id, minus ipsum aperiam facilis eaque repellendus sit quod, vero libero voluptates aspernatur eligendi sequi dolorum at molestiae possimus. Vero voluptatem quia harum repellendus optio eum dolore consequuntur voluptatum, nemo, excepturi aliquam!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="upload_background_tool">
+                        <div class="tool_header">
+                            <h4>Upload background</h4>
+                            <i class="closer_click_start"></i>
+                            <div class="tool_description closer_click_elem">
+                                <span class="show_more">Show more</span>
+                                <span class="show_less">Show less</span>
+                                <div>
+                                    <strong>Upload background</strong>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus illo consectetur aut, asperiores repellendus unde, atque! Blanditiis est modi, alias voluptates veniam sit iste maxime possimus beatae aut recusandae dignissimos praesentium neque inventore, impedit delectus pariatur sint deleniti qui! Earum laudantium similique explicabo incidunt asperiores architecto quasi placeat sint reiciendis repudiandae perferendis, repellendus iste, corporis ullam quo adipisci officiis cum officia unde. Iste alias delectus reiciendis neque mollitia iure, commodi ratione sapiente velit atque cupiditate eius hic suscipit. Consequuntur quod natus consequatur tempore magni tempora quasi quas ullam doloribus saepe neque aspernatur nemo assumenda repudiandae, nobis qui cumque. Nostrum quam deserunt nulla harum, pariatur, dicta assumenda ab labore facere id, modi ipsum doloremque voluptatum optio, non laboriosam fugiat quas facilis repudiandae iste corrupti animi sed. Veritatis vero tempora aut officiis, facere delectus voluptatum consectetur vel suscipit alias, eos perferendis, dolore optio. Dolorum minus ducimus, libero illum similique adipisci animi nemo autem, provident, hic quae neque commodi incidunt maxime tenetur quisquam corporis mollitia omnis. Necessitatibus animi odit molestias alias id, minus ipsum aperiam facilis eaque repellendus sit quod, vero libero voluptates aspernatur eligendi sequi dolorum at molestiae possimus. Vero voluptatem quia harum repellendus optio eum dolore consequuntur voluptatum, nemo, excepturi aliquam!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <dev class="drag_bar_tools active">
+                <span class="show_hide_drag_bar_tools" onclick="$('.drag_bar_tools').toggleClass('active');"></span>
+                <div>
+                    <div class="drag_bar_tools_inner">
+                        <h5>Drag and drop the relevant<br>data to your badge</h5>
+                        <div class="special_elements">
+                            <h6>Special elements</h6>
+                            <ul>
+                                <li class="sp_el_picture">Picture</li>
+                                <li class="sp_el_barcode">Barcode</li>
+                                <li class="sp_el_qr_code">QR Code</li>
+                                <li class="sp_el_pixtag">Pixtag</li>
+                                <li class="sp_el_dynamic">Dynamic</li>
+                            </ul>
+                        </div>
+                        <div class="form_fields">
+                            <h6>Form fields</h6>
+                            <ul>
+                                <li class="f_f_first_name">First name</li>
+                                <li class="f_f_last_name">Last name</li>
+                                <li class="f_f_band">Band</li>
+                                <li class="f_f_email">Email</li>
+                                <li class="f_f_phone">Phone</li>
+                                <li class="f_f_attendeeID">Attendee ID</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </dev>
+
+            <div class="top_bar_tools">
+                <div class="alignment_tool">
+                    <i class="text_left"></i>
+                    <i class="text_center"></i>
+                    <i class="text_right"></i>
+                </div>
+                <div class="direction_tool">
+                    <i class="left_to_right"></i>
+                    <i class="right_to_left"></i>
+                </div>
+                <div class="style_tool">
+                    <i class="bold"></i>
+                    <i class="coursive"></i>
+                    <i class="color" style="background-color: #D1D627;"></i>
+                    <div class="color_picker">
+                        <span class="picker_color active">Picker color</span>
+                        <span class="swatches">Swatches</span>
+                        <div style="clear: both;"></div>
+                    </div>
+                </div>
+                <div class="font_tool">
+                    <select name="font" id="">
+                        <option value="1">Tittillium Web</option>
+                        <option value="2">Tittillium Semibold</option>
+                        <option value="3">Tittillium Light</option>
+                        <option value="4">Times New Roman Semibold Coursive</option>
+                        <option value="5">Google Sans Light</option>
+                        <option value="6">Google Sans Bold</option>
+                        <option value="7">Google Sans Coursive</option>
+                        <option value="8">Gotham Italic Regular Webfont</option>
+                    </select>
+                    <div class="font_tool_inner">
+                        <span class="closer_click_start">
+                            <em></em>
+                        </span>
+                        <div class="font_list_dropdown closer_click_elem">
+                            <span class="upload_font">Upload font</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="font_size_tool">
+                    <div class="font_size_tool_inner">
+                        <span class="more"></span>
+                        <span class="less"></span>
+                        <input type="text" value="16 pt" disabled>
+                        <i class="font_size_selector closer_click_start"></i>
+                        <select>
+                            <option value="6">6 pt</option>
+                            <option value="7">7 pt</option>
+                            <option value="8">8 pt</option>
+                            <option value="9">9 pt</option>
+                            <option value="10">10 pt</option>
+                            <option value="11">11 pt</option>
+                            <option value="12">12 pt</option>
+                            <option value="13">13 pt</option>
+                            <option value="14">14 pt</option>
+                            <option value="15">15 pt</option>
+                            <option selected value="16">16 pt</option>
+                            <option value="17">17 pt</option>
+                            <option value="18">18 pt</option>
+                            <option value="19">19 pt</option>
+                            <option value="20">20 pt</option>
+                            <option value="21">21 pt</option>
+                            <option value="22">22 pt</option>
+                            <option value="23">23 pt</option>
+                            <option value="24">24 pt</option>
+                            <option value="25">25 pt</option>
+                            <option value="26">26 pt</option>
+                            <option value="27">27 pt</option>
+                            <option value="28">28 pt</option>
+                            <option value="29">29 pt</option>
+                            <option value="30">30 pt</option>
+                            <option value="31">31 pt</option>
+                            <option value="32">32 pt</option>
+                            <option value="33">33 pt</option>
+                            <option value="34">34 pt</option>
+                            <option value="35">35 pt</option>
+                            <option value="36">36 pt</option>
+                            <option value="37">37 pt</option>
+                            <option value="38">38 pt</option>
+                            <option value="39">39 pt</option>
+                            <option value="40">40 pt</option>
+                            <option value="41">41 pt</option>
+                            <option value="42">42 pt</option>
+                            <option value="43">43 pt</option>
+                            <option value="44">44 pt</option>
+                            <option value="45">45 pt</option>
+                            <option value="46">46 pt</option>
+                            <option value="47">47 pt</option>
+                            <option value="48">48 pt</option>
+                            <option value="49">49 pt</option>
+                            <option value="50">50 pt</option>
+                            <option value="51">51 pt</option>
+                            <option value="52">52 pt</option>
+                            <option value="53">53 pt</option>
+                            <option value="54">54 pt</option>
+                            <option value="55">55 pt</option>
+                            <option value="56">56 pt</option>
+                            <option value="57">57 pt</option>
+                            <option value="58">58 pt</option>
+                            <option value="59">59 pt</option>
+                            <option value="60">60 pt</option>
+                            <option value="61">61 pt</option>
+                            <option value="62">62 pt</option>
+                            <option value="63">63 pt</option>
+                            <option value="64">64 pt</option>
+                            <option value="65">65 pt</option>
+                            <option value="66">66 pt</option>
+                            <option value="67">67 pt</option>
+                            <option value="68">68 pt</option>
+                            <option value="69">69 pt</option>
+                            <option value="70">70 pt</option>
+                            <option value="71">71 pt</option>
+                            <option value="72">72 pt</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="kerning_tool">
+                    <input type="range" min="-100" max="100" step="1" value="0" >
+                </div>
+                <div class="text_transform_tool">
+                    <i class="normal">Ab</i>
+                    <i class="uppercase">AB</i>
+                </div>
+                <div class="history_tool">
+                    <i class="back_history"></i>
+                    <i class="forward_history"></i>
+                </div>
+                <div class="font_mask_tool">
+                    <h4>Text mask</h4>
+                    <div class="font_mask_tool_inner">
+                        <input type="text">
+                        <span class="closer_click_start"></span>
+                    </div>
+                    <select name="text_mask" id="text_mask">
+                        <option>{1:"First Name"}{1:"Checkboxes"}</option>
+                        <option>{2:"First Name"}{2:"Checkboxes"}</option>
+                        <option>{3:"First Name"}{3:"Checkboxes"}</option>
+                        <option>{4:"First Name"}{4:"Checkboxes"}</option>
+                        <option>{5:"First Name"}{5:"Checkboxes"}</option>
+                        <option>{6:"First Name"}{6:"Checkboxes"}</option>
+                        <option>{7:"First Name"}{7:"Checkboxes"}</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Target popup from form that generated by custom gravity forms -->
+
+            <div class="ui-dialog ui-corner-all ui-widget ui-widget-content ui-front ui-draggable ui-resizable">
+                <div class="ui-dialog-titlebar ui-corner-all ui-widget-header ui-helper-clearfix ui-draggable-handle">
+                    <span class="ui-dialog-title">Tag usage conditions</span>
+                    <button type="button" class="ui-button ui-corner-all ui-widget ui-button-icon-only ui-dialog-titlebar-close">
+                        <span class="ui-button-icon ui-icon ui-icon-closethick"></span>
+                        <span class="ui-button-icon-space"></span>
+                        Close
+                    </button>
+                </div>
+                <div class="tag_condition_logic ui-dialog-content ui-widget-content">
+                    <span class="badge_usage_conditions">
+                        Badge usage conditions
+                    </span>
+                    <span class="callback_conditions">
+                        <div id="gform-field-filters">
+                            Use this tag if &nbsp;
+                            <select name="mode">
+                                <option value="all">All</option>
+                                <option value="any">Any</option>
+                            </select>
+                            match:
+                            <div class="gform-field-filter">
+                                <select class="gform-filter-field" name="f[]">
+                                    <option value="0">Any form field</option>
+                                    <option value="1">First Name</option>
+                                    <option value="7">Last Name</option>
+                                    <option value="3">Email</option>
+                                    <option value="8">DropDown</option>
+                                    <option value="9">Checkboxes</option>
+                                    <option value="10">Radio Buttons</option>
+                                    <option value="11">Code</option>
+                                    <option value="entry_id">Attendee ID</option>
+                                    <option value="date_created">Attendee Date</option>
+                                    <option value="is_starred">Starred</option>
+                                    <option value="ip">IP Address</option>
+                                    <option value="source_url">Source URL</option>
+                                    <option value="payment_status">Payment Status</option>
+                                    <option value="payment_date">Payment Date</option>
+                                    <option value="payment_amount">Payment Amount</option>
+                                    <option value="transaction_id">Transaction ID</option>
+                                    <option value="created_by">User</option>
+                                </select>
+                                <input type="hidden" class="gform-filter-type" name="t[]" value="">
+                                <select name="o[]" class="gform-filter-operator">
+                                    <option value="contains">contains</option>
+                                    <option value="is">is</option>
+                                </select>
+                                <input type="text" value="" name="v[]" class="gform-filter-value">
+                                <i class="gform-add" title="Add a condition" style="background: url(&quot;https://roman2.xtag-event.com/dev1/wp-content/plugins/gravityforms/images/add.png&quot;) no-repeat center; background-size: cover;width: 16px;height: 16px"></i>
+                                <i class="gform-remove" title="Remove a condition" style="background: url(&quot;https://roman2.xtag-event.com/dev1/wp-content/plugins/gravityforms/images/remove.png&quot;) no-repeat center; background-size: cover;width: 16px;height: 16px"></i>
+                            </div>
+                            <div class="gform-field-filter">
+                                <select class="gform-filter-field" name="f[]">
+                                    <option value="0">Any form field</option>
+                                    <option value="1">First Name</option>
+                                    <option value="7">Last Name</option>
+                                    <option value="3">Email</option>
+                                    <option value="8">DropDown</option>
+                                    <option value="9">Checkboxes</option>
+                                    <option value="10">Radio Buttons</option>
+                                    <option value="11">Code</option>
+                                    <option value="entry_id">Attendee ID</option>
+                                    <option value="date_created">Attendee Date</option>
+                                    <option value="is_starred">Starred</option>
+                                    <option value="ip">IP Address</option>
+                                    <option value="source_url">Source URL</option>
+                                    <option value="payment_status">Payment Status</option>
+                                    <option value="payment_date">Payment Date</option>
+                                    <option value="payment_amount">Payment Amount</option>
+                                    <option value="transaction_id">Transaction ID</option>
+                                    <option value="created_by">User</option>
+                                </select>
+                                <input type="hidden" class="gform-filter-type" name="t[]" value="">
+                                <select name="o[]" class="gform-filter-operator">
+                                    <option value="contains">contains</option>
+                                    <option value="is">is</option>
+                                </select>
+                                <input type="text" value="" name="v[]" class="gform-filter-value">
+                                <i class="gform-add" title="Add a condition" style="background: url(&quot;https://roman2.xtag-event.com/dev1/wp-content/plugins/gravityforms/images/add.png&quot;) no-repeat center; background-size: cover;width: 16px;height: 16px"></i>
+                                <i class="gform-remove" title="Remove a condition" style="background: url(&quot;https://roman2.xtag-event.com/dev1/wp-content/plugins/gravityforms/images/remove.png&quot;) no-repeat center; background-size: cover;width: 16px;height: 16px"></i>
+                            </div>
+                        </div>
+                    </span>
+                    <span class="custom_add_condition">Add condition</span>
+                    <input type="button" value="save" onclick="SaveTagFilter();">
+                </div>
+                <div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div>
+                <div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div>
+                <div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div>
+                <div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div>
+                <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div>
+                <div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div>
+                <div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div>
+                <div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div>
+            </div>
+
+            <!-- END Target popup from form that generated by custom gravity forms -->
+
+
+
+            <!-- Upload block -->
+
+            <div class="upload_pop">
+                <h4>Upload background</h4>
+                <span class="upload_pop_close"></span>
+                <div class="upload_pop_inner">
+                    <input id="uploadFile" type="file">
+                    <label for="uploadFile">
+                        <i></i>
+                        <span>Drag files here</span>
+                        <em>or</em>
+                        <strong>Browse</strong>
+                    </label>
+                    <p class="percentage">
+                        <span>Uploading <strong>22%</strong></span>
+                        <em></em>
+                    </p>
+                </div>
+            </div>
+            <!-- END Upload block -->
+        </div>
+    </div>
+    <div class="notifications_popup">
+        <ul>
+            <span class="notifications_popup_close"></span>
+            <li>
+                <input type="checkbox" id="not1">
+                <label for="not1"></label>
+                <strong>System notification</strong>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy ever since the 1500s</p>
+                <span>24 Dec 2019, 16:30 AM</span>
+                <div class="not_descr">
+                    <label for="not1"></label>
+                    <div>
+                        <strong>System notification</strong>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy ever since the 1500s</p>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look <span>like readable Englis</span>. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+                        <p>using Lorem Ipsum is that it has a more-or-less normal of letters, as opposed to using 'Content here</p>
+                        <span>24 Dec 2019, 16:30 AM</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <input type="checkbox" id="not2">
+                <label for="not2"></label>
+                <strong>System notification</strong>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy ever since the 1500s</p>
+                <span>24 Dec 2019, 16:30 AM</span>
+                <div class="not_descr">
+                    <label for="not2"></label>
+                    <div>
+                        <strong>System notification</strong>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy ever since the 1500s</p>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look <span>like readable Englis</span>. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+                        <p>using Lorem Ipsum is that it has a more-or-less normal of letters, as opposed to using 'Content here</p>
+                        <span>24 Dec 2019, 16:30 AM</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <input type="checkbox" id="not3">
+                <label for="not3"></label>
+                <strong>System notification</strong>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy ever since the 1500s</p>
+                <span>24 Dec 2019, 16:30 AM</span>
+                <div class="not_descr">
+                    <label for="not3"></label>
+                    <div>
+                        <strong>System notification</strong>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy ever since the 1500s</p>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look <span>like readable Englis</span>. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+                        <p>using Lorem Ipsum is that it has a more-or-less normal of letters, as opposed to using 'Content here</p>
+                        <span>24 Dec 2019, 16:30 AM</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <input type="checkbox" id="not4">
+                <label for="not4"></label>
+                <strong>System notification</strong>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy ever since the 1500s</p>
+                <span>24 Dec 2019, 16:30 AM</span>
+                <div class="not_descr">
+                    <label for="not4"></label>
+                    <div>
+                        <strong>System notification</strong>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy ever since the 1500s</p>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look <span>like readable Englis</span>. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+                        <p>using Lorem Ipsum is that it has a more-or-less normal of letters, as opposed to using 'Content here</p>
+                        <span>24 Dec 2019, 16:30 AM</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="notifications_popup_closer"></div>
+    <div class="events_popup">
+        <span class="events_popup_close"></span>
+        <div class="events_popup_inner">
+            <div class="events_popup_inner_header">
+                <img src="img/conference_name.jpg" alt="">
+                <span>Our events</span>
+            </div>
+            <ul>
+                <li class="active">
+                    <span class="live active">Live</span>
+                    <span class="ended">Ended</span>
+                    <img src="img/conference_name.jpg" alt="">
+                    <h6>Zara winter collection 2019</h6>
+                    <span>1 April 2019 - 4 April 2019</span>
+                    <em>United state, NY</em>
+                </li>
+                <li>
+                    <span class="live">Live</span>
+                    <span class="ended">Ended</span>
+                    <img src="img/conference_name.jpg" alt="">
+                    <h6>Zara winter collection 2019</h6>
+                    <span>1 April 2019 - 4 April 2019</span>
+                    <em>United state, NY</em>
+                </li>
+                <li>
+                    <span class="live">Live</span>
+                    <span class="ended">Ended</span>
+                    <img src="img/conference_name.jpg" alt="">
+                    <h6>Zara winter collection 2019</h6>
+                    <span>1 April 2019 - 4 April 2019</span>
+                    <em>United state, NY</em>
+                </li>
+                <li>
+                    <span class="live">Live</span>
+                    <span class="ended active">Ended</span>
+                    <img src="img/conference_name.jpg" alt="">
+                    <h6>Zara winter collection 2019</h6>
+                    <span>1 April 2019 - 4 April 2019</span>
+                    <em>United state, NY</em>
+                </li>
+                <li>
+                    <span class="live">Live</span>
+                    <span class="ended active">Ended</span>
+                    <img src="img/conference_name.jpg" alt="">
+                    <h6>Zara winter collection 2019</h6>
+                    <span>1 April 2019 - 4 April 2019</span>
+                    <em>United state, NY</em>
+                </li>
+                <li>
+                    <span class="live">Live</span>
+                    <span class="ended active">Ended</span>
+                    <img src="img/conference_name.jpg" alt="">
+                    <h6>Zara winter collection 2019</h6>
+                    <span>1 April 2019 - 4 April 2019</span>
+                    <em>United state, NY</em>
+                </li>
+                <li>
+                    <span class="live">Live</span>
+                    <span class="ended active">Ended</span>
+                    <img src="img/conference_name.jpg" alt="">
+                    <h6>Zara winter collection 2019</h6>
+                    <span>1 April 2019 - 4 April 2019</span>
+                    <em>United state, NY</em>
+                </li>
+                <li>
+                    <span class="live">Live</span>
+                    <span class="ended active">Ended</span>
+                    <img src="img/conference_name.jpg" alt="">
+                    <h6>Zara winter collection 2019</h6>
+                    <span>1 April 2019 - 4 April 2019</span>
+                    <em>United state, NY</em>
+                </li>
+                <li>
+                    <span class="live">Live</span>
+                    <span class="ended active">Ended</span>
+                    <img src="img/conference_name.jpg" alt="">
+                    <h6>Zara winter collection 2019</h6>
+                    <span>1 April 2019 - 4 April 2019</span>
+                    <em>United state, NY</em>
+                </li>
+                <li>
+                    <span class="live">Live</span>
+                    <span class="ended active">Ended</span>
+                    <img src="img/conference_name.jpg" alt="">
+                    <h6>Zara winter collection 2019</h6>
+                    <span>1 April 2019 - 4 April 2019</span>
+                    <em>United state, NY</em>
+                </li>
+                <li>
+                    <span class="live">Live</span>
+                    <span class="ended active">Ended</span>
+                    <img src="img/conference_name.jpg" alt="">
+                    <h6>Zara winter collection 2019</h6>
+                    <span>1 April 2019 - 4 April 2019</span>
+                    <em>United state, NY</em>
+                </li>
+                <li>
+                    <span class="live">Live</span>
+                    <span class="ended active">Ended</span>
+                    <img src="img/conference_name.jpg" alt="">
+                    <h6>Zara winter collection 2019</h6>
+                    <span>1 April 2019 - 4 April 2019</span>
+                    <em>United state, NY</em>
+                </li>
+            </ul>
+        </div>
+    </div>
+	<div class="main">
+		<div class="aside min">
+        	<span class="mobile_menu_close"></span>
+            <span class="mobile_menu_back"></span>
+            <span class="aside_settngs"><i></i></span>
+            <span class="aside_bell red"><i></i></span>
+            <div class="aside_user_info">
+                <i><img src="img/user_face.jpg" alt=""></i>
+                <h4>David Emillton</h4>
+                <p>CTO</p>
+                <span class="aside_logout">Log out</span>
+            </div>
+            <ul class="menu">
+                    <li class="menu_dashboard">
+                        <a href="#">Dashboard<em>Dashboard</em></a>
+                        <i></i>
+                    </li>
+                    <li class="menu_website menu_drop">
+                        <a href="#">Website<em>Website</em></a>
+                        <i></i>
+                        <ul>
+                            <li><a href="#">Settings</a></li>
+                            <li><a href="#">Sections</a></li>
+                            <li><a href="#">Colors</a></li>
+                            <li><a href="#">Header</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu_mobile_app">
+                        <a href="#">Mobile app<em>Mobile app</em></a>
+                        <i></i>
+                    </li>
+                    <li class="menu_on_site menu_drop">
+                        <a href="#">On site<em>On site</em></a>
+                        <i></i>
+                        <span>1,037</span>
+                        <ul>
+                            <li><a href="#">Desktop</a></li>
+                            <li><a href="#">Kiosk</a></li>
+                            <li><a href="#">Badges</a></li>
+                            <li><a href="#">Header</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu_attendees">
+                        <a href="#">Attendees<em>Attendees</em></a>
+                        <i></i>
+                        <span>1,037</span>
+                    </li>
+                    <li class="menu_agenda">
+                        <a href="#">Agenda<em>Agenda</em></a>
+                        <i></i>
+                    </li>
+                    <li class="menu_data_manager">
+                        <a href="#">Data manager<em>Data manager</em></a>
+                        <i></i>
+                    </li>
+                    <li class="menu_analytics">
+                        <a href="#">Analytics<em>Analytics</em></a>
+                        <i></i>
+                    </li>
+                    <li class="more menu_drop">
+                        <a href="#">More<em>More</em></a>
+                        <i></i>
+                        <ul>
+                            <li><a href="#">More 1</a></li>
+                            <li><a href="#">More 2</a></li>
+                            <li class="menu_drop">
+                                <a href="#">More</a>
+                                <ul>
+                                    <li><a href="#">More A</a></li>
+                                    <li><a href="#">More B</a></li>
+                                    <li><a href="#">More <strong>C</strong></a></li>
+                                    <li><a href="#">More D</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">More 4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            <div class="copyright">
+                <i></i>
+                <img src="img/logo.svg" alt="Xtag technology">
+                <span>Advanced event technologies</span>
+            </div>
+        </div>
+        <div class="content">
+            <span class="pointer">
+                <em>text</em>
+                <img src="img/pointer_to_menu_arrow.svg" alt="">
+            </span>
+            <div class="header">
+                <div href="#" class="conference_name">
+                    <em style="background-image: url(img/conference_name.jpg);"></em>
+                    <span class="live">Live</span>
+                    <h6>Zara winter collection2019</h6>
+                </div>
+                <div class="user_tools">
+                    <ul>
+                        <li class="burger">
+                            <i></i>
+                        </li>
+                        <li class="search">
+                            <div>
+                                <input type="text" placeholder="Type in to search..." required>
+                                <span class="search_cleaner"></span>
+                                <select name="" id="">
+                                    <option value="1">Attendees</option>
+                                    <option value="2">Not Attendees</option>
+                                    <option value="1">May be Attendees</option>
+                                </select>
+                            </div>
+                            <i></i>
+                        </li>
+                        <li class="settngs">
+                            <i></i>
+                        </li>
+                        <li class="accnt">
+                            <i></i>
+                            <div class="accnt_pop">
+                                <div>
+                                    <i>
+                                        <img src="img/user_face.jpg" alt="">
+                                    </i>
+                                    <h4>David Emillton</h4>
+                                    <p>CTO</p>
+                                </div>
+                                <a href="#">Log out</a>
+                            </div>
+                        </li>
+                        <li class="bell red">
+                            <i></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        	<div class=" main_carousel owl-carousel">
+				<div class="item congratulations" data-dot='<button><div>Welcome</div></button>'>
+                    <div class="congratulations_inner">
+                        <svg viewBox="0 0 192.07 193.39" xmlns="http://www.w3.org/2000/svg">
+                            <title>CUP</title>
+                            <g data-name="Layer 2">
+                                <g data-name="Layer 1">
+                                    <path d="M144.75,106.49a4.8,4.8,0,0,1,0-9.59A22.13,22.13,0,0,0,165.66,82l9.41-27.17a4.67,4.67,0,0,0-.86-4,4.75,4.75,0,0,0-3.83-1.9h-16a4.8,4.8,0,1,1,0-9.59h16a14.37,14.37,0,0,1,13.83,18.33l-9.49,27.43A31.73,31.73,0,0,1,144.75,106.49Z" fill="#e59733"/>
+                                    <path d="M68.85,106.49a31.74,31.74,0,0,1-30-21.34L29.47,58A14.38,14.38,0,0,1,43.22,39.39H59.27a4.8,4.8,0,0,1,0,9.59H43.22a4.78,4.78,0,0,0-4.61,6.11L47.94,82A22.13,22.13,0,0,0,68.85,96.9a4.8,4.8,0,0,1,0,9.59Z" fill="#e8a53f"/>
+                                    <path d="M129.34,166.08A29.19,29.19,0,0,1,121.19,146v-16.8a4.74,4.74,0,0,0-6-4.6,33.65,33.65,0,0,1-16.68,0,4.73,4.73,0,0,0-6,4.6V146a29.24,29.24,0,0,1-8.15,20.07,4.74,4.74,0,0,0,3.35,8.14H126A4.74,4.74,0,0,0,129.34,166.08Z" fill="#e8a53f"/>
+                                    <path d="M154.74,29.81H58.89a4.7,4.7,0,0,0-4.7,5.46L63.58,98A43.7,43.7,0,0,0,150,98l9.4-62.69A4.7,4.7,0,0,0,154.74,29.81Z" fill="#f3d951"/>
+                                    <path d="M129.34,166.08a4.74,4.74,0,0,1-3.36,8.14H106.81V125.66a33.25,33.25,0,0,0,8.34-1.06,4.75,4.75,0,0,1,6,4.61V146A29.19,29.19,0,0,0,129.34,166.08Z" fill="#e59733"/>
+                                    <path d="M133.08,68l-14.67-2.21L111.8,52.53a4.52,4.52,0,0,0-5-2.4,4.3,4.3,0,0,0-3.54,2.4L96.65,65.75,82,68A4.8,4.8,0,0,0,79.3,76.1L89.94,86.46,87.45,101a4.83,4.83,0,0,0,7,5.08l12.36-6.52.77-.39,13,6.91a4.83,4.83,0,0,0,7-5.08l-2.49-14.57L135.76,76.1A4.79,4.79,0,0,0,133.08,68Z" fill="#e8a53f"/>
+                                    <path d="M159.44,35.27,150,98a43.71,43.71,0,0,1-43.23,37.28V29.81h47.93A4.7,4.7,0,0,1,159.44,35.27Z" fill="#ebbd3d"/>
+                                    <path d="M135.76,76.1,125.12,86.46,127.61,101a4.83,4.83,0,0,1-7,5.08l-13-6.91-.77.39V50.13a4.52,4.52,0,0,1,5,2.4l6.61,13.22L133.08,68A4.79,4.79,0,0,1,135.76,76.1Z" fill="#e59733"/>
+                                    <path d="M126,164.64H87.64A14.35,14.35,0,0,0,73.27,179v9.58a4.74,4.74,0,0,0,4.79,4.79h57.51a4.75,4.75,0,0,0,4.79-4.79V179A14.36,14.36,0,0,0,126,164.64Z" fill="#77767f"/>
+                                    <path d="M140.36,179v9.58a4.75,4.75,0,0,1-4.79,4.79H106.81V164.64H126A14.36,14.36,0,0,1,140.36,179Z" fill="#57565c"/>
+                                    <path class="fading_star_2" d="M172.12,10.93H161.53a1.33,1.33,0,0,1,0-2.65h10.59a1.33,1.33,0,0,1,0,2.65" fill="#fff"/>
+                                    <path class="fading_star_2" d="M166.83,16.22a1.33,1.33,0,0,1-1.33-1.32V4.31a1.33,1.33,0,1,1,2.65,0V14.9a1.32,1.32,0,0,1-1.32,1.32" fill="#fff"/>
+                                    <path class="fading_star_3" d="M190.66,28.14H180.07a1.33,1.33,0,1,1,0-2.65h10.59a1.33,1.33,0,0,1,0,2.65" fill="#f3d951"/>
+                                    <path class="fading_star_3" d="M185.36,33.43A1.32,1.32,0,0,1,184,32.11V21.52a1.33,1.33,0,1,1,2.65,0V32.11a1.33,1.33,0,0,1-1.33,1.32" fill="#f3d951"/>
+                                    <path class="fading_star_4" d="M190.1,130H157.5a2,2,0,0,1,0-3.93h32.6a2,2,0,1,1,0,3.93" fill="#fff"/>
+                                    <path class="fading_star_8" d="M24.61,37.63H16.75a2,2,0,1,1,0-3.93h7.86a2,2,0,1,1,0,3.93" fill="#ebbd3d"/>
+                                    <path class="fading_star_7" d="M28,48.2H2a2,2,0,1,1,0-3.94H28a2,2,0,1,1,0,3.94" fill="#fff"/>
+                                    <path class="fading_star_6" d="M41.6,123.55H32.81a1.1,1.1,0,1,1,0-2.2H41.6a1.1,1.1,0,1,1,0,2.2" fill="#fff"/>
+                                    <path class="fading_star_6" d="M37.2,127.94a1.09,1.09,0,0,1-1.09-1.1v-8.79a1.1,1.1,0,1,1,2.19,0v8.79a1.1,1.1,0,0,1-1.1,1.1" fill="#fff"/>
+                                    <path class="fading_star_5" d="M62.91,146.12H54.12a1.1,1.1,0,0,1,0-2.2h8.79a1.1,1.1,0,0,1,0,2.2" fill="#f3d951"/>
+                                    <path class="fading_star_5" d="M58.51,150.51a1.1,1.1,0,0,1-1.1-1.1v-8.78a1.1,1.1,0,1,1,2.2,0v8.78a1.1,1.1,0,0,1-1.1,1.1" fill="#f3d951"/>
+                                    <path class="fading_star_1" d="M50.15,6.6H41.36a1.1,1.1,0,1,1,0-2.2h8.79a1.1,1.1,0,0,1,0,2.2" fill="#fff"/>
+                                    <path class="fading_star_1" d="M45.75,11a1.1,1.1,0,0,1-1.1-1.1V1.1a1.1,1.1,0,1,1,2.2,0V9.89a1.1,1.1,0,0,1-1.1,1.1" fill="#fff"/>
+                                </g>
+                            </g>
+                        </svg>
+
+                        <div>
+                            <h6>Congratulations Osher Cohen!</h6>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard dummy <span>text</span><em></em> ever since the 1500s</p>
+                        </div>
+                        <div class="top_bounce_canvas">
+                            <span class="total_attendees">Total attendees <strong>12.350</strong></span>
+                            <div class="top_bounce_canvas_inner">
+                                <canvas class="top_bounce_canvas_elem" width="100%" height="100%"></canvas>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+				<div class="item analytics_sec" data-dot='<button><div>Analytics</div></button>'>
+                    <div class="analytics_sec_inner">
+                        <div class="analytics_sec_header">
+                            
+                            <svg enable-background="new 0 0 158 158" version="1.1" viewBox="0 0 158 158" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                                <style type="text/css">
+                                    .st0{opacity:0.12;}
+                                    .st1{fill:#3D4159;}
+                                    .st2{fill:#F2F0EC;}
+                                    .st3{fill:#713775;}
+                                    .st4{fill:#F74F4F;}
+                                    .st5{fill:#66BAED;}
+                                    .st6{fill:#3FB777;}
+                                    .st7{fill:#DDE8ED;}
+                                    .st8{fill:#BFD5DE;}
+                                    .st9{fill:#EAB599;}
+                                    .st10{fill:#F6CAAE;}
+                                    .st11{fill:#FFFFFF;}
+                                    .st12{fill:#E8C934;}
+                                    .st13{fill:#FFE152;}
+                                </style>
+                                <path class="st0" d="m158 79c0 43.6-35.4 79-79 79s-79-35.4-79-79 35.4-79 79-79 79 35.4 79 79z"/>
+                                <path class="st1" d="m47.6 0h100.5c5.5 0 9.9 4.4 9.9 9.9v94.8c0 5.5-4.4 9.9-9.9 9.9h-100.5c-5.5 0-9.9-4.4-9.9-9.9v-94.8c0-5.5 4.5-9.9 9.9-9.9z"/>
+                                <path class="st2" d="m47.6 108.1c-1.9 0-3.4-1.5-3.4-3.4v-94.8c0-1.9 1.5-3.4 3.4-3.4h100.5c1.9 0 3.4 1.5 3.4 3.4v94.8c0 1.9-1.5 3.4-3.4 3.4h-100.5z"/>
+                                <rect class="st3" x="56.6" y="86.8" width="88.9" height="9.1"/>
+                                <rect class="st3 analytic_anim_1" x="61.8" y="14.2" width="10.3" height="64.7"/>
+                                <rect class="st4 analytic_anim_2" x="84.6" y="25.4" width="10.3" height="53.5"/>
+                                <rect class="st5 analytic_anim_3" x="107.3" y="14.2" width="10.3" height="64.7"/>
+                                <rect class="st6 analytic_anim_4" x="130.1" y="38.4" width="10.3" height="40.5"/>
+                                <path class="st7" d="m115.9 131.6v17.3c-3.1 1.6-6.3 3.1-9.6 4.3-2.2 0.8-4.5 1.5-6.8 2.2v-23.7h16.4z"/>
+                                <path class="st8" d="m106.3 131.6v21.6c-2.2 0.8-4.5 1.5-6.8 2.2v-23.7h6.8z"/>
+                                <path class="st9" d="m131.2 126.8c0 2.6-2.1 4.8-4.8 4.8h-27v-4.8c0-2.6 2.1-4.8 4.8-4.8h22.2c1.3 0 2.5 0.5 3.4 1.4 0.5 0.5 0.8 1 1.1 1.6 0.2 0.6 0.3 1.2 0.3 1.8z"/>
+                                <path class="st10" d="m130.9 125.1c-0.7 1.8-2.4 3-4.4 3h-27v-1.2c0-2.6 2.1-4.8 4.8-4.8h22.2c1.3 0 2.5 0.5 3.4 1.4 0.4 0.4 0.8 1 1 1.6z"/>
+                                <path class="st8" d="m94.7 138.7v9c-8.3 4.7-17.5 7.9-27.3 9.4-13.2-1.9-25.3-7.1-35.5-14.8-5-3.7-9.5-8-13.5-12.8 3.6-11 13.5-19.1 25.5-20.1 0.8-0.1 1.6-0.1 2.4-0.1h19.1c2.3 0 4.5 0.3 6.6 0.7 13 3.1 22.7 14.8 22.7 28.7z"/>
+                                <path class="st7" d="m94.7 138.7v17.7c-5.1 1-10.3 1.6-15.7 1.6-17.7 0-34-5.8-47.1-15.6v-3.7c0-16.2 13.1-29.4 29.4-29.4h4.1c16.2 0.1 29.3 13.2 29.3 29.4z"/>
+                                <polyline class="st4" points="63.7 120 55.8 132.6 47.9 120"/>
+                                <path class="st4" d="m62.7 156.3c-4.4-0.9-8.7-2.2-12.9-3.9l5.9-23.1 7 27z"/>
+                                <polyline class="st8" points="55.8 121.4 42.6 128.7 38.5 110 46.8 105.2"/>
+                                <polyline class="st8" points="55.8 121.4 69 128.7 73 110 64.8 105.2"/>
+                                <rect class="st8" x="67.7" y="137.8" width="15.8" height="4.8"/>
+                                <path class="st9" d="m66.3 98.1v12.9c0 4.7-3.1 8.7-7.4 10-1 0.3-2 0.5-3.1 0.5-5.8 0-10.5-4.7-10.5-10.5v-12.9h21z"/>
+                                <path class="st10" d="m66.3 110.1v0.8c0 4.7-3.1 8.7-7.4 10-3.9-1.2-6.8-4.5-7.3-8.6 0.7 0 1.4 0.1 2.1 0.1 2 0 3.9-0.2 5.8-0.5 2.4-0.4 4.6-1 6.8-1.8z"/>
+                                <path class="st10" d="m27.1 77c0 4.8-3.5 8.9-8.2 9.6-0.5 0.1-1 0.1-1.6 0.1-5.4 0-9.7-4.4-9.7-9.7 0-5.4 4.4-9.7 9.7-9.7 0.5 0 1.1 0 1.6 0.1 4.6 0.7 8.2 4.8 8.2 9.6z"/>
+                                <path class="st9" d="m27.1 77c0 4.8-3.5 8.9-8.2 9.6-0.8-3.1-1.3-6.3-1.3-9.6s0.4-6.6 1.3-9.6c4.6 0.7 8.2 4.8 8.2 9.6z"/>
+                                <path class="st9" d="m20.8 77c0 1.9-1.6 3.5-3.5 3.5s-3.5-1.6-3.5-3.5 1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5z"/>
+                                <path class="st10" d="m84.5 77c0 4.8 3.5 8.9 8.2 9.6 0.5 0.1 1 0.1 1.6 0.1 5.4 0 9.7-4.4 9.7-9.7 0-5.4-4.4-9.7-9.7-9.7-0.5 0-1.1 0-1.6 0.1-4.6 0.7-8.2 4.8-8.2 9.6z"/>
+                                <path class="st9" d="m84.5 77c0 4.8 3.5 8.9 8.2 9.6 0.8-3.1 1.3-6.3 1.3-9.6s-0.4-6.6-1.3-9.6c-4.6 0.7-8.2 4.8-8.2 9.6z"/>
+                                <path class="st9" d="m92 58v13.8c0 18-13.2 33-30.4 35.8h-0.2c-1.8 0.3-3.7 0.4-5.6 0.4-20 0-36.2-16.2-36.2-36.2v-13.8c0-4.2 0.7-8.3 2-12 5-14.1 18.4-24.2 34.2-24.2 1.9 0 3.8 0.1 5.6 0.4 17.4 2.7 30.6 17.7 30.6 35.8z"/>
+                                <path class="st9" d="m97.7 77c0 1.9-1.6 3.5-3.5 3.5s-3.5-1.6-3.5-3.5 1.6-3.5 3.5-3.5c2 0 3.5 1.6 3.5 3.5z"/>
+                                <path class="st10" d="m92 58v13.8c0 18-13.2 33-30.4 35.8h-0.2c-17.3-2.7-30.6-17.7-30.6-35.8v-13.8c0-18.1 13.3-33.1 30.6-35.8 17.4 2.7 30.6 17.7 30.6 35.8z"/>
+                                <g width="3">
+                                    <ellipse class="eye1" cx="44" cy="70" rx="4" ry="4" fill="#404359"/>
+                                    <ellipse class="eye2" cx="45" cy="69" rx="1.6" ry="1.6" fill="#fff"/>
+                                </g>
+                                <ellipse class="eye1" cx="68" cy="70" rx="4" ry="4" fill="#404359"/>
+                                <ellipse class="eye2" cx="69" cy="69" rx="1.6" ry="1.6" fill="#fff"/>
+                                <path class="st9" d="m59.9 78.5h-8.2c-1 0-1.8-0.8-1.8-1.8s0.8-1.8 1.8-1.8h8.2c1 0 1.8 0.8 1.8 1.8s-0.8 1.8-1.8 1.8z"/>
+                                <path class="st9" d="m55.8 89.7c-3 0-6.1-0.8-8.8-2.3-0.8-0.4-1.1-1.4-0.6-2.2 0.4-0.8 1.4-1.1 2.2-0.6 4.6 2.5 10 2.5 14.6 0 0.8-0.4 1.8-0.1 2.2 0.6 0.4 0.8 0.1 1.8-0.6 2.2-2.9 1.5-6 2.3-9 2.3z"/>
+                                <path class="st12" d="m92 45.5v14.1h-6.7v-11l-48.7-9-10.3-1.9v22h-6.7v-14.2c0-16.1 13.1-29.2 29.2-29.2h14.1 1.2c15.5 0.6 27.9 13.5 27.9 29.2z"/>
+                                <path class="st13" d="m92 45.5v14.1h-6.7v-11l-48.7-9c2.7-13 13.9-22.7 27.4-23.2 15.6 0.5 28 13.4 28 29.1z"/>
+                            </svg>
+
+                            <div>
+                                <div class="section_headline">
+                                    <label>Analytics</label>
+                                    <i class="closer_click_start"></i>
+                                    <div class="section_description closer_click_elem">
+                                        <span class="show_more">Show more</span>
+                                        <span class="show_less">Show less</span>
+                                        <div>
+                                            <strong>Analytics</strong>
+                                            <p>This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                            </div>
+                            <span class="show_all">Show all</span>
+                        </div>
+                        <div class="analytics_sec_blocks">
+                            <div class="analytics_income">
+                                <div class="analytics_income_header">
+                                    <h6>Income credits</h6>
+                                    <div>
+                                        <span>Total</span>
+                                        <strong>$3395.25</strong>
+                                    </div>
+                                    <div class="tends_up_arrow">
+                                        <span>Charges</span>
+                                        <strong>$332.21</strong>
+                                    </div>
+                                </div>
+                                <div class="canv_wr">
+                                    <canvas class="analytics_income_canvas_elem" width="100%" height="100%"></canvas>
+                                </div>
+                            </div>
+                            <div class="analytics_registrations">
+                                <div class="analytics_registrations_header">
+                                    <h6>Income website</h6>
+                                    <div>
+                                        <span>Total</span>
+                                        <strong>$1885.00</strong>
+                                    </div>
+                                    <div class="tends_down_arrow">
+                                        <span>Charges</span>
+                                        <strong>$18.21</strong>
+                                    </div>
+                                </div>
+                                <div class="canv_wr">
+                                    <canvas class="analytics_registrations_canvas_elem" width="100%" height="100%"></canvas>
+                                </div>
+                            </div>
+                            <div class="analytics_comple_reg">
+                                <div class="analytics_comple_reg_header">
+                                    <h6>Completed registrations</h6>
+                                    <div>
+                                        <span>Total</span>
+                                        <strong>11,292</strong>
+                                    </div>
+                                    <div class="tends_up_arrow">
+                                        <span>Charges</span>
+                                        <strong>32</strong>
+                                    </div>
+                                </div>
+                                <div class="canv_wr">
+                                    <canvas class="analytics_comple_reg_canvas_elem" width="100%" height="100%"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+				<div class="item on_site" data-dot='<button><div>On site</div></button>'>
+                    <div class="on_site_inner">
+                        <svg viewBox="0 0 178 178" xmlns="http://www.w3.org/2000/svg">
+                            <g data-name="Layer 2">
+                                <g data-name="Layer 1">
+                                    <path d="M178,89A89,89,0,1,1,33.39,19.51c1.16-.93,2.35-1.84,3.56-2.71A89,89,0,0,1,178,89Z" opacity=".12"/>
+                                    <path d="M140.08,3.59H37.93a15,15,0,0,0-15,15v130a89,89,0,0,0,132.22,0v-130a15,15,0,0,0-15-15ZM39.29,30.74A7.17,7.17,0,0,1,37,16.8a7,7,0,0,1,2.34-.39,7.17,7.17,0,1,1,0,14.33Z" fill="#dee6eb"/>
+                                    <path d="M135.49,68A46.49,46.49,0,1,1,89,21.51,46.49,46.49,0,0,1,135.49,68Z" fill="#faf8f3"/>
+                                    <path d="M42,23.76a190.89,190.89,0,0,1-3.3,23.37c-3.48,16.81-8.53,27.73-15,32.46a13.49,13.49,0,0,1-8.07,2.75,14.4,14.4,0,0,1-3.46-.44,7.46,7.46,0,0,1-5.64-4.82c-2.2-6.23,3-17.36,16.35-35V51.3c-11.75,16.59-11.82,22.24-11.21,24,.17.49.52,1,1.8,1.34a8,8,0,0,0,7-1.42C24.17,72.5,29.39,65.26,33.38,46a190.62,190.62,0,0,0,3.2-22.63,2.72,2.72,0,1,1,5.43.37Z" fill="#d65050"/>
+                                    <rect x="39.54" y="132.32" width="98.92" height="7.08" fill="#404359"/>
+                                    <rect x="39.54" y="150.48" width="98.92" height="7.08" fill="#404359"/>
+                                    <path d="M68.46,77.25a7.05,7.05,0,1,1-5.93-7,7.06,7.06,0,0,1,5.93,7Z" fill="#e9c8ad"/>
+                                    <path d="M68.46,77.25a7.06,7.06,0,0,1-5.93,7,26.31,26.31,0,0,1,0-13.94,7.06,7.06,0,0,1,5.93,7Z" fill="#dbb398"/>
+                                    <path d="M63.92,77.25a2.53,2.53,0,1,1-2.53-2.52,2.52,2.52,0,0,1,2.53,2.52Z" fill="#dbb398"/>
+                                    <path d="M110.12,77.25a7.05,7.05,0,1,0,5.93-7,7.06,7.06,0,0,0-5.93,7Z" fill="#e9c8ad"/>
+                                    <path d="M110.12,77.25a7.06,7.06,0,0,0,5.93,7,26.31,26.31,0,0,0,0-13.94,7.06,7.06,0,0,0-5.93,7Z" fill="#dbb398"/>
+                                    <path d="M115.57,63.49v10A26.3,26.3,0,0,1,93.51,99.44l-.13,0A26.34,26.34,0,0,1,63,73.5v-10a26,26,0,0,1,1.49-8.72A26.27,26.27,0,0,1,89.29,37.21h0a26.28,26.28,0,0,1,26.28,26.28Z" fill="#dbb398"/>
+                                    <path d="M119.71,77.25a2.53,2.53,0,1,1-2.52-2.52,2.52,2.52,0,0,1,2.52,2.52Z" fill="#dbb398"/>
+                                    <path d="M115.57,63.49v10A26.3,26.3,0,0,1,93.51,99.44l-.13,0a26.29,26.29,0,0,1-22.19-26v-10a26.28,26.28,0,0,1,22.19-26,26.28,26.28,0,0,1,22.19,26Z" fill="#e9c8ad"/>
+                                    <g width="3">
+                                        <ellipse class="eye1" cx="81" cy="71" rx="3.5" ry="2.9" fill="#404359"/>
+                                        <ellipse class="eye2" cx="81.8" cy="70.2" rx="1.4" ry="1.4" fill="#fff"/>
+                                    </g>
+                                    <ellipse class="eye1" cx="98" cy="71" rx="3.5" ry="2.9" fill="#404359"/>
+                                    <ellipse class="eye2" cx="99" cy="70.2" rx="1.4" ry="1.4" fill="#fff"/>
+                                    <path d="M92.27,78.3h-6a1.29,1.29,0,1,1,0-2.57h6a1.29,1.29,0,1,1,0,2.57Z" fill="#dbb398"/>
+                                    <path d="M89.29,86.44a13.23,13.23,0,0,1-6.41-1.66,1.17,1.17,0,1,1,1.13-2,11,11,0,0,0,10.56,0,1.17,1.17,0,1,1,1.13,2,13.23,13.23,0,0,1-6.41,1.66Z" fill="#dbb398"/>
+                                    <path d="M115.57,54.41V64.66h-4.89v-8L75.37,50.07,67.9,48.68v16H63V54.41A21.16,21.16,0,0,1,84.17,33.25H94.41l.84,0a21.15,21.15,0,0,1,20.32,21.14Z" fill="#bd3336"/>
+                                    <path d="M115.57,54.41V64.66h-4.89v-8L75.37,50.07a21.17,21.17,0,0,1,19.88-16.8,21.15,21.15,0,0,1,20.32,21.14Z" fill="#d65050"/>
+                                </g>
+                            </g>
+                        </svg>
+
+                        <div class="section_headline">
+                            <label>On site</label>
+                            <i class="closer_click_start"></i>
+                            <div class="section_description closer_click_elem">
+                                <span class="show_more">Show more</span>
+                                <span class="show_less">Show less</span>
+                                <div>
+                                    <strong>On site</strong>
+                                    <p>This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p>This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the.</p>
+                        <div class="total_attendees">
+                            <div>
+                                <span>Total attendees</span>
+                                <strong>12.350</strong>
+                            </div>
+                        </div>
+                        <ul>
+                            <li class="checked_in">
+                                <span>Checked-in</span>
+                                <strong>600 <em>(</em><span>50.3</span><em>%)</em></strong>
+                            </li>
+                            <li class="checked_out">
+                                <span>Checked-out</span>
+                                <strong>350 <em>(</em><span>15.0</span><em>%)</em></strong>
+                            </li>
+                            <li class="walk_ins">
+                                <span>Walk-ins</span>
+                                <strong>3.186 <em></em><span></span><em></em></strong>
+                            </li>
+                            <li class="no_status">
+                                <span>No status</span>
+                                <strong>11.400 <em></em><span></span><em></em></strong>
+                            </li>
+                        </ul>
+                    </div>
+				</div>
+				<div class="item lead_retrieaval" data-dot='<button><div>Leads</div></button>'>
+                    <div class="lead_retrieval_inner">
+                        <svg viewBox="0 0 194.84 182.99" xmlns="http://www.w3.org/2000/svg">
+                            <g data-name="Layer 2">
+                                <g data-name="Layer 1">
+                                    <path d="M178.46,93.76A89.35,89.35,0,0,1,135,170.4a90.55,90.55,0,0,1-10.09,5.19c-.9.39-1.81.76-2.72,1.13l-1.41.55q-2.43.91-4.92,1.69-2.32.72-4.69,1.32c-.74.19-1.49.37-2.23.53l-1.28.28-.39.08c-1.61.34-3.24.62-4.89.86s-3.38.45-5.1.6q-4,.36-8,.36a89.23,89.23,0,1,1,89.23-89.23Z" opacity=".12"/>
+                                    <path d="M107,161.23v20A90.07,90.07,0,0,1,89.23,183,89,89,0,0,1,20.7,150.9a33.23,33.23,0,0,1,22.92-21.7c.52-.14,1-.26,1.57-.38a33.63,33.63,0,0,1,4.31-.63c.9-.08,1.8-.11,2.72-.11H73.81a33.2,33.2,0,0,1,7,.74l.39.09c.38.08.77.18,1.14.28h0a33.18,33.18,0,0,1,24.57,32Z" fill="#404359"/>
+                                    <path d="M82.48,128.82l-.08.38-11.17,52-.39-.08q-1.77-.36-3.51-.81a88.6,88.6,0,0,1-9.61-3l-1.41-.55c-.91-.37-1.82-.74-2.72-1.13l-10-46.39-.08-.38Z" fill="#dee6eb"/>
+                                    <polyline class="tie" points="71.92 140.04 63.02 154.32 54.11 140.04" fill="#d65050"/>
+                                    <path class="tie" d="M70.84,181.09q-1.77-.36-3.51-.81a88.6,88.6,0,0,1-9.61-3l-1.41-.55L63,150.6Z" fill="#d65050"/>
+                                    <polyline points="63.01 141.65 48.08 149.95 43.54 128.82 52.82 123.36" fill="#c3d3dc"/>
+                                    <polyline points="63.01 141.65 77.94 149.95 82.48 128.82 73.21 123.36" fill="#c3d3dc"/>
+                                    <path d="M83.05,157.33h4.73l-10,24.45-1.61.25a85.4,85.4,0,0,1-8.79-1.75L82.48,127l10.22,5.16Z" fill="#2f334f"/>
+                                    <path d="M57.72,177.27A89.2,89.2,0,0,1,43.5,170.4l-5.37-13.07h4.74l-9.66-25.17,10.33-4.79Z" fill="#2f334f"/>
+                                    <path d="M74.84,115.3v14.52a11.82,11.82,0,0,1-8.33,11.3,11.54,11.54,0,0,1-3.5.53,11.83,11.83,0,0,1-11.83-11.83V115.3Z" fill="#dbb398"/>
+                                    <path d="M74.84,128.9v.92a11.82,11.82,0,0,1-8.33,11.3,11.81,11.81,0,0,1-8.23-9.76c.79,0,1.58.07,2.38.07a40.64,40.64,0,0,0,6.57-.52,40.18,40.18,0,0,0,7.61-2Z" fill="#e9c8ad"/>
+                                    <path d="M30.56,91.51a11,11,0,0,1-9.24,10.86,11.3,11.3,0,0,1-1.76.14,11,11,0,1,1,0-22,10.2,10.2,0,0,1,1.76.14,11,11,0,0,1,9.24,10.86Z" fill="#e9c8ad"/>
+                                    <path d="M30.56,91.51a11,11,0,0,1-9.24,10.86,41.12,41.12,0,0,1,0-21.72,11,11,0,0,1,9.24,10.86Z" fill="#dbb398"/>
+                                    <path d="M23.49,91.51a3.94,3.94,0,1,1-3.93-3.93,3.93,3.93,0,0,1,3.93,3.93Z" fill="#dbb398"/>
+                                    <path d="M169.27,25.58l.79-8.73a3.7,3.7,0,0,1,1.05-2.26L182.05,3.65a1.84,1.84,0,0,1,2.59,0l6.55,6.55a1.84,1.84,0,0,1,0,2.59L180.25,23.73A3.64,3.64,0,0,1,178,24.78Z" fill="#df6464"/>
+                                    <circle cx="132.73" cy="62.11" r="43.85" fill="#df6464"/>
+                                    <circle cx="132.73" cy="62.11" r="32.88" fill="#fff"/>
+                                    <circle cx="132.73" cy="62.11" r="21.92" fill="#df6464"/>
+                                    <circle cx="132.73" cy="62.11" r="10.96" fill="#fff"/>
+                                    <path d="M132.73,63.94a1.83,1.83,0,0,1-1.29-3.12L191.72.54a1.83,1.83,0,0,1,2.59,2.58L134,63.41A1.86,1.86,0,0,1,132.73,63.94Z" fill="#484855"/>
+                                    <path d="M194.31.54a1.82,1.82,0,0,0-2.59,0L188.6,3.65l2.59,2.59,3.12-3.12A1.83,1.83,0,0,0,194.31.54Z" fill="#df6464"/>
+                                    <path d="M95.47,91.51a11,11,0,0,0,9.24,10.86,11.3,11.3,0,0,0,1.76.14,11,11,0,0,0,0-22,10.2,10.2,0,0,0-1.76.14,11,11,0,0,0-9.24,10.86Z" fill="#e9c8ad"/>
+                                    <path d="M95.47,91.51a11,11,0,0,0,9.24,10.86,41.12,41.12,0,0,0,0-21.72,11,11,0,0,0-9.24,10.86Z" fill="#dbb398"/>
+                                    <path d="M104,70.07V85.66a40.94,40.94,0,0,1-34.37,40.41l-.2,0a40.47,40.47,0,0,1-6.37.49A40.93,40.93,0,0,1,22.08,85.66V70A40.9,40.9,0,0,1,63,29.14h0A40.87,40.87,0,0,1,104,70.07Z" fill="#dbb398"/>
+                                    <path d="M110.4,91.51a3.93,3.93,0,1,1-3.93-3.93,3.93,3.93,0,0,1,3.93,3.93Z" fill="#dbb398"/>
+                                    <path d="M104,70.07V85.66a40.94,40.94,0,0,1-34.37,40.41l-.2,0A40.93,40.93,0,0,1,34.83,85.66V70.07A40.94,40.94,0,0,1,69.39,29.63,40.94,40.94,0,0,1,104,70.07Z" fill="#e9c8ad"/>
+                                    <rect x="52.16" y="77.01" width="27.25" height="14.84" fill="#dbb398"/>
+                                    <path d="M35.57,82.07h0A11.49,11.49,0,0,0,46.94,93.38h.82A11.49,11.49,0,0,0,59.08,81.89V78.43L59,73.91a1.49,1.49,0,0,0-1-1.36,32.38,32.38,0,0,0-21.4,0,1.49,1.49,0,0,0-1,1.4v8.26" fill="#dee6eb"/>
+                                    <path d="M37.39,82.25H33.75V74A3.3,3.3,0,0,1,36,70.88a34.28,34.28,0,0,1,22.6,0,3.31,3.31,0,0,1,2.21,3l.13,4.57v3.64H57.26V78.45l-.12-4.25a30.64,30.64,0,0,0-19.75,0Z" fill="#404359"/>
+                                    <path d="M47.33,95.2h-.41A13.25,13.25,0,0,1,33.75,82.1l1.82,0h1.82A9.63,9.63,0,0,0,47,91.56h.78a9.7,9.7,0,0,0,9.52-9.67H60.9A13.35,13.35,0,0,1,47.79,95.2Z" fill="#f6df5e"/>
+                                    <path d="M67.8,82.07h0A11.51,11.51,0,0,0,79.17,93.38H80A11.49,11.49,0,0,0,91.31,81.89V78.43l-.12-4.52a1.49,1.49,0,0,0-1-1.36,32.35,32.35,0,0,0-21.39,0,1.5,1.5,0,0,0-1,1.4v8.26" fill="#dee6eb"/>
+                                    <path d="M69.63,82.25H66V74a3.3,3.3,0,0,1,2.21-3.11,34.28,34.28,0,0,1,22.6,0,3.33,3.33,0,0,1,2.22,3l.12,4.57v3.64H89.49V78.45l-.12-4.25a30.61,30.61,0,0,0-19.74,0v8Z" fill="#404359"/>
+                                    <path d="M79.56,95.2h-.41A13.26,13.26,0,0,1,66,82.1l1.82,0h1.83a9.62,9.62,0,0,0,9.57,9.49H80a9.7,9.7,0,0,0,9.52-9.67h3.64A13.35,13.35,0,0,1,80,95.2Z" fill="#f6df5e"/>
+                                    <rect x="58.95" y="73.91" width="8.85" height="3.64" fill="#404359"/>
+                                    <path d="m104 70.42v3.83l-10 3.12-2.18 0.73-1.15-3.46 2.78-0.92z" fill="#404359"/>
+                                    <path d="M36.15,74.65,35,78.11l-2.5-.83L22.08,73.84V70l11,3.62Z" fill="#404359"/>
+                                    <g width="3">
+                                        <ellipse class="eye_increase" cx="49" cy="81.2" rx="5" ry="5" fill="#404359"/>
+                                        <ellipse class="eye_increase1" cx="51" cy="80" rx="1.8" ry="1.8" fill="#fff"/>
+                                    </g>
+                                    <ellipse class="eye_increase" cx="77" cy="81.2" rx="5" ry="5" fill="#404359"/>
+                                    <ellipse class="eye_increase1" cx="79" cy="80" rx="1.8" ry="1.8" fill="#fff"/>
+                                    <path d="M68.45,93.88H58.3a2,2,0,0,1,0-4H68.45a2,2,0,0,1,0,4Z" fill="#dbb398"/>
+                                    <path d="M63,105.82a20.81,20.81,0,0,1-10-2.57,1.83,1.83,0,1,1,1.76-3.2,17,17,0,0,0,16.45,0,1.82,1.82,0,0,1,1.75,3.2,20.75,20.75,0,0,1-10,2.57Z" fill="#dbb398"/>
+                                    <path d="m104 55.93v16h-7.67v-12.54l-55-10.22-11.63-2.17v24.89h-7.62v-16a33 33 0 0 1 32.92 -32.89h16 1.31a33 33 0 0 1 31.69 32.93z" fill="#2f334f"/>
+                                    <path d="M104,55.93v16H96.33V59.39l-55-10.22A33,33,0,0,1,72.3,23,33,33,0,0,1,104,55.93Z" fill="#404359"/>
+                                    <path d="M97.24,159v11a4.45,4.45,0,0,0,2.81,4.14,4.35,4.35,0,0,0,1.66.33,4.47,4.47,0,0,0,4.47-4.47V159a4.47,4.47,0,0,0-4.47-4.47,4.54,4.54,0,0,0-1.66.32,4.61,4.61,0,0,0-1.5,1A4.5,4.5,0,0,0,97.24,159Z" fill="#dbb398"/>
+                                    <path d="M97.24,159v19.46c0,1.88,1.16-5,2.81-4.32a4.46,4.46,0,0,0,2.8-4.14V159a4.47,4.47,0,0,0-2.8-4.15,4.61,4.61,0,0,0-1.5,1A4.5,4.5,0,0,0,97.24,159Z" fill="#e9c8ad"/>
+                                    <path d="M115.82,173.62V179q-2.32.72-4.69,1.32c-.74.19-1.49.37-2.23.53l-1.28.28-.39.08c-1.61.34-3.24.62-4.89.86s-3.38.45-5.1.6v-9a9.29,9.29,0,1,1,18.58,0Z" fill="#dbb398"/>
+                                    <path d="M108.9,173.62v7.19l-1.28.28-.39.08c-1.61.34-3.24.62-4.89.86s-3.38.45-5.1.6v-9a9.28,9.28,0,0,1,5.83-8.62,9.29,9.29,0,0,1,5.83,8.62Z" fill="#e9c8ad"/>
+                                </g>
+                            </g>
+                        </svg>
+
+                        <div class="section_headline">
+                            <label>Lead retrieval</label>
+                            <i class="closer_click_start"></i>
+                            <div class="section_description closer_click_elem">
+                                <span class="show_more">Show more</span>
+                                <span class="show_less">Show less</span>
+                                <div>
+                                    <strong>Lead retrieval</strong>
+                                    <p>This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p>This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the.</p>
+                        <ul>
+                            <li>
+                                <strong>12</strong>
+                                <span>Users</span>
+                            </li>
+                            <li>
+                                <strong>1.322</strong>
+                                <span>Leads collected</span>
+                            </li>
+                            <li>
+                                <strong>23</strong>
+                                <span>Avg.leads per user</span>
+                            </li>
+                        </ul>
+                    </div>
+				</div>
+				<div class="item website" data-dot='<button><div>Website</div></button>'>
+                    <div class="website_inner">
+                        <div class="section_headline">
+                            <label>On site</label>
+                            <i class="closer_click_start"></i>
+                            <div class="section_description closer_click_elem">
+                                <span class="show_more">Show more</span>
+                                <span class="show_less">Show less</span>
+                                <div>
+                                    <strong>On site</strong>
+                                    <p>This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p>This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the.</p>
+                        <div class="website_blocks">
+                            <div class="visitors_map">
+                                <div class="visitors_map_header">
+                                    <span>Visitors map</span>
+                                </div>
+                                <div id="chart_map_div"></div>
+                                <!-- link to plugin 
+                                https://www.amcharts.com/demos/multi-series-map/?theme=dataviz
+                                -->
+                                <script src="https://www.amcharts.com/lib/4/core.js"></script>
+                                <script src="https://www.amcharts.com/lib/4/maps.js"></script>
+                                <script src="https://www.amcharts.com/lib/4/geodata/worldLow.js"></script>
+                                <script src="https://www.amcharts.com/lib/4/geodata/usaLow.js"></script>
+                                <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+                                <!-- Chart code -->
+                                <script>
+                                    // Themes begin
+                                    am4core.useTheme(am4themes_animated);
+                                    // Themes end
+
+                                    // Create map instance
+                                    var chart = am4core.create("chart_map_div", am4maps.MapChart);
+
+                                    // Set map definition
+                                    chart.geodata = am4geodata_worldLow;
+
+                                    // Set projection
+                                    chart.projection = new am4maps.projections.Miller();
+
+                                    // Series for World map
+                                    var worldSeries = chart.series.push(new am4maps.MapPolygonSeries());
+                                    worldSeries.exclude = ["AQ"];
+                                    worldSeries.useGeodata = true;
+
+                                    var polygonTemplate = worldSeries.mapPolygons.template;
+                                    polygonTemplate.tooltipText = "{name}";
+                                    polygonTemplate.fill = chart.colors.getIndex(0);
+
+                                    // Hover state
+                                    var hs = polygonTemplate.states.create("hover");
+                                    hs.properties.fill = am4core.color("#84c0f7");
+
+                                    // Series for United States map
+                                    var usaSeries = chart.series.push(new am4maps.MapPolygonSeries());
+                                    usaSeries.geodata = am4geodata_usaLow;
+
+                                    var polygonTemplate = usaSeries.mapPolygons.template;
+                                    polygonTemplate.tooltipText = "{name}";
+                                    polygonTemplate.fill = chart.colors.getIndex(1);
+
+                                    // Hover state
+                                    var hs = polygonTemplate.states.create("hover");
+                                    hs.properties.fill = am4core.color("#84c0f7");
+                                </script>
+                                <ul class="country_list">
+                                    <li class="country_list_header">
+                                        <span class="country">Country/Region</span>
+                                        <span class="sessions">Sessions</span>
+                                        <span class="total">% Total</span>
+                                    </li>
+                                    <li>
+                                        <span class="country">United State</span>
+                                        <span class="sessions">6.7K</span>
+                                        <span class="total">67.2%</span>
+                                        <strong></strong>
+                                    </li>
+                                    <li>
+                                        <span class="country">India</span>
+                                        <span class="sessions">781</span>
+                                        <span class="total">7.4%</span>
+                                        <strong></strong>
+                                    </li>
+                                    <li>
+                                        <span class="country">Israel</span>
+                                        <span class="sessions">487</span>
+                                        <span class="total">4.6%</span>
+                                        <strong></strong>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="visitors">
+                                <div class="visitors_header">
+                                    <h6>Visitors</h6>
+                                    <div>
+                                        <span>Total</span>
+                                        <strong>9.095</strong>
+                                    </div>
+                                    <div class="tends_down_arrow">
+                                        <span>Charges</span>
+                                        <strong>12</strong>
+                                    </div>
+                                </div>
+                                <div class="canv_wr">
+                                    <canvas class="visitors_canvas_elem" width="100%" height="100%"></canvas>
+                                </div>
+                            </div>
+                            <div class="visitors_registrations">
+                                <div class="visitors_registrations_header">
+                                    <h6>Registrations</h6>
+                                    <div>
+                                        <span>Total</span>
+                                        <strong>4.455</strong>
+                                    </div>
+                                    <div class="tends_up_arrow">
+                                        <span>Charges</span>
+                                        <strong>32</strong>
+                                    </div>
+                                </div>
+                                <div class="canv_wr">
+                                    <canvas class="visitors_registrations_canvas_elem" width="100%" height="100%"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+                <div class="item app_activity" data-dot='<button><div>Mobile App</div></button>'>
+                    <div class="app_activity_inner">
+                        <div class="app_activity_inner_header">
+                            <svg viewBox="0 0 169.33 176.92" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <clipPath id="a" transform="translate(-.34)">
+                                    <rect width="170" height="176.92" fill="none"/>
+                                    </clipPath>
+                                </defs>
+                                <g data-name="Layer 2">
+                                    <g data-name="Layer 1">
+                                        <g clip-path="url(#a)">
+                                            <path transform="translate(-.34)" d="M89.63,7.73A84.66,84.66,0,0,0,33.4,159.38H136.59a84.66,84.66,0,0,0-47-151.65Z" opacity=".12"/>
+                                            <path transform="translate(-.34)" d="M119.76,0H53.18A20.69,20.69,0,0,0,32.51,20.67v138a84.68,84.68,0,0,0,107.92-2.44V20.67A20.69,20.69,0,0,0,119.76,0Z" fill="#4a4a6e"/>
+                                            <path transform="translate(-.34)" d="M55,20.67A20.69,20.69,0,0,1,75.7,0H53.18A20.69,20.69,0,0,0,32.51,20.67v138A84.33,84.33,0,0,0,55,171.46Z" fill="#3d3d5f"/>
+                                            <path transform="translate(-.34)" d="M119.76,11.45h-5.07a3.44,3.44,0,0,0-3.45,3.45v2.19a5.35,5.35,0,0,1-5.34,5.33H67a5.35,5.35,0,0,1-5.33-5.33V14.9a3.45,3.45,0,0,0-3.45-3.45H53.18A9.22,9.22,0,0,0,44,20.67V166.33a84.79,84.79,0,0,0,85-1.72V20.67a9.22,9.22,0,0,0-9.22-9.22Z" fill="#7391e0"/>
+                                        </g>
+                                        <path transform="translate(-.34)" d="M55,20.67a20.56,20.56,0,0,1,2.18-9.22h-4A9.22,9.22,0,0,0,44,20.67V166.32A84.79,84.79,0,0,0,55,171.46Z" fill="#687fce"/>
+                                        <path transform="translate(-.34)" d="M94.79,14H85a2.59,2.59,0,0,1,0-5.18h9.79a2.59,2.59,0,0,1,0,5.18Z" fill="#5d5d81"/>
+                                        <path transform="translate(-.34)" d="M75.47,14A2.59,2.59,0,1,1,78,12,2.6,2.6,0,0,1,75.47,14Z" fill="#5d5d81"/>
+                                        <path transform="translate(-.34)" d="M85.45,73.42h60.63a8.15,8.15,0,0,1,8.13,8.12v34a8.15,8.15,0,0,1-5.72,7.76,3.52,3.52,0,0,0-2.41,3.37v6.79a.67.67,0,0,1-1.18.44l-7.15-8.25a5.73,5.73,0,0,0-4.34-2h-48a8.15,8.15,0,0,1-8.12-8.13v-34a8.14,8.14,0,0,1,8.12-8.12Z" fill="#e8b74c"/>
+                                        <path transform="translate(-.34)" d="M96.22,115.55v-34a8.14,8.14,0,0,1,8.12-8.12H85.45a8.14,8.14,0,0,0-8.12,8.12v34a8.15,8.15,0,0,0,8.12,8.13h18.89a8.15,8.15,0,0,1-8.12-8.13Z" fill="#e0a033"/>
+                                        <path transform="translate(-.34)" d="M101.42,101.08c5.54,15.81,23.12,15.83,28.69,0a1.08,1.08,0,0,0-1-1.44H102.44a1.08,1.08,0,0,0-1,1.43Z" fill="#d5595c"/>
+                                        <path transform="translate(-.34)" d="M129.09,99.65h-11c.45,0,.76.73.61,1.44-1.32,6.26-3.79,10-6.49,11.34,6.82,2,14.56-1.79,17.92-11.34a1.08,1.08,0,0,0-1-1.44Z" fill="#c44651"/>
+                                        <path transform="translate(-.34)" d="M106.23,88.94a.65.65,0,0,0-1.19,0,2.6,2.6,0,0,1-4.69-2.23,5.85,5.85,0,0,1,10.56,0,2.59,2.59,0,1,1-4.68,2.23Z" fill="#e0a033"/>
+                                        <path transform="translate(-.34)" d="M121.84,90.17a2.59,2.59,0,0,1-1.22-3.46,5.85,5.85,0,0,1,10.56,0,2.59,2.59,0,1,1-4.68,2.23.66.66,0,0,0-1.2,0,2.61,2.61,0,0,1-3.46,1.23Z" fill="#e0a033"/>
+                                        <path transform="translate(-.34)" d="M84.55,42.78H23.92A8.15,8.15,0,0,0,15.8,50.9v34a8.17,8.17,0,0,0,5.71,7.77A3.49,3.49,0,0,1,23.92,96v6.8a.67.67,0,0,0,1.18.43L32.25,95a5.73,5.73,0,0,1,4.34-2h48a8.16,8.16,0,0,0,8.13-8.13v-34a8.15,8.15,0,0,0-8.13-8.12Z" fill="#f0d76c"/>
+                                        <path transform="translate(-.34)" d="M40.4,92.68a8.17,8.17,0,0,1-5.71-7.77v-34a8.14,8.14,0,0,1,8.13-8.12H23.92A8.14,8.14,0,0,0,15.8,50.9v34a8.17,8.17,0,0,0,5.71,7.77A3.49,3.49,0,0,1,23.92,96v6.8a.67.67,0,0,0,1.18.43L32.25,95a5.73,5.73,0,0,1,4.34-2h4.6a3,3,0,0,0-.79-.36Z" fill="#e8b74c"/>
+                                        <path transform="translate(-.34)" d="M39.94,72a2.59,2.59,0,0,1,4.79-2c3.73,9,15.3,9,19,0a2.59,2.59,0,0,1,4.79,2c-5.48,13.25-23.09,13.29-28.6,0Z" fill="#e0a033"/>
+                                        <path transform="translate(-.34)" d="M67.31,61.16A2.57,2.57,0,0,1,65,59.68a.66.66,0,0,0-1.2,0,2.59,2.59,0,1,1-4.68-2.22,5.85,5.85,0,0,1,10.56,0,2.59,2.59,0,0,1-2.34,3.7Z" fill="#e0a033"/>
+                                        <path transform="translate(-.34)" d="M44.7,59.68a.65.65,0,0,0-1.19,0,2.59,2.59,0,1,1-4.68-2.22,5.84,5.84,0,0,1,10.55,0,2.59,2.59,0,1,1-4.68,2.22Z" fill="#e0a033"/>
+                                    </g>
+                                </g>
+                            </svg>
+
+                            <div>
+                                <div class="section_headline">
+                                    <label>Mobile app</label>
+                                    <i class="closer_click_start"></i>
+                                    <div class="section_description closer_click_elem">
+                                        <span class="show_more">Show more</span>
+                                        <span class="show_less">Show less</span>
+                                        <div>
+                                            <strong>Mobile app</strong>
+                                            <p>This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the.</p>
+                            </div>
+                        </div>
+                        <div class="app_activity_blocks">
+                            <div class="connections">
+                                <div class="connectionsAndOnline">
+                                    <div>
+                                        <strong>3.221</strong>
+                                        <span>Total connetions</span>
+                                    </div>
+                                    <div>
+                                        <strong>779</strong>
+                                        <span>Online now</span>
+                                    </div>
+                                </div>
+                                <div class="connections_inner">
+                                    <div class="connections_header">
+                                        <h6>App activity</h6>
+                                        <div>
+                                            <span>Total</span>
+                                            <strong>9.095</strong>
+                                        </div>
+                                        <div class="tends_up_arrow">
+                                            <span>Charges</span>
+                                            <strong>12</strong>
+                                        </div>
+                                    </div>
+                                    <div class="canv_wr">
+                                        <canvas class="app_activity_canvas_elem" width="100%" height="100%"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="last_notifications">
+                                <h6>Last notifications</h6>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <p>Xtag going more one hour to mintmatice
+                                                <span>Lorem Ipsum has been the industry's standard.</span>
+                                            </p>
+                                            <span class="date_time">Friday, Dec 28     14:00</span>
+                                            <span class="sent">Sent <em>1500</em></span>
+                                            <span class="read">Read <em>970</em></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <p>Add more day plane to agenda
+                                                <span>Lorem Ipsum has been the industry's standard dummy text</span>
+                                            </p>
+                                            <span class="date_time">Friday, Dec 28     14:00</span>
+                                            <span class="sent">Sent <em>1500</em></span>
+                                            <span class="read">Read <em>970</em></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <p>The CTO “Say”
+                                                <span>Lorem Ipsum has been the industry's standard dummy text ever since!</span>
+                                            </p>
+                                            <span class="date_time">Friday, Dec 28     14:00</span>
+                                            <span class="sent">Sent <em>1500</em></span>
+                                            <span class="read">Read <em>970</em></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item agenda" data-dot='<button><div>Agenda</div></button>'>
+                    <div class="agenda_inner">
+                        <svg viewBox="0 0 169 172.79" xmlns="http://www.w3.org/2000/svg">
+                            <g data-name="Layer 2">
+                                <g data-name="Layer 1">
+                                    <path d="M169,88.29A84.5,84.5,0,1,1,84.5,3.79,84.5,84.5,0,0,1,169,88.29Z" opacity=".12"/>
+                                    <path d="M46.22,31H153.14a5.18,5.18,0,0,1,5.17,5.17v72.43a5.18,5.18,0,0,1-5.17,5.18H46.22A5.18,5.18,0,0,1,41,108.64V36.21A5.18,5.18,0,0,1,46.22,31Z" fill="#f1dcb8"/>
+                                    <path d="M53.11,31h100a5.18,5.18,0,0,1,5.17,5.17v72.43a5.18,5.18,0,0,1-5.17,5.18h-100a5.18,5.18,0,0,1-5.17-5.18V36.21A5.18,5.18,0,0,1,53.11,31Z" fill="#fbf4f4"/>
+                                    <path d="M123.82,89.67h20.69A3.45,3.45,0,0,1,148,93.12V100a3.44,3.44,0,0,1-3.45,3.45H123.82a3.44,3.44,0,0,1-3.45-3.45v-6.9a3.45,3.45,0,0,1,3.45-3.45ZM85.88,93.12V100a3.44,3.44,0,0,0,3.45,3.45H110a3.44,3.44,0,0,0,3.45-3.45v-6.9A3.45,3.45,0,0,0,110,89.67H89.33a3.45,3.45,0,0,0-3.45,3.45Zm34.49-20.69v6.9a3.45,3.45,0,0,0,3.45,3.45h20.69A3.45,3.45,0,0,0,148,79.33v-6.9A3.44,3.44,0,0,0,144.51,69H123.82a3.44,3.44,0,0,0-3.45,3.45Zm-34.49,0v6.9a3.45,3.45,0,0,0,3.45,3.45H110a3.45,3.45,0,0,0,3.45-3.45v-6.9A3.44,3.44,0,0,0,110,69H89.33a3.44,3.44,0,0,0-3.45,3.45Zm34.49-20.7v6.9a3.44,3.44,0,0,0,3.45,3.45h20.69A3.44,3.44,0,0,0,148,58.63v-6.9a3.44,3.44,0,0,0-3.45-3.44H123.82a3.44,3.44,0,0,0-3.45,3.44Zm-34.49,0v6.9a3.44,3.44,0,0,0,3.45,3.45H110a3.44,3.44,0,0,0,3.45-3.45v-6.9A3.44,3.44,0,0,0,110,48.29H89.33a3.44,3.44,0,0,0-3.45,3.44Zm-34.49,0v6.9a3.44,3.44,0,0,0,3.45,3.45H75.53A3.44,3.44,0,0,0,79,58.63v-6.9a3.44,3.44,0,0,0-3.45-3.44H54.84a3.44,3.44,0,0,0-3.45,3.44Z" fill="#efc9b9"/>
+                                    <path d="M46.22,17.24H153.14a5.18,5.18,0,0,1,5.17,5.18V37.94H41V22.42a5.18,5.18,0,0,1,5.18-5.18Z" fill="#da4545"/>
+                                    <path d="M53.11,17.24h100a5.18,5.18,0,0,1,5.17,5.18V37.94H47.94V22.42a5.18,5.18,0,0,1,5.17-5.18Z" fill="#dc5858"/>
+                                    <path d="M108.3,120.54a56.05,56.05,0,0,1-34.18,51.62,84.37,84.37,0,0,1-21.83-5.72C43.57,162.83,11.53,132.82,6.56,121A83.62,83.62,0,0,1,.64,98.67,56.05,56.05,0,0,1,108.3,120.54Z" fill="#628da1"/>
+                                    <path d="M52.25,64.5a56.07,56.07,0,0,1,6.9.42A56,56,0,0,0,10,120.54v.09a1.71,1.71,0,0,1-3.29.7A83.88,83.88,0,0,1,.64,98.67,56,56,0,0,1,52.25,64.5Z" fill="#537f8e"/>
+                                    <path d="m98 120.54a45.7 45.7 0 0 1 -45.7 45.7h-0.44a84.83 84.83 0 0 1 -45.3 -45.24v-0.45a45.7 45.7 0 1 1 91.4 0z" fill="#fbf4f4"/>
+                                    <path d="M79,27.59A3.44,3.44,0,0,1,75.53,31H68.64a3.45,3.45,0,0,1,0-6.9h6.89A3.45,3.45,0,0,1,79,27.59Zm62.08-3.45h-6.9a3.45,3.45,0,0,0,0,6.9h6.9a3.45,3.45,0,0,0,0-6.9Z" fill="#d23030"/>
+                                    <path d="M141.06,10.35V31h-6.9V10.35a3.45,3.45,0,1,0-6.89,0v6.89h-6.9V10.35a10.35,10.35,0,1,1,20.69,0ZM65.19,0A10.36,10.36,0,0,0,54.84,10.35v6.89h6.9V10.35a3.45,3.45,0,0,1,6.9,0V31h6.89V10.35A10.36,10.36,0,0,0,65.19,0Z" fill="#c7d1db"/>
+                                    <path d="M55.7,70.7v62.09A1.72,1.72,0,0,1,54,134.51H50.53a1.73,1.73,0,0,1-1.73-1.72V70.7A1.73,1.73,0,0,1,50.53,69H54A1.72,1.72,0,0,1,55.7,70.7Z" fill="#b8c2cc"/>
+                                    <path d="M87.6,124H42.77A1.73,1.73,0,0,1,41,122.27v-3.45a1.74,1.74,0,0,1,1.73-1.73H87.6a1.73,1.73,0,0,1,1.73,1.73v3.45A1.72,1.72,0,0,1,87.6,124Z" fill="#3b5966"/>
+                                    <path d="M35.18,140.05a1.73,1.73,0,0,1,0,2.44l-7.32,7.32a1.69,1.69,0,0,1-.8.45c-1.57-1.45-3.07-3-4.52-4.52a1.68,1.68,0,0,1,.45-.81l7.31-7.32a1.73,1.73,0,0,1,2.44,0Zm-8.8-17.78v-3.45a1.73,1.73,0,0,0-1.72-1.73H14.31a1.73,1.73,0,0,0-1.72,1.73v3.45A1.72,1.72,0,0,0,14.31,124H24.66a1.72,1.72,0,0,0,1.72-1.72Zm45.38-18.8a1.73,1.73,0,0,0,2.44,0l7.32-7.32a1.72,1.72,0,0,0,0-2.43l-2.44-2.44a1.71,1.71,0,0,0-2.44,0l-7.32,7.31a1.73,1.73,0,0,0,0,2.44ZM54,146.41H50.53a1.73,1.73,0,0,0-1.73,1.72v10.35a1.74,1.74,0,0,0,1.73,1.73H54a1.73,1.73,0,0,0,1.72-1.73V148.13A1.72,1.72,0,0,0,54,146.41Zm20.22-8.8a1.73,1.73,0,0,0-2.44,0l-2.44,2.44a1.73,1.73,0,0,0,0,2.44l7.32,7.32a1.73,1.73,0,0,0,2.44,0l2.44-2.44a1.73,1.73,0,0,0,0-2.44ZM27.86,91.28a1.7,1.7,0,0,0-2.43,0L23,93.72a1.7,1.7,0,0,0,0,2.43l7.31,7.32a1.73,1.73,0,0,0,2.44,0L35.18,101a1.73,1.73,0,0,0,0-2.44Z" fill="#dbe5ea"/>
+                                </g>
+                            </g>
+                        </svg>
+
+
+                        <div class="section_headline">
+                            <label>Agenda</label>
+                            <i class="closer_click_start"></i>
+                            <div class="section_description closer_click_elem">
+                                <span class="show_more">Show more</span>
+                                <span class="show_less">Show less</span>
+                                <div>
+                                    <strong>Agenda</strong>
+                                    <p>This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p>This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the.</p>
+                        <ul>
+                            <li>
+                                <strong>22</strong>
+                                <span>Speakers</span>
+                            </li>
+                            <li>
+                                <strong>12</strong>
+                                <span>Sessions</span>
+                            </li>
+                            <li>
+                                <strong>50</strong>
+                                <span>Subjects</span>
+                            </li>
+                            <li>
+                                <strong>3</strong>
+                                <span>Halls/Paces</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item galleries" data-dot='<button><div>Gallery</div><i class="bouncing_sircle"></i></button>'>
+                    <div class="galleries_inner">
+                        <div class="section_headline">
+                            <label>Galleries</label>
+                            <i class="closer_click_start"></i>
+                            <div class="section_description closer_click_elem">
+                                <span class="show_more">Show more</span>
+                                <span class="show_less">Show less</span>
+                                <div>
+                                    <strong>Galleries</strong>
+                                    <p>This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p>This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the atenddes This mood show you in shortcut what happed now with the.</p>
+                        <div class="lists">
+                            <ul>
+                                <li>
+                                    <span>Images</span>
+                                    <strong>3.901</strong>
+                                </li>
+                                <li>
+                                    <span>Galleries</span>
+                                    <strong>4</strong>
+                                </li>
+                                <li>
+                                    <span>Attendees tagged</span>
+                                    <strong>4.004</strong>
+                                </li>
+                            </ul>
+                            <span class="show_all">Show all</span>
+                        </div>
+                        <div class="gallery">
+                            <div>
+                                <figure>
+                                    <img src="img/gallery.jpg" alt="">
+                                    <figcaption>
+                                        <strong>Professor Yoram Levi</strong>
+                                        <span>Gallery #1</span>
+                                    </figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="img/gallery.jpg" alt="">
+                                    <figcaption>
+                                        <strong>Professor Yoram Levi</strong>
+                                        <span>Gallery #1</span>
+                                    </figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="img/gallery.jpg" alt="">
+                                    <figcaption>
+                                        <strong>Professor Yoram Levi</strong>
+                                        <span>Gallery #1</span>
+                                    </figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="img/gallery.jpg" alt="">
+                                    <figcaption>
+                                        <strong>Professor Yoram Levi</strong>
+                                        <span>Gallery #1</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <img src="img/gallery.jpg" alt="">
+                                    <figcaption>
+                                        <strong>Professor Yoram Levi</strong>
+                                        <span>Gallery #1</span>
+                                    </figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="img/gallery.jpg" alt="">
+                                    <figcaption>
+                                        <strong>Professor Yoram Levi</strong>
+                                        <span>Gallery #1</span>
+                                    </figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="img/gallery.jpg" alt="">
+                                    <figcaption>
+                                        <strong>Professor Yoram Levi</strong>
+                                        <span>Gallery #1</span>
+                                    </figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="img/gallery.jpg" alt="">
+                                    <figcaption>
+                                        <strong>Professor Yoram Levi</strong>
+                                        <span>Gallery #1</span>
+                                    </figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="img/gallery.jpg" alt="">
+                                    <figcaption>
+                                        <strong>Professor Yoram Levi</strong>
+                                        <span>Gallery #1</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <img src="img/gallery.jpg" alt="">
+                                    <figcaption>
+                                        <strong>Professor Yoram Levi</strong>
+                                        <span>Gallery #1</span>
+                                    </figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="img/gallery.jpg" alt="">
+                                    <figcaption>
+                                        <strong>Professor Yoram Levi</strong>
+                                        <span>Gallery #1</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <img src="img/gallery.jpg" alt="">
+                                    <figcaption>
+                                        <strong>Professor Yoram Levi</strong>
+                                        <span>Gallery #1</span>
+                                    </figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="img/gallery.jpg" alt="">
+                                    <figcaption>
+                                        <strong>Professor Yoram Levi</strong>
+                                        <span>Gallery #1</span>
+                                    </figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="img/gallery.jpg" alt="">
+                                    <figcaption>
+                                        <strong>Professor Yoram Levi</strong>
+                                        <span>Gallery #1</span>
+                                    </figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="img/gallery.jpg" alt="">
+                                    <figcaption>
+                                        <strong>Professor Yoram Levi</strong>
+                                        <span>Gallery #1</span>
+                                    </figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="img/gallery.jpg" alt="">
+                                    <figcaption>
+                                        <strong>Professor Yoram Levi</strong>
+                                        <span>Gallery #1</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <img src="img/gallery.jpg" alt="">
+                                    <figcaption>
+                                        <strong>Professor Yoram Levi</strong>
+                                        <span>Gallery #1</span>
+                                    </figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="img/gallery.jpg" alt="">
+                                    <figcaption>
+                                        <strong>Professor Yoram Levi</strong>
+                                        <span>Gallery #1</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        	</div>
+        </div>
+	</div>
+</body>
+</html>
